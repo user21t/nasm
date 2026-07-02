@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETPE",
+  "id": "setpe64",
+  "format": "bin",
+  "source": "setpe.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setpe/",
+  "target": [
+   { "output": "setpe.bin64", "match": "setpe.bin64.t" }
+  ]
+ }
+]

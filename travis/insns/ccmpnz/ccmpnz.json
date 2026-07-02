@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CCMPNZ",
+  "id": "ccmpnz64",
+  "format": "bin",
+  "source": "ccmpnz.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpnz/",
+  "target": [
+   { "output": "ccmpnz.bin64", "match": "ccmpnz.bin64.t" }
+  ]
+ }
+]

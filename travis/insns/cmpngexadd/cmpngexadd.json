@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPNGEXADD",
+  "id": "cmpngexadd64",
+  "format": "bin",
+  "source": "cmpngexadd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpngexadd/",
+  "target": [
+   { "output": "cmpngexadd.bin64", "match": "cmpngexadd.bin64.t" }
+  ]
+ }
+]

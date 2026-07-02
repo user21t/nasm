@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPNAEXADD",
+  "id": "cmpnaexadd64",
+  "format": "bin",
+  "source": "cmpnaexadd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpnaexadd/",
+  "target": [
+   { "output": "cmpnaexadd.bin64", "match": "cmpnaexadd.bin64.t" }
+  ]
+ }
+]

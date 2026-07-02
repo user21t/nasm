@@ -266,26 +266,10 @@ sub relaxed_forms(@) {
     return @field_list;
 }
 
-# Condition codes.
-my $c_ccmask = 0x0f;
-my $c_nd     = 0x10;		# Not for the disassembler
-my $c_cc     = 0x20;		# cc only (not scc)
-my $c_scc    = 0x40;		# scc only (not cc)
-my %conds = (
-    'o'   =>  0,             'no'  =>  1,        'c'   =>  2,        'nc'  =>  3,
-    'z'   =>  4,             'nz'  =>  5,        'na'  =>  6,        'a'   =>  7,
-    's'   =>  8,             'ns'  =>  9,
-    'pe'  => 10|$c_cc,       'po'  => 11|$c_cc,
-    't'   => 10|$c_scc,      'f'   => 11|$c_scc,
-    'l'   => 12,             'nl'  => 13,        'ng'  => 14,        'g'   => 15,
-
-    'ae'  =>  3|$c_nd,       'b'   =>  2|$c_nd,  'be'  =>  6|$c_nd,  'e'   =>  4|$c_nd,
-    'ge'  => 13|$c_nd,       'le'  => 14|$c_nd,  'nae' =>  2|$c_nd,  'nb'  =>  3|$c_nd,
-    'nbe' =>  7|$c_nd,       'ne'  =>  5|$c_nd,  'nge' => 12|$c_nd,  'nle' => 15|$c_nd,
-    'np'  => 11|$c_nd|$c_cc, 'p'   => 10|$c_nd|$c_cc,
-    ''    => 11|$c_nd|$c_scc);
-
-my @conds = sort keys(%conds);
+# Condition codes (%conds, @conds, $c_ccmask/$c_nd/$c_cc/$c_scc, and
+# cc_suffix_list()) are defined in insns-cc.ph, shared with
+# tools/testgen/gen-insn-tests.pl which needs the same suffix sets.
+require 'x86/insns-cc.ph';
 
 # Generate conditional form patterns if applicable
 sub conditional_forms(@) {
@@ -304,11 +288,8 @@ sub conditional_forms(@) {
 	    next;
 	}
 
-	my $exclude_mask = ($fields->[0] =~ /scc/ ? $c_cc : $c_scc);
-
-	foreach my $cc (@conds) {
+	foreach my $cc (cc_suffix_list($fields->[0] =~ /scc/)) {
 	    my $ccval = $conds{$cc};
-	    next if ($ccval & $exclude_mask);
 
 	    my @ff = @$fields;
 

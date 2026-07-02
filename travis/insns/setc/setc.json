@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETC",
+  "id": "setc64",
+  "format": "bin",
+  "source": "setc.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setc/",
+  "target": [
+   { "output": "setc.bin64", "match": "setc.bin64.t" }
+  ]
+ }
+]

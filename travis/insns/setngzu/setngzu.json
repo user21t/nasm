@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETNGZU",
+  "id": "setngzu64",
+  "format": "bin",
+  "source": "setngzu.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setngzu/",
+  "target": [
+   { "output": "setngzu.bin64", "match": "setngzu.bin64.t" }
+  ]
+ }
+]

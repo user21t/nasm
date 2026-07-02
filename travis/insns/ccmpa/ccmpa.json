@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CCMPA",
+  "id": "ccmpa64",
+  "format": "bin",
+  "source": "ccmpa.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpa/",
+  "target": [
+   { "output": "ccmpa.bin64", "match": "ccmpa.bin64.t" }
+  ]
+ }
+]

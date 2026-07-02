@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETNC",
+  "id": "setnc64",
+  "format": "bin",
+  "source": "setnc.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setnc/",
+  "target": [
+   { "output": "setnc.bin64", "match": "setnc.bin64.t" }
+  ]
+ }
+]

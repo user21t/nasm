@@ -8,7 +8,7 @@ into the existing `tools/travis/nasm-t.py` harness. This gives every
 instruction-set pattern regression coverage without hand-writing
 thousands of test cases.
 
-The generated tree currently checked in lives at `travis/insns/` (2432
+The generated tree currently checked in lives at `travis/insns/` (2606
 mnemonic subdirectories as of the last full run).
 
 ## Usage
@@ -100,19 +100,30 @@ targets.
 ## Condition-code mnemonic families
 
 `insns.xda` leaves condition-code instruction families as literal,
-unexpanded placeholders: `Jcc`, `SETcc`, `CMOVcc`, `CFCMOVcc`. Unlike
-`$bwdq`-style width macros (which `insns.pl` *does* pre-expand into
-concrete lines in `.xda`), NASM's parser expands condition codes against
-its own cc-table at parse time — so the literal placeholder mnemonic
-isn't directly assemblable. The generator expands these four families
-itself into concrete mnemonics (`JE`, `SETNZ`, `CMOVGE`, ...) using the
-16 canonical condition-code suffixes
-(`o no b ae e ne be a s ns p np l ge le g`).
+unexpanded placeholders: `Jcc`, `SETcc`, `CMOVcc`, `CFCMOVcc` (the "cc"
+family) and the newer APX `CCMPscc`, `CTESTscc`, `CMPccXADD`, `SETccZU`
+(the "scc" family). Unlike `$bwdq`-style width macros (which `insns.pl`
+*does* pre-expand into concrete lines in `.xda`), NASM's parser expands
+condition codes against its own cc-table at parse time — and
+`x86/insns.pl`'s own `conditional_forms()` performs the equivalent
+expansion for the C-code generators, but only *after* `insns.xda` has
+already been written by `preinsns.pl`, so the placeholders reach this
+tool unexpanded either way.
 
-**Known gap:** the newer APX condition-suffix families (`CCMPscc`,
-`CTESTscc`, `CMPccXADD`, `SETccZU`) are *not* expanded and are currently
-dropped as unsupported. Extending the `@cc_suffixes` expansion loop to
-cover these would close this gap.
+The condition-code table (`%conds`, plus the `$c_cc`/`$c_scc` masks
+distinguishing which suffixes are valid for which family) is shared
+between `insns.pl` and this generator via `x86/insns-cc.ph`, a small
+Perl module `require`d by both — this guarantees the two expansions
+never drift out of sync, since there's only one copy of the
+suffix/mask data. `cc_suffix_list($is_scc)` (defined in that module)
+returns the applicable suffix list for either family, and the generator
+mirrors `insns.pl`'s own detection (`$mnem =~ /s?cc/`, case-sensitive)
+and substitution (`$mnem =~ s/s?cc/\U$suffix/`) exactly, so e.g. `Jcc`
+expands to `JE`/`JNE`/`JGE`/... , `CCMPscc` expands to `CCMPE`/
+`CCMPNE`/... (excluding the "cc"-only suffixes `pe`/`po`/`p`/`np`, which
+aren't valid for `scc`-family instructions), and `SETccZU` expands to
+`SETNEZU`/... . Any future new "cc"/"scc" family added to `insns.dat`
+is picked up automatically without changes to this script.
 
 ## Bit-width (16/32/64) handling
 
@@ -175,15 +186,15 @@ The generator prints a coverage summary at the end of each run
 unsupported operand-type tokens), so gaps are self-documenting. As of
 the last full run:
 
-- **2432 / 2452 mnemonics generate at least one assemblable template.**
-- **20 mnemonics produce zero output and are dropped**, mostly:
+- **2606 / 2622 mnemonics generate at least one assemblable template**
+  (includes all concrete expansions of the `cc`/`scc` condition-code
+  families — see above).
+- **16 mnemonics produce zero output and are dropped**, mostly:
   - `HINT_NOP0` .. `HINT_NOP63` placeholder mnemonics,
   - `LOADALL` / `LOADALL286`,
   - a handful of exotic AMX-transpose / APX instructions whose full
     operand grammar wasn't targeted (e.g. `T2RPNTLVWZ0*`, `TCONJT*`,
     `TTMMULTF32PS`).
-- APX `scc`-suffix condition-code families (`CCMPscc`, `CTESTscc`,
-  `CMPccXADD`, `SETccZU`) are not expanded (see above).
 - Memory/vsib operands only exercise base-register-free addressing
   forms (see above) — true base+index+scale+disp combinations aren't
   covered by generated tests.
@@ -207,5 +218,5 @@ tests + `travis/insns/`):
 python3 tools/travis/nasm-t.py --nasm=./nasm --directory=./travis run
 ```
 
-4225 tests total, 4224 PASS, 1 pre-existing SKIP (`time`, an
+4427 tests total, 4426 PASS, 1 pre-existing SKIP (`time`, an
 intentional/known skip unrelated to this tool), 0 FAIL, 0 ABORT.

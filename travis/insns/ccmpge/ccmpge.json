@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CCMPGE",
+  "id": "ccmpge64",
+  "format": "bin",
+  "source": "ccmpge.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpge/",
+  "target": [
+   { "output": "ccmpge.bin64", "match": "ccmpge.bin64.t" }
+  ]
+ }
+]

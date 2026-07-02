@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETOZU",
+  "id": "setozu64",
+  "format": "bin",
+  "source": "setozu.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setozu/",
+  "target": [
+   { "output": "setozu.bin64", "match": "setozu.bin64.t" }
+  ]
+ }
+]

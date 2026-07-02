@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETNLE",
+  "id": "setnle64",
+  "format": "bin",
+  "source": "setnle.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setnle/",
+  "target": [
+   { "output": "setnle.bin64", "match": "setnle.bin64.t" }
+  ]
+ }
+]

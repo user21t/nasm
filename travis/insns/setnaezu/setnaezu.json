@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETNAEZU",
+  "id": "setnaezu64",
+  "format": "bin",
+  "source": "setnaezu.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setnaezu/",
+  "target": [
+   { "output": "setnaezu.bin64", "match": "setnaezu.bin64.t" }
+  ]
+ }
+]

@@ -91,14 +91,19 @@ GetOptions(
 my %by_mnemonic;   # mnemonic => [ { ops => [...], flags => {...} }, ... ]
 
 # insns.xda leaves condition-code instruction *families* as literal
-# "cc"-suffixed placeholders (e.g. mnemonic "Jcc") -- the parser
-# expands these against a condition-code table at parse time rather
-# than insns.pl expanding them into per-condition lines the way the
-# $bwdq-style width macros are expanded. Mirror that expansion here so
-# concrete, testable mnemonics (JE, SETNZ, CMOVGE, ...) get generated
-# instead of the unusable literal placeholder.
-my @cc_suffixes = qw(o no b ae e ne be a s ns p np l ge le g);
-my %cc_families = map { $_ => 1 } qw(Jcc SETcc CMOVcc CFCMOVcc);
+# "...cc"/"...scc"-suffixed placeholders (Jcc, SETcc, CMOVcc, CFCMOVcc,
+# CCMPscc, CTESTscc, CMPccXADD, SETccZU) -- x86/insns.pl's own
+# conditional_forms() expands these into one concrete pattern per
+# applicable condition code, but that expansion happens *after*
+# insns.xda is generated (insns.xda comes from preinsns.pl), so the
+# placeholders reach us unexpanded. Mirror insns.pl's own detection
+# (case-sensitive "/s?cc/" match) and expansion using the shared
+# x86/insns-cc.ph condition-code tables, so concrete, testable
+# mnemonics (JE, SETNZ, CMOVGE, CCMPNE, SETccZU -> SETNEZU, ...) get
+# generated instead of the unusable literal placeholder, and any
+# future new cc/scc family added to insns.dat is picked up
+# automatically without touching this script.
+require 'x86/insns-cc.ph';
 
 open(my $xda, '<', $xda_file) or die "cannot open $xda_file: $!\n";
 while (my $line = <$xda>) {
@@ -114,10 +119,10 @@ while (my $line = <$xda>) {
 
     my @ops = ($opstr eq 'void') ? () : split(/,/, $opstr);
 
-    if ($cc_families{$mnem}) {
-        (my $prefix = $mnem) =~ s/cc$//;
-        for my $suf (@cc_suffixes) {
-            my $concrete = uc($prefix . $suf);
+    if ($mnem =~ /s?cc/) {   # case-sensitive, same as insns.pl
+        my $is_scc = ($mnem =~ /scc/);
+        for my $suf (cc_suffix_list($is_scc)) {
+            (my $concrete = $mnem) =~ s/s?cc/\U$suf/;
             push @{ $by_mnemonic{$concrete} }, { ops => \@ops, flags => \%flags };
         }
         next;

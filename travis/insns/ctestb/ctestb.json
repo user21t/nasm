@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CTESTB",
+  "id": "ctestb64",
+  "format": "bin",
+  "source": "ctestb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctestb/",
+  "target": [
+   { "output": "ctestb.bin64", "match": "ctestb.bin64.t" }
+  ]
+ }
+]

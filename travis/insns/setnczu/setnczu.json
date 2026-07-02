@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETNCZU",
+  "id": "setnczu64",
+  "format": "bin",
+  "source": "setnczu.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setnczu/",
+  "target": [
+   { "output": "setnczu.bin64", "match": "setnczu.bin64.t" }
+  ]
+ }
+]

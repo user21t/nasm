@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CTESTA",
+  "id": "ctesta64",
+  "format": "bin",
+  "source": "ctesta.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctesta/",
+  "target": [
+   { "output": "ctesta.bin64", "match": "ctesta.bin64.t" }
+  ]
+ }
+]

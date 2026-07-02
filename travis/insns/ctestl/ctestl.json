@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CTESTL",
+  "id": "ctestl64",
+  "format": "bin",
+  "source": "ctestl.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctestl/",
+  "target": [
+   { "output": "ctestl.bin64", "match": "ctestl.bin64.t" }
+  ]
+ }
+]

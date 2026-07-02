@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPAEXADD",
+  "id": "cmpaexadd64",
+  "format": "bin",
+  "source": "cmpaexadd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpaexadd/",
+  "target": [
+   { "output": "cmpaexadd.bin64", "match": "cmpaexadd.bin64.t" }
+  ]
+ }
+]

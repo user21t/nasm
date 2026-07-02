@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CCMPNG",
+  "id": "ccmpng64",
+  "format": "bin",
+  "source": "ccmpng.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpng/",
+  "target": [
+   { "output": "ccmpng.bin64", "match": "ccmpng.bin64.t" }
+  ]
+ }
+]

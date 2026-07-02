@@ -284,7 +284,7 @@ PERLREQ_CLEANABLE = \
 
 PERLREQ = $(PERLREQ_CLEANABLE)
 
-INSDEP = x86/insns.xda x86/insns.pl x86/insns-iflags.ph x86/iflags.ph
+INSDEP = x86/insns.xda x86/insns.pl x86/insns-iflags.ph x86/iflags.ph x86/insns-cc.ph
 
 x86/insns.xda: x86/insns.dat x86/preinsns.pl $(DIRS)
 	$(RUNPERL) $(srcdir)/x86/preinsns.pl $(srcdir)/x86/insns.dat $@

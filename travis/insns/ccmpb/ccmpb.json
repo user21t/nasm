@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CCMPB",
+  "id": "ccmpb64",
+  "format": "bin",
+  "source": "ccmpb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpb/",
+  "target": [
+   { "output": "ccmpb.bin64", "match": "ccmpb.bin64.t" }
+  ]
+ }
+]

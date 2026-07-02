@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETNZ",
+  "id": "setnz64",
+  "format": "bin",
+  "source": "setnz.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setnz/",
+  "target": [
+   { "output": "setnz.bin64", "match": "setnz.bin64.t" }
+  ]
+ }
+]

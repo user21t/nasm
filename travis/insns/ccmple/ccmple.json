@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CCMPLE",
+  "id": "ccmple64",
+  "format": "bin",
+  "source": "ccmple.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmple/",
+  "target": [
+   { "output": "ccmple.bin64", "match": "ccmple.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMOVNAE",
+  "id": "cmovnae64",
+  "format": "bin",
+  "source": "cmovnae.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmovnae/",
+  "target": [
+   { "output": "cmovnae.bin64", "match": "cmovnae.bin64.t" }
+  ]
+ }
+]

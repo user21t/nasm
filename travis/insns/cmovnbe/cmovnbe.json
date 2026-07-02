@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMOVNBE",
+  "id": "cmovnbe64",
+  "format": "bin",
+  "source": "cmovnbe.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmovnbe/",
+  "target": [
+   { "output": "cmovnbe.bin64", "match": "cmovnbe.bin64.t" }
+  ]
+ }
+]

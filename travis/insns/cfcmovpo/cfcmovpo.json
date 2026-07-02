@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CFCMOVPO",
+  "id": "cfcmovpo64",
+  "format": "bin",
+  "source": "cfcmovpo.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cfcmovpo/",
+  "target": [
+   { "output": "cfcmovpo.bin64", "match": "cfcmovpo.bin64.t" }
+  ]
+ }
+]
