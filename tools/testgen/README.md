@@ -8,7 +8,7 @@ into the existing `tools/travis/nasm-t.py` harness. This gives every
 instruction-set pattern regression coverage without hand-writing
 thousands of test cases.
 
-The generated tree currently checked in lives at `travis/insns/` (2606
+The generated tree currently checked in lives at `travis/insns/` (2612
 mnemonic subdirectories as of the last full run).
 
 ## Usage
@@ -361,6 +361,64 @@ Two wrinkles this created and how they're handled:
   base-free scaled vsib index forms (`[xmm0*1]`). This sacrifices
   coverage of true `[base+index*scale+disp]` forms — a known,
   documented limitation, not a bug.
+- **16/32-bit-only tokens poisoning the 64-bit probe.** The mirror
+  image of the first wrinkle: CALL/JMP's near-indirect targets accept
+  `rm16`/`rm32`/`rm64` operands, but only `rm64` is valid in 64-bit
+  mode (`call cx`/`call ecx` both fail to assemble under `--bits 64`,
+  matching the `NOLONG` flag on those `insns.xda` templates) — unlike
+  an ordinary `reg16`/`reg32` operand elsewhere, which assembles fine
+  at any bit width. `branch_narrow_only()` flags lines built from these
+  tokens (`avoid64`, mirroring `needs64`) and excludes them from the
+  64-bit "full" body; see "Error-case (`%ifdef ERROR`) coverage" below
+  for where they end up instead.
+
+## Error-case (`%ifdef ERROR`) coverage
+
+Verifying that an instruction *fails* to assemble the way it should
+(and prints the expected diagnostic) is itself test coverage, not just
+verifying the ways it succeeds. Per the preferred convention, error
+cases don't get a separate source file: known-bad lines are appended
+to the *same* per-mnemonic `.asm` file under a `%ifdef ERROR` guard,
+and the file is assembled twice — once plainly (existing behavior,
+unaffected, since the guarded block is invisible) and once with
+`-DERROR` defined (where the guarded block is included and expected to
+fail). This mirrors the pre-existing hand-written convention already
+used by `travis/ret/ret.json` (`"option": "-DERROR ...", "error":
+"expected"`).
+
+Two kinds of already-known-bad lines feed this, both by-products of the
+bit-width handling above rather than newly invented content:
+
+- Lines flagged `needs64` (64-bit-only operands, hireg/apxreg
+  register-number lines) are appended to the 16/32-bit "narrow" body
+  and probed with `-DERROR` at `--bits 16`/`32`.
+- Lines flagged `avoid64` (CALL/JMP's rm16/rm32 near-indirect targets)
+  are appended to the 64-bit "full" body and probed with `-DERROR` at
+  `--bits 64`.
+
+Each candidate block is probed with `-DERROR` before becoming a json
+entry, and is only kept for the specific bit width(s) where it actually
+fails — this generator doesn't model every mode restriction, so a
+block that unexpectedly *does* assemble at some width simply doesn't
+get an "expected error" entry for that width, rather than becoming a
+false test failure. A mnemonic whose only surviving coverage would be
+error entries (no working positive-path line at any bit width) is
+still dropped entirely, same as before — "this instruction never
+assembles" isn't meaningful regression coverage by itself.
+
+While wiring this up, two latent bugs in the pre-existing branch-target
+operand handling surfaced and were fixed: `gen_operand()`'s branch-mode
+substitution used to replace *every* operand of a branch mnemonic
+(`is_branch`) with the `.L1` local-label text, not just genuine
+relative-displacement targets — producing nonsense like `loop .L1,
+.L1` (LOOP's address-size-override form takes a fixed `cx`/`ecx`/`rcx`
+register, not a branch target) and `call .L1` for JMP/CALL's indirect
+(`rm16`/`32`/`64`) and far-pointer (`imm16:imm16`) operand forms. These
+bogus lines silently broke assembly for the whole mnemonic, and
+LOOP/LOOPE/LOOPNE/LOOPNZ/LOOPZ/JCXZ were silently dropped as a result.
+Restricting the substitution to base tokens matching
+`/^imm(?:8|16|32|64)$/` fixed both bugs and recovered all six
+previously-dropped mnemonics.
 
 ## Integration with `nasm-t.py`
 
@@ -399,10 +457,10 @@ The generator prints a coverage summary at the end of each run
 unsupported operand-type tokens), so gaps are self-documenting. As of
 the last full run:
 
-- **2606 / 2622 mnemonics generate at least one assemblable template**
+- **2612 / 2622 mnemonics generate at least one assemblable template**
   (includes all concrete expansions of the `cc`/`scc` condition-code
   families — see above).
-- **16 mnemonics produce zero output and are dropped**, mostly:
+- **10 mnemonics produce zero output and are dropped**, mostly:
   - `HINT_NOP0` .. `HINT_NOP63` placeholder mnemonics,
   - `LOADALL` / `LOADALL286`,
   - a handful of exotic AMX-transpose / APX instructions whose full
@@ -427,6 +485,11 @@ the last full run:
   *first* size-carrying memory operand in a template; templates with
   multiple independently-sizable memory operands aren't exhaustively
   covered.
+- Error-case coverage only exercises the two bit-width-incompatibility
+  patterns the generator already tracks for other reasons (`needs64`
+  and `avoid64` lines); it doesn't target other classes of assembly
+  errors (e.g. invalid immediate ranges, disallowed operand
+  combinations not tied to bit width, EVEX-decorator misuse).
 - ~70+ distinct operand-type tokens have generator support (see the
   `%fixed`/`%gen` tables at the top of the script); any new/renamed
   token introduced by a future `insns.dat` change that isn't in those
@@ -473,3 +536,17 @@ change these counts (1922 mnemonics gained at least one implicit-size
 line, verified via the same per-mnemonic `.json` entry-count
 comparison, identical 6955/6955). `make -j32 travis` continues to pass
 in ~26s.
+
+Adding `%ifdef ERROR` error-case coverage — together with the
+branch-operand bug fixes it surfaced (see above) — changed the
+mnemonic-level counts for the first time since the initial hireg/apxreg
+update: 2612/2622 mnemonics now generate (up from 2606, since
+LOOP/LOOPE/LOOPNE/LOOPNZ/LOOPZ/JCXZ are no longer silently dropped),
+verified by diffing per-mnemonic *non-error* `.json` entry counts
+between a scratch regeneration and the previously-committed tree
+(identical aside from the six newly-recovered mnemonics — confirming
+no regressions in existing coverage). 1976/2612 mnemonics gained at
+least one error-case entry (3951 error json entries total). Full
+`nasm-t.py run` on the scratch tree: 10918/10918 PASS, 0 FAIL.
+`make -j32 travis` on the regenerated `travis/insns/` continues to pass
+in ~27s.
