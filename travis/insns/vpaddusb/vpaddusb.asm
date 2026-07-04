@@ -19,3 +19,9 @@ default rel
 	vpaddusb ymm29, ymm18, ymm20
 	vpaddusb xmm23, xmm21, xmm23
 	vpaddusb ymm26, ymm18, ymm24
+	vpaddusb xmm5{k1}, xmm1, xmm0
+	vpaddusb ymm1{k7}, ymm5, ymm4
+	vpaddusb zmm4{k3}, zmm1, zmm7
+	vpaddusb xmm0{k5}{z}, xmm3, xmm5
+	vpaddusb ymm7{k7}{z}, ymm2, ymm3
+	vpaddusb zmm2{k7}{z}, zmm4, zmm1

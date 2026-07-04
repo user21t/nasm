@@ -6,3 +6,5 @@ default rel
 	vcmplt_oqss k6, xmm0, dword [0x90a]
 	vcmplt_oqss xmm9, xmm11, xmm11
 	vcmplt_oqss k6, xmm8, xmm15
+	vcmplt_oqss k6{k3}, xmm7, xmm7
+	vcmplt_oqss k7, xmm2, xmm0, {sae}

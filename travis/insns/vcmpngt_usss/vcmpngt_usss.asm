@@ -6,3 +6,5 @@ default rel
 	vcmpngt_usss k2, xmm0, dword [0x36d]
 	vcmpngt_usss xmm15, xmm9, xmm12
 	vcmpngt_usss k7, xmm15, xmm15
+	vcmpngt_usss k6{k7}, xmm2, dword [0x74a]
+	vcmpngt_usss k5, xmm6, xmm3, {sae}

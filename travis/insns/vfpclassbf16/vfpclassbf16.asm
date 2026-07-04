@@ -11,3 +11,6 @@ default rel
 	vfpclassbf16 k1, xmm17, 0xc7
 	vfpclassbf16 k6, ymm22, 0x65
 	vfpclassbf16 k6, zmm24, 0xe7
+	vfpclassbf16 k1{k7}, xmm7, 0xb8
+	vfpclassbf16 k2{k2}, ymm5, 0xdc
+	vfpclassbf16 k2{k3}, zword [0xf78], 0xd5

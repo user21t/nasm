@@ -7,3 +7,5 @@ default rel
 	vextractf32x8 yword [0x683], zmm9, 0x1e
 	vextractf32x8 ymm17, zmm31, 0xcd
 	vextractf32x8 yword [0x666], zmm24, 0x9d
+	vextractf32x8 ymm4{k3}, zmm0, 0xb9
+	vextractf32x8 yword [0x4a8]{k3}, zmm0, 0xa5

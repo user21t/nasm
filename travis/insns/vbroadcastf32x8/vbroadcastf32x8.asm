@@ -3,3 +3,5 @@ default rel
 	vbroadcastf32x8 zmm5, yword [0xaa6]
 	vbroadcastf32x8 zmm15, yword [0x1b4]
 	vbroadcastf32x8 zmm31, yword [0x26c]
+	vbroadcastf32x8 zmm4{k1}, yword [0xa46]
+	vbroadcastf32x8 zmm4{k7}{z}, yword [0x226]

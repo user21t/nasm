@@ -15,3 +15,9 @@ default rel
 	vpmovusqb xmm23, ymm22
 	vpmovusqb xmm21, zmm23
 	vpmovusqb word [0xf2b], xmm23
+	vpmovusqb xmm3{k2}, xmm3
+	vpmovusqb xmm5{k4}, ymm6
+	vpmovusqb xmm3{k3}, zmm5
+	vpmovusqb word [0x8ab]{k3}, xmm3
+	vpmovusqb dword [0x811]{k7}, ymm7
+	vpmovusqb qword [0xe9c]{k3}, zmm7

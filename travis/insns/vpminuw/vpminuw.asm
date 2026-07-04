@@ -19,3 +19,9 @@ default rel
 	vpminuw ymm20, ymm24, ymm26
 	vpminuw xmm16, xmm31, xmm17
 	vpminuw ymm24, ymm28, ymm30
+	vpminuw xmm1{k2}, xmm5, xmm6
+	vpminuw ymm3{k2}, ymm4, yword [0x6e7]
+	vpminuw zmm3{k5}, zmm2, zword [0xd0f]
+	vpminuw xmm1{k5}{z}, xmm3, xmm3
+	vpminuw ymm4{k6}{z}, ymm5, ymm7
+	vpminuw zmm6{k4}{z}, zmm4, zword [0x523]

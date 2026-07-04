@@ -9,3 +9,6 @@ default rel
 	vmaxss xmm13, xmm13, xmm12
 	vmaxss xmm22, xmm27, xmm17
 	vmaxss xmm16, xmm24, xmm26
+	vmaxss xmm2{k1}, xmm5, dword [0xce4]
+	vmaxss xmm6{k5}{z}, xmm1, xmm4
+	vmaxss xmm2, xmm2, xmm2, {sae}

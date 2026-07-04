@@ -19,3 +19,9 @@ default rel
 	vpmuludq ymm25, ymm20, ymm21
 	vpmuludq xmm24, xmm24, xmm22
 	vpmuludq ymm22, ymm25, ymm22
+	vpmuludq xmm4{k6}, xmm3, xmm0
+	vpmuludq ymm2{k4}, ymm1, yword [0xc0f]
+	vpmuludq zmm2{k4}, zmm4, zword [0x2d6]
+	vpmuludq xmm7{k2}{z}, xmm7, xmm0
+	vpmuludq ymm5{k7}{z}, ymm6, yword [0x248]
+	vpmuludq zmm6{k2}{z}, zmm5, zmm5

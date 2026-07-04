@@ -11,3 +11,6 @@ default rel
 	vpcmpltw k6, xmm29, xmm30
 	vpcmpltw k6, ymm29, ymm19
 	vpcmpltw k2, zmm23, zmm24
+	vpcmpltw k3{k3}, xmm3, xmm3
+	vpcmpltw k6{k2}, ymm0, ymm0
+	vpcmpltw k3{k7}, zmm4, zmm3

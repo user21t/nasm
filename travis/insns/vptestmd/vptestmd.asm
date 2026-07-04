@@ -11,3 +11,6 @@ default rel
 	vptestmd k1, xmm17, xmm19
 	vptestmd k1, ymm22, ymm31
 	vptestmd k6, zmm17, zmm16
+	vptestmd k6{k7}, xmm3, xmm3
+	vptestmd k4{k6}, ymm4, yword [0xda9]
+	vptestmd k3{k5}, zmm7, zmm7

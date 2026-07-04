@@ -11,3 +11,9 @@ default rel
 	vgetmantph xmm18, xmm25, 0xc7
 	vgetmantph ymm22, ymm17, 0xca
 	vgetmantph zmm26, zmm31, 0xad
+	vgetmantph xmm5{k6}, xmm6, 0xb1
+	vgetmantph ymm7{k7}, ymm2, 0x7b
+	vgetmantph zmm6{k1}, zword [0xb8c], 0x10
+	vgetmantph xmm0{k7}{z}, xmm5, 0x40
+	vgetmantph ymm7{k3}{z}, ymm3, 0xd
+	vgetmantph zmm4{k6}{z}, zmm3, 0x36

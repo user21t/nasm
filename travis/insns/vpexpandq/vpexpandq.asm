@@ -15,3 +15,15 @@ default rel
 	vpexpandq ymm19, yword [0xeda]
 	vpexpandq zmm17, zword [0x4ff]
 	vpexpandq xmm24, xmm17
+	vpexpandq xmm0{k4}, oword [0x855]
+	vpexpandq ymm6{k4}, yword [0x3e2]
+	vpexpandq zmm4{k1}, zword [0xf58]
+	vpexpandq xmm4{k4}, xmm2
+	vpexpandq ymm4{k6}, ymm2
+	vpexpandq zmm4{k1}, zmm4
+	vpexpandq xmm6{k2}{z}, oword [0x2e2]
+	vpexpandq ymm0{k5}{z}, yword [0x177]
+	vpexpandq zmm6{k2}{z}, zword [0xac3]
+	vpexpandq xmm2{k5}{z}, xmm1
+	vpexpandq ymm6{k7}{z}, ymm0
+	vpexpandq zmm4{k2}{z}, zmm6

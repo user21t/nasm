@@ -13,3 +13,7 @@ default rel
 	vcmplt_osps ymm9, ymm11, ymm10
 	vcmplt_osps k2, xmm12, xmm11
 	vcmplt_osps k6, ymm13, ymm8
+	vcmplt_osps k1{k4}, xmm7, xmm1
+	vcmplt_osps k7{k3}, ymm7, ymm2
+	vcmplt_osps k7{k6}, zmm2, zmm7
+	vcmplt_osps k1, zmm4, zmm0, {sae}

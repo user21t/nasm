@@ -9,3 +9,6 @@ default rel
 	vaddss xmm13, xmm9, xmm15
 	vaddss xmm25, xmm17, xmm22
 	vaddss xmm24, xmm16, xmm27
+	vaddss xmm5{k6}, xmm4, dword [0x9e7]
+	vaddss xmm4{k4}{z}, xmm6, xmm3
+	vaddss xmm2, xmm5, xmm1, {rz-sae}

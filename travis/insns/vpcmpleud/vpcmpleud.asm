@@ -11,3 +11,6 @@ default rel
 	vpcmpleud k4, xmm19, xmm30
 	vpcmpleud k1, ymm17, ymm16
 	vpcmpleud k4, zmm18, zmm24
+	vpcmpleud k2{k4}, xmm1, xmm2
+	vpcmpleud k3{k2}, ymm3, yword [0xa46]
+	vpcmpleud k5{k3}, zmm3, zword [0x61a]

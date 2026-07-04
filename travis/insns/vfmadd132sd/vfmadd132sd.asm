@@ -7,3 +7,6 @@ default rel
 	vfmadd132sd xmm14, xmm8, xmm9
 	vfmadd132sd xmm31, xmm27, xmm30
 	vfmadd132sd xmm29, xmm24, xmm19
+	vfmadd132sd xmm4{k2}, xmm2, xmm7
+	vfmadd132sd xmm6{k6}{z}, xmm4, xmm3
+	vfmadd132sd xmm7, xmm0, xmm5, {rn-sae}

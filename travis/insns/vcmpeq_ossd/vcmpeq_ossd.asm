@@ -6,3 +6,5 @@ default rel
 	vcmpeq_ossd k5, xmm7, xmm6
 	vcmpeq_ossd xmm14, xmm10, xmm13
 	vcmpeq_ossd k3, xmm15, xmm10
+	vcmpeq_ossd k3{k4}, xmm5, xmm1
+	vcmpeq_ossd k1, xmm3, xmm1, {sae}

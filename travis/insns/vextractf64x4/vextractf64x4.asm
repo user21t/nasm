@@ -7,3 +7,5 @@ default rel
 	vextractf64x4 yword [0xcdf], zmm13, 0xe5
 	vextractf64x4 ymm24, zmm24, 0xb5
 	vextractf64x4 yword [0x5e1], zmm17, 0xc9
+	vextractf64x4 ymm5{k7}, zmm6, 0x97
+	vextractf64x4 yword [0xea5]{k7}, zmm5, 0x3

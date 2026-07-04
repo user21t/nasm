@@ -7,3 +7,6 @@ default rel
 	vfnmadd213sd xmm9, xmm15, xmm11
 	vfnmadd213sd xmm21, xmm31, xmm19
 	vfnmadd213sd xmm28, xmm31, xmm21
+	vfnmadd213sd xmm2{k7}, xmm7, xmm1
+	vfnmadd213sd xmm6{k2}{z}, xmm2, xmm1
+	vfnmadd213sd xmm0, xmm1, xmm5, {rz-sae}

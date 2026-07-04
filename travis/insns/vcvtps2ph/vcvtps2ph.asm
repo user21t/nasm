@@ -15,3 +15,9 @@ default rel
 	vcvtps2ph xmm25, xmm27, 0xe5
 	vcvtps2ph xmm31, xmm16, 0xc4
 	vcvtps2ph xmm18, ymm16, 0x12
+	vcvtps2ph xmm5{k7}, xmm5, 0x5c
+	vcvtps2ph xmm7{k5}, ymm3, 0x45
+	vcvtps2ph ymm7{k4}, zmm3, 0x7d
+	vcvtps2ph qword [0xe5a]{k6}, xmm7, 0x5c
+	vcvtps2ph oword [0xa5c]{k5}, ymm7, 0xa2
+	vcvtps2ph yword [0xc45]{k7}, zmm4, 0xf5

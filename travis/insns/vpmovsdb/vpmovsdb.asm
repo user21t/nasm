@@ -15,3 +15,9 @@ default rel
 	vpmovsdb xmm25, ymm16
 	vpmovsdb xmm31, zmm30
 	vpmovsdb dword [0x4f6], xmm23
+	vpmovsdb xmm0{k5}, xmm6
+	vpmovsdb xmm5{k5}, ymm5
+	vpmovsdb xmm7{k5}, zmm2
+	vpmovsdb dword [0xcac]{k2}, xmm3
+	vpmovsdb qword [0x78a]{k5}, ymm6
+	vpmovsdb oword [0x52a]{k3}, zmm2

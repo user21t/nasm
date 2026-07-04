@@ -4,3 +4,5 @@ default rel
 	vreducesh xmm3, xmm4, xmm0, 0xaf
 	vreducesh xmm8, xmm9, xmm14, 0x68
 	vreducesh xmm23, xmm25, xmm22, 0x52
+	vreducesh xmm6{k7}, xmm0, xmm2, 0xf8
+	vreducesh xmm6{k3}{z}, xmm5, xmm6, 0x98

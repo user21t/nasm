@@ -7,3 +7,6 @@ default rel
 	vfmsub213sd xmm15, xmm13, xmm11
 	vfmsub213sd xmm28, xmm30, xmm28
 	vfmsub213sd xmm24, xmm30, xmm16
+	vfmsub213sd xmm7{k6}, xmm2, xmm0
+	vfmsub213sd xmm5{k3}{z}, xmm6, qword [0xe97]
+	vfmsub213sd xmm1, xmm0, xmm1, {rd-sae}

@@ -15,3 +15,15 @@ default rel
 	vexpandps ymm31, yword [0x4d5]
 	vexpandps zmm20, zword [0xd67]
 	vexpandps xmm23, xmm30
+	vexpandps xmm0{k7}, oword [0x29e]
+	vexpandps ymm6{k1}, yword [0x929]
+	vexpandps zmm6{k3}, zword [0xdee]
+	vexpandps xmm3{k2}, xmm2
+	vexpandps ymm3{k4}, ymm6
+	vexpandps zmm3{k2}, zmm7
+	vexpandps xmm5{k6}{z}, oword [0xe24]
+	vexpandps ymm1{k3}{z}, yword [0x19b]
+	vexpandps zmm3{k7}{z}, zword [0x9a6]
+	vexpandps xmm6{k4}{z}, xmm0
+	vexpandps ymm2{k5}{z}, ymm1
+	vexpandps zmm3{k1}{z}, zmm3

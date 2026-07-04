@@ -7,3 +7,6 @@ default rel
 	vfmsub132ss xmm13, xmm15, xmm9
 	vfmsub132ss xmm19, xmm18, xmm29
 	vfmsub132ss xmm29, xmm25, xmm16
+	vfmsub132ss xmm2{k2}, xmm5, xmm3
+	vfmsub132ss xmm0{k7}{z}, xmm3, xmm6
+	vfmsub132ss xmm4, xmm6, xmm4, {rz-sae}

@@ -6,3 +6,5 @@ default rel
 	vcmpgess k7, xmm4, xmm3
 	vcmpgess xmm11, xmm14, xmm10
 	vcmpgess k1, xmm13, xmm14
+	vcmpgess k4{k2}, xmm2, xmm1
+	vcmpgess k7, xmm4, xmm3, {sae}

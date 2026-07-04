@@ -19,3 +19,9 @@ default rel
 	vshufps ymm27, ymm28, ymm16, 0xa7
 	vshufps xmm17, xmm21, xmm22, 0x13
 	vshufps ymm25, ymm16, ymm18, 0x3c
+	vshufps xmm4{k1}, xmm7, xmm1, 0x17
+	vshufps ymm5{k3}, ymm0, ymm5, 0x1f
+	vshufps zmm0{k5}, zmm5, zmm3, 0xf
+	vshufps xmm5{k5}{z}, xmm6, oword [0x6de], 0x3
+	vshufps ymm6{k2}{z}, ymm5, ymm2, 0x5d
+	vshufps zmm2{k2}{z}, zmm4, zmm7, 0xa4

@@ -13,3 +13,7 @@ default rel
 	vcmpnge_uspd ymm13, ymm12, ymm14
 	vcmpnge_uspd k3, xmm11, xmm15
 	vcmpnge_uspd k5, ymm9, ymm9
+	vcmpnge_uspd k6{k3}, xmm6, oword [0x40e]
+	vcmpnge_uspd k2{k5}, ymm1, ymm3
+	vcmpnge_uspd k3{k1}, zmm5, zmm7
+	vcmpnge_uspd k3, zmm5, zmm5, {sae}

@@ -11,3 +11,10 @@ default rel
 	vrsqrtph xmm31, xmm24
 	vrsqrtph ymm31, ymm21
 	vrsqrtph zmm16, zmm31
+	vrsqrtph xmm2{k6}, oword [0x76d]
+	vrsqrtph ymm3{k5}, ymm0
+	vrsqrtph zmm2{k1}, zmm4
+	vrsqrtph xmm0{k5}{z}, xmm1
+	vrsqrtph ymm0{k1}{z}, ymm0
+	vrsqrtph zmm2{k3}{z}, zword [0x783]
+	vrsqrtph zmm6, zmm5, {sae}

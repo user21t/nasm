@@ -15,3 +15,9 @@ default rel
 	vcvtneps2bf16 xmm19, ymm22
 	vcvtneps2bf16 xmm27, xmm18
 	vcvtneps2bf16 xmm17, ymm17
+	vcvtneps2bf16 xmm6{k6}, xmm7
+	vcvtneps2bf16 xmm7{k6}, ymm0
+	vcvtneps2bf16 ymm4{k6}, zword [0xc3b]
+	vcvtneps2bf16 xmm3{k2}{z}, xmm1
+	vcvtneps2bf16 xmm5{k7}{z}, yword [0x7e1]
+	vcvtneps2bf16 ymm7{k4}{z}, zmm2

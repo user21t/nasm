@@ -14,3 +14,9 @@ default rel
 	vpandq xmm16, xmm28, xmm26
 	vpandq ymm19, ymm24, ymm26
 	vpandq zmm16, zmm26, zmm25
+	vpandq xmm5{k1}, xmm0, oword [0x207]
+	vpandq ymm4{k1}, ymm5, ymm3
+	vpandq zmm0{k1}, zmm5, zword [0x73f]
+	vpandq xmm0{k5}{z}, xmm3, xmm4
+	vpandq ymm3{k3}{z}, ymm0, ymm7
+	vpandq zmm2{k6}{z}, zmm0, zmm6

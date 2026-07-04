@@ -19,3 +19,9 @@ default rel
 	vpaddusw ymm30, ymm19, ymm31
 	vpaddusw xmm21, xmm26, xmm24
 	vpaddusw ymm28, ymm25, ymm26
+	vpaddusw xmm5{k3}, xmm7, xmm6
+	vpaddusw ymm1{k3}, ymm6, yword [0xe60]
+	vpaddusw zmm5{k3}, zmm6, zword [0x552]
+	vpaddusw xmm4{k4}{z}, xmm0, oword [0x7a4]
+	vpaddusw ymm2{k7}{z}, ymm6, yword [0x9db]
+	vpaddusw zmm7{k7}{z}, zmm3, zmm0

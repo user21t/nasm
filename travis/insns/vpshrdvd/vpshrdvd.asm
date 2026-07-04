@@ -14,3 +14,9 @@ default rel
 	vpshrdvd xmm30, xmm21, xmm25
 	vpshrdvd ymm21, ymm20, ymm28
 	vpshrdvd zmm25, zmm31, zmm16
+	vpshrdvd xmm4{k7}, xmm1, xmm7
+	vpshrdvd ymm3{k4}, ymm6, ymm0
+	vpshrdvd zmm7{k5}, zmm5, zword [0x6ce]
+	vpshrdvd xmm6{k4}{z}, xmm4, xmm7
+	vpshrdvd ymm7{k4}{z}, ymm5, ymm0
+	vpshrdvd zmm4{k4}{z}, zmm1, zword [0x2f2]

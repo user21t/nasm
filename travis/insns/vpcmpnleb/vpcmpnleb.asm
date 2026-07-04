@@ -11,3 +11,6 @@ default rel
 	vpcmpnleb k6, xmm31, xmm25
 	vpcmpnleb k6, ymm19, ymm20
 	vpcmpnleb k7, zmm22, zmm31
+	vpcmpnleb k6{k4}, xmm2, oword [0x216]
+	vpcmpnleb k2{k3}, ymm3, ymm6
+	vpcmpnleb k6{k2}, zmm0, zmm1

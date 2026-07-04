@@ -11,3 +11,9 @@ default rel
 	vpblendmd xmm20, xmm22, xmm20
 	vpblendmd ymm18, ymm16, ymm29
 	vpblendmd zmm25, zmm30, zmm21
+	vpblendmd xmm6{k3}, xmm5, xmm5
+	vpblendmd ymm6{k1}, ymm3, ymm4
+	vpblendmd zmm3{k3}, zmm7, zmm1
+	vpblendmd xmm7{k2}{z}, xmm5, xmm0
+	vpblendmd ymm4{k3}{z}, ymm6, ymm0
+	vpblendmd zmm4{k6}{z}, zmm3, zword [0x96f]

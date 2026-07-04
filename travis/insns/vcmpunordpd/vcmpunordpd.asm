@@ -13,3 +13,7 @@ default rel
 	vcmpunordpd ymm14, ymm15, ymm15
 	vcmpunordpd k4, xmm8, xmm15
 	vcmpunordpd k4, ymm9, ymm15
+	vcmpunordpd k1{k2}, xmm4, xmm7
+	vcmpunordpd k1{k7}, ymm3, ymm4
+	vcmpunordpd k1{k1}, zmm2, zword [0x5b4]
+	vcmpunordpd k1, zmm3, zmm2, {sae}

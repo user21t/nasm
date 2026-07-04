@@ -11,3 +11,6 @@ default rel
 	vpcmpgeub k7, xmm19, xmm20
 	vpcmpgeub k6, ymm25, ymm31
 	vpcmpgeub k2, zmm28, zmm27
+	vpcmpgeub k7{k6}, xmm5, xmm7
+	vpcmpgeub k3{k4}, ymm0, ymm3
+	vpcmpgeub k6{k4}, zmm4, zmm5

@@ -13,3 +13,7 @@ default rel
 	vcmpeq_uspd ymm12, ymm15, ymm11
 	vcmpeq_uspd k2, xmm9, xmm12
 	vcmpeq_uspd k3, ymm9, ymm8
+	vcmpeq_uspd k2{k7}, xmm3, xmm0
+	vcmpeq_uspd k6{k4}, ymm1, ymm3
+	vcmpeq_uspd k2{k6}, zmm3, zmm6
+	vcmpeq_uspd k3, zmm0, zmm0, {sae}

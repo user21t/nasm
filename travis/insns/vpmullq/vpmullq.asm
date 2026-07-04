@@ -14,3 +14,9 @@ default rel
 	vpmullq xmm25, xmm22, xmm28
 	vpmullq ymm26, ymm29, ymm18
 	vpmullq zmm22, zmm24, zmm22
+	vpmullq xmm4{k4}, xmm5, xmm1
+	vpmullq ymm6{k4}, ymm5, ymm5
+	vpmullq zmm2{k3}, zmm7, zmm7
+	vpmullq xmm3{k6}{z}, xmm7, xmm3
+	vpmullq ymm5{k1}{z}, ymm6, yword [0x3da]
+	vpmullq zmm7{k5}{z}, zmm0, zmm1

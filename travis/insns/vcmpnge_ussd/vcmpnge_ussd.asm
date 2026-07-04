@@ -6,3 +6,5 @@ default rel
 	vcmpnge_ussd k2, xmm6, qword [0x872]
 	vcmpnge_ussd xmm9, xmm8, xmm9
 	vcmpnge_ussd k1, xmm9, xmm12
+	vcmpnge_ussd k2{k1}, xmm7, qword [0xccd]
+	vcmpnge_ussd k2, xmm3, xmm4, {sae}

@@ -15,3 +15,7 @@ default rel
 	vextracti32x4 xmm21, zmm24, 0x21
 	vextracti32x4 oword [0xe3b], ymm24, 0xb
 	vextracti32x4 oword [0x120], zmm20, 0xc7
+	vextracti32x4 xmm0{k1}, ymm1, 0x71
+	vextracti32x4 xmm4{k3}, zmm2, 0x9a
+	vextracti32x4 oword [0x28c]{k5}, ymm2, 0x55
+	vextracti32x4 oword [0xe3f]{k1}, zmm5, 0xd

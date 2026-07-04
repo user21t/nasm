@@ -14,3 +14,10 @@ default rel
 	vmaxph xmm22, xmm16, xmm19
 	vmaxph ymm18, ymm30, ymm17
 	vmaxph zmm17, zmm20, zmm28
+	vmaxph xmm7{k6}, xmm5, oword [0x703]
+	vmaxph ymm2{k2}, ymm3, ymm2
+	vmaxph zmm7{k5}, zmm3, zword [0x1d6]
+	vmaxph xmm5{k1}{z}, xmm0, xmm7
+	vmaxph ymm6{k7}{z}, ymm3, ymm1
+	vmaxph zmm0{k4}{z}, zmm2, zmm6
+	vmaxph zmm2, zmm4, zmm0, {sae}

@@ -13,3 +13,7 @@ default rel
 	vcmpfalseps ymm11, ymm11, ymm10
 	vcmpfalseps k3, xmm12, xmm10
 	vcmpfalseps k7, ymm9, ymm8
+	vcmpfalseps k7{k3}, xmm1, oword [0x8ce]
+	vcmpfalseps k7{k5}, ymm2, yword [0x186]
+	vcmpfalseps k4{k7}, zmm3, zmm7
+	vcmpfalseps k2, zmm0, zmm7, {sae}

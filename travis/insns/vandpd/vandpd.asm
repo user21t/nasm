@@ -19,3 +19,9 @@ default rel
 	vandpd ymm17, ymm26, ymm25
 	vandpd xmm26, xmm31, xmm25
 	vandpd ymm25, ymm30, ymm21
+	vandpd xmm1{k4}, xmm5, xmm3
+	vandpd ymm0{k3}, ymm1, ymm1
+	vandpd zmm5{k1}, zmm3, zmm5
+	vandpd xmm5{k3}{z}, xmm3, xmm0
+	vandpd ymm1{k3}{z}, ymm1, ymm5
+	vandpd zmm4{k1}{z}, zmm1, zmm6

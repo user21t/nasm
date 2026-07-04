@@ -14,3 +14,9 @@ default rel
 	vpmaxsq xmm22, xmm18, xmm19
 	vpmaxsq ymm22, ymm16, ymm30
 	vpmaxsq zmm23, zmm25, zmm28
+	vpmaxsq xmm4{k3}, xmm0, xmm6
+	vpmaxsq ymm2{k5}, ymm4, yword [0x60b]
+	vpmaxsq zmm1{k6}, zmm1, zword [0x3ac]
+	vpmaxsq xmm1{k1}{z}, xmm4, xmm0
+	vpmaxsq ymm2{k7}{z}, ymm3, ymm6
+	vpmaxsq zmm3{k7}{z}, zmm1, zword [0x24f]

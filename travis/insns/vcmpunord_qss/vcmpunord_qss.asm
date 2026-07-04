@@ -6,3 +6,5 @@ default rel
 	vcmpunord_qss k7, xmm4, xmm3
 	vcmpunord_qss xmm8, xmm11, xmm14
 	vcmpunord_qss k7, xmm13, xmm8
+	vcmpunord_qss k3{k5}, xmm7, dword [0xae6]
+	vcmpunord_qss k3, xmm3, xmm1, {sae}

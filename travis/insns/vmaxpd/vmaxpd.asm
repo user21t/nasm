@@ -19,3 +19,10 @@ default rel
 	vmaxpd ymm17, ymm24, ymm20
 	vmaxpd xmm19, xmm19, xmm18
 	vmaxpd ymm28, ymm29, ymm19
+	vmaxpd xmm7{k7}, xmm7, xmm0
+	vmaxpd ymm7{k2}, ymm5, ymm7
+	vmaxpd zmm2{k7}, zmm7, zword [0x261]
+	vmaxpd xmm5{k2}{z}, xmm1, xmm7
+	vmaxpd ymm2{k5}{z}, ymm6, ymm7
+	vmaxpd zmm0{k6}{z}, zmm5, zmm0
+	vmaxpd zmm6, zmm6, zmm2, {sae}

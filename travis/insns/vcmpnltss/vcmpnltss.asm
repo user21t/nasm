@@ -6,3 +6,5 @@ default rel
 	vcmpnltss k6, xmm7, xmm4
 	vcmpnltss xmm14, xmm10, xmm13
 	vcmpnltss k4, xmm8, xmm11
+	vcmpnltss k6{k2}, xmm5, xmm6
+	vcmpnltss k2, xmm5, xmm1, {sae}

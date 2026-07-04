@@ -19,3 +19,15 @@ default rel
 	vpsraw xmm16, xmm30, 0xae
 	vpsraw ymm21, ymm26, xmm29
 	vpsraw ymm16, ymm26, 0x42
+	vpsraw xmm5{k6}, xmm3, xmm4
+	vpsraw ymm3{k7}, ymm3, xmm3
+	vpsraw zmm1{k6}, zmm7, oword [0x101]
+	vpsraw xmm0{k3}, xmm1, 0xc5
+	vpsraw ymm6{k3}, ymm3, 0xdc
+	vpsraw zmm4{k4}, zword [0x4b9], 0x89
+	vpsraw xmm1{k2}{z}, xmm1, xmm2
+	vpsraw ymm0{k4}{z}, ymm3, xmm5
+	vpsraw zmm3{k4}{z}, zmm6, xmm5
+	vpsraw xmm5{k5}{z}, oword [0x332], 0x7
+	vpsraw ymm5{k4}{z}, ymm2, 0xb7
+	vpsraw zmm3{k4}{z}, zword [0x6f5], 0xcf

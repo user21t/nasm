@@ -16,3 +16,11 @@ default rel
 	vpermq ymm19, ymm25, 0xee
 	vpermq zmm18, zmm25, 0x4f
 	vpermq ymm21, ymm26, ymm20
+	vpermq ymm3{k7}, ymm6, 0xb2
+	vpermq zmm2{k4}, zmm3, 0xf6
+	vpermq ymm6{k7}, ymm1, ymm2
+	vpermq zmm6{k6}, zmm6, zword [0xbb1]
+	vpermq ymm1{k4}{z}, yword [0x649], 0x88
+	vpermq zmm1{k3}{z}, zmm2, 0xd0
+	vpermq ymm4{k5}{z}, ymm2, ymm2
+	vpermq zmm0{k2}{z}, zmm0, zmm0

@@ -11,3 +11,6 @@ default rel
 	vpcmpub k3, xmm31, xmm18, 0xd2
 	vpcmpub k5, ymm22, ymm23, 0x57
 	vpcmpub k6, zmm19, zmm25, 0xe
+	vpcmpub k4{k1}, xmm2, oword [0x51d], 0x3e
+	vpcmpub k7{k3}, ymm6, yword [0x526], 0x44
+	vpcmpub k7{k5}, zmm0, zmm3, 0x4

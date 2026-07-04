@@ -19,3 +19,9 @@ default rel
 	vpmulhrsw ymm25, ymm20, ymm28
 	vpmulhrsw xmm21, xmm28, xmm23
 	vpmulhrsw ymm24, ymm17, ymm18
+	vpmulhrsw xmm2{k5}, xmm0, oword [0xb04]
+	vpmulhrsw ymm0{k6}, ymm6, ymm7
+	vpmulhrsw zmm4{k3}, zmm2, zmm3
+	vpmulhrsw xmm5{k2}{z}, xmm4, oword [0xc58]
+	vpmulhrsw ymm7{k5}{z}, ymm6, yword [0xa9d]
+	vpmulhrsw zmm6{k2}{z}, zmm6, zword [0xff9]

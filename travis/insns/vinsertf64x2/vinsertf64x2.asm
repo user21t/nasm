@@ -9,3 +9,7 @@ default rel
 	vinsertf64x2 zmm9, zmm10, xmm12, 0xe0
 	vinsertf64x2 ymm26, ymm29, xmm25, 0xb7
 	vinsertf64x2 zmm28, zmm21, xmm27, 0x80
+	vinsertf64x2 ymm7{k7}, ymm2, xmm6, 0x3c
+	vinsertf64x2 zmm6{k5}, zmm5, xmm1, 0x38
+	vinsertf64x2 ymm1{k1}{z}, ymm0, xmm6, 0x64
+	vinsertf64x2 zmm4{k2}{z}, zmm5, xmm2, 0x4f

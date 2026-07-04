@@ -3,3 +3,4 @@ default rel
 	vcomxss xmm6, xmm5
 	vcomxss xmm14, xmm8
 	vcomxss xmm25, xmm20
+	vcomxss xmm3, xmm6, {sae}

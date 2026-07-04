@@ -13,3 +13,7 @@ default rel
 	vcmptrue_uqps ymm14, ymm14, ymm11
 	vcmptrue_uqps k4, xmm13, xmm11
 	vcmptrue_uqps k1, ymm10, ymm13
+	vcmptrue_uqps k7{k1}, xmm6, xmm2
+	vcmptrue_uqps k7{k7}, ymm3, yword [0xe89]
+	vcmptrue_uqps k6{k7}, zmm6, zword [0xef4]
+	vcmptrue_uqps k5, zmm5, zmm4, {sae}

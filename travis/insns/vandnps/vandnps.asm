@@ -19,3 +19,9 @@ default rel
 	vandnps ymm31, ymm20, ymm31
 	vandnps xmm28, xmm21, xmm17
 	vandnps ymm25, ymm30, ymm18
+	vandnps xmm5{k6}, xmm1, xmm6
+	vandnps ymm5{k7}, ymm0, ymm6
+	vandnps zmm5{k4}, zmm2, zword [0xe9a]
+	vandnps xmm4{k1}{z}, xmm0, xmm4
+	vandnps ymm3{k3}{z}, ymm3, ymm0
+	vandnps zmm6{k1}{z}, zmm3, zmm2

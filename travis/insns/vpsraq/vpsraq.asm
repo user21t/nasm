@@ -19,3 +19,15 @@ default rel
 	vpsraq ymm20, ymm25, xmm28
 	vpsraq zmm31, zmm19, xmm16
 	vpsraq xmm19, xmm25, 0x4a
+	vpsraq xmm0{k3}, xmm7, oword [0x7da]
+	vpsraq ymm3{k2}, ymm7, xmm1
+	vpsraq zmm1{k7}, zmm0, oword [0xdc3]
+	vpsraq xmm2{k2}, xmm4, 0xf3
+	vpsraq ymm2{k7}, ymm5, 0xca
+	vpsraq zmm0{k5}, zmm2, 0xec
+	vpsraq xmm3{k7}{z}, xmm5, xmm1
+	vpsraq ymm7{k5}{z}, ymm7, oword [0xc7d]
+	vpsraq zmm2{k6}{z}, zmm0, xmm1
+	vpsraq xmm6{k6}{z}, xmm7, 0x2e
+	vpsraq ymm2{k6}{z}, ymm0, 0xb3
+	vpsraq zmm7{k7}{z}, zword [0xf0d], 0xb9

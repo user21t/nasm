@@ -11,3 +11,6 @@ default rel
 	vpcmpneqd k7, xmm24, xmm26
 	vpcmpneqd k4, ymm20, ymm18
 	vpcmpneqd k2, zmm22, zmm23
+	vpcmpneqd k7{k6}, xmm6, oword [0xdeb]
+	vpcmpneqd k1{k5}, ymm3, ymm5
+	vpcmpneqd k7{k5}, zmm2, zmm7

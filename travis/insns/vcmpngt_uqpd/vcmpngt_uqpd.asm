@@ -13,3 +13,7 @@ default rel
 	vcmpngt_uqpd ymm10, ymm14, ymm15
 	vcmpngt_uqpd k3, xmm8, xmm9
 	vcmpngt_uqpd k6, ymm10, ymm15
+	vcmpngt_uqpd k1{k3}, xmm3, xmm7
+	vcmpngt_uqpd k1{k7}, ymm3, ymm5
+	vcmpngt_uqpd k5{k2}, zmm1, zmm4
+	vcmpngt_uqpd k6, zmm1, zmm0, {sae}

@@ -6,3 +6,5 @@ default rel
 	vcmpnle_usss k6, xmm4, dword [0x62d]
 	vcmpnle_usss xmm13, xmm10, xmm13
 	vcmpnle_usss k7, xmm9, xmm13
+	vcmpnle_usss k2{k5}, xmm0, dword [0x159]
+	vcmpnle_usss k5, xmm1, xmm3, {sae}

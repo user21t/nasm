@@ -11,3 +11,9 @@ default rel
 	vrsqrt14ps xmm19, xmm25
 	vrsqrt14ps ymm20, ymm27
 	vrsqrt14ps zmm20, zmm31
+	vrsqrt14ps xmm6{k6}, oword [0xda0]
+	vrsqrt14ps ymm2{k5}, yword [0x195]
+	vrsqrt14ps zmm0{k2}, zmm5
+	vrsqrt14ps xmm5{k7}{z}, oword [0x24f]
+	vrsqrt14ps ymm0{k5}{z}, ymm3
+	vrsqrt14ps zmm1{k5}{z}, zmm6

@@ -11,3 +11,9 @@ default rel
 	vpopcntb xmm20, xmm29
 	vpopcntb ymm25, ymm18
 	vpopcntb zmm22, zmm26
+	vpopcntb xmm2{k7}, xmm4
+	vpopcntb ymm0{k5}, ymm3
+	vpopcntb zmm7{k1}, zword [0x2d2]
+	vpopcntb xmm3{k7}{z}, oword [0x603]
+	vpopcntb ymm4{k1}{z}, yword [0xdd7]
+	vpopcntb zmm5{k2}{z}, zmm3

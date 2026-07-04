@@ -15,3 +15,10 @@ default rel
 	vfmsubadd213pd ymm27, ymm26, ymm27
 	vfmsubadd213pd xmm27, xmm16, xmm31
 	vfmsubadd213pd ymm27, ymm29, ymm24
+	vfmsubadd213pd xmm7{k1}, xmm6, xmm0
+	vfmsubadd213pd ymm4{k1}, ymm4, yword [0xe3f]
+	vfmsubadd213pd zmm7{k7}, zmm2, zword [0x5a2]
+	vfmsubadd213pd xmm0{k7}{z}, xmm7, xmm5
+	vfmsubadd213pd ymm0{k3}{z}, ymm3, ymm3
+	vfmsubadd213pd zmm5{k4}{z}, zmm2, zmm2
+	vfmsubadd213pd zmm6, zmm6, zmm7, {rn-sae}

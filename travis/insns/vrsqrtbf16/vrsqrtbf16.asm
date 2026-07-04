@@ -11,3 +11,9 @@ default rel
 	vrsqrtbf16 xmm19, xmm28
 	vrsqrtbf16 ymm23, ymm18
 	vrsqrtbf16 zmm29, zmm22
+	vrsqrtbf16 xmm3{k2}, oword [0x699]
+	vrsqrtbf16 ymm7{k5}, ymm6
+	vrsqrtbf16 zmm2{k7}, zmm1
+	vrsqrtbf16 xmm5{k6}{z}, xmm3
+	vrsqrtbf16 ymm7{k3}{z}, ymm7
+	vrsqrtbf16 zmm4{k6}{z}, zmm7

@@ -15,3 +15,9 @@ default rel
 	vpabsd ymm16, ymm24
 	vpabsd xmm22, xmm26
 	vpabsd ymm20, ymm17
+	vpabsd xmm6{k1}, oword [0x1c0]
+	vpabsd ymm7{k3}, ymm2
+	vpabsd zmm2{k5}, zmm1
+	vpabsd xmm1{k2}{z}, oword [0x9df]
+	vpabsd ymm1{k4}{z}, ymm6
+	vpabsd zmm5{k6}{z}, zword [0x243]

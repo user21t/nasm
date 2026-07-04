@@ -19,3 +19,4 @@ default rel
 	vcvtsi2sd xmm27, xmm24, dword [0x6d8]
 	vcvtsi2sd xmm28, xmm27, r16
 	vcvtsi2sd xmm30, xmm20, r16
+	vcvtsi2sd xmm4, xmm1, rcx, {rd-sae}

@@ -6,3 +6,5 @@ default rel
 	vcmpnge_uqss k3, xmm4, dword [0xdde]
 	vcmpnge_uqss xmm10, xmm15, xmm8
 	vcmpnge_uqss k3, xmm12, xmm9
+	vcmpnge_uqss k1{k5}, xmm3, xmm0
+	vcmpnge_uqss k2, xmm5, xmm3, {sae}

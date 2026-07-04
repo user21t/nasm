@@ -13,3 +13,7 @@ default rel
 	vcmpnle_uqpd ymm14, ymm11, ymm10
 	vcmpnle_uqpd k6, xmm9, xmm10
 	vcmpnle_uqpd k3, ymm10, ymm11
+	vcmpnle_uqpd k6{k1}, xmm6, xmm3
+	vcmpnle_uqpd k1{k5}, ymm5, ymm2
+	vcmpnle_uqpd k5{k6}, zmm6, zword [0xeef]
+	vcmpnle_uqpd k6, zmm3, zmm4, {sae}

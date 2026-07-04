@@ -9,3 +9,6 @@ default rel
 	vsubss xmm13, xmm9, xmm10
 	vsubss xmm19, xmm16, xmm17
 	vsubss xmm31, xmm18, xmm24
+	vsubss xmm3{k6}, xmm1, xmm5
+	vsubss xmm5{k5}{z}, xmm0, dword [0x40c]
+	vsubss xmm3, xmm5, xmm4, {ru-sae}

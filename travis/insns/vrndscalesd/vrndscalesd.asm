@@ -4,3 +4,5 @@ default rel
 	vrndscalesd xmm5, xmm0, qword [0x81b], 0x65
 	vrndscalesd xmm13, xmm8, xmm9, 0x6a
 	vrndscalesd xmm25, xmm19, xmm19, 0xfd
+	vrndscalesd xmm4{k2}, xmm0, qword [0xc3d], 0xe2
+	vrndscalesd xmm0{k6}{z}, xmm2, xmm5, 0xfe

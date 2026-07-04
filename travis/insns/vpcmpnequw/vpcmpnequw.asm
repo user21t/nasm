@@ -11,3 +11,6 @@ default rel
 	vpcmpnequw k6, xmm18, xmm31
 	vpcmpnequw k1, ymm25, ymm31
 	vpcmpnequw k6, zmm17, zmm27
+	vpcmpnequw k7{k3}, xmm6, xmm2
+	vpcmpnequw k3{k6}, ymm1, ymm2
+	vpcmpnequw k3{k3}, zmm7, zmm2

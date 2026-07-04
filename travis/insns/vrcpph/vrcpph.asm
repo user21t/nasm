@@ -11,3 +11,9 @@ default rel
 	vrcpph xmm24, xmm24
 	vrcpph ymm29, ymm22
 	vrcpph zmm16, zmm26
+	vrcpph xmm0{k7}, xmm1
+	vrcpph ymm7{k1}, ymm1
+	vrcpph zmm2{k5}, zmm7
+	vrcpph xmm0{k4}{z}, oword [0x89f]
+	vrcpph ymm0{k7}{z}, yword [0xbff]
+	vrcpph zmm0{k5}{z}, zmm1

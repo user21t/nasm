@@ -19,3 +19,9 @@ default rel
 	vpunpckhwd ymm31, ymm29, ymm28
 	vpunpckhwd xmm20, xmm21, xmm24
 	vpunpckhwd ymm30, ymm28, ymm20
+	vpunpckhwd xmm0{k2}, xmm3, xmm6
+	vpunpckhwd ymm2{k5}, ymm4, ymm0
+	vpunpckhwd zmm3{k7}, zmm7, zword [0x79e]
+	vpunpckhwd xmm0{k6}{z}, xmm3, xmm5
+	vpunpckhwd ymm6{k4}{z}, ymm3, ymm0
+	vpunpckhwd zmm1{k1}{z}, zmm6, zmm0

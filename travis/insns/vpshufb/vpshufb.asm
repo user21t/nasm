@@ -19,3 +19,9 @@ default rel
 	vpshufb ymm29, ymm31, ymm26
 	vpshufb xmm24, xmm19, xmm24
 	vpshufb ymm23, ymm31, ymm31
+	vpshufb xmm0{k2}, xmm3, xmm7
+	vpshufb ymm5{k5}, ymm2, ymm4
+	vpshufb zmm1{k3}, zmm5, zword [0xdee]
+	vpshufb xmm0{k4}{z}, xmm1, xmm6
+	vpshufb ymm0{k1}{z}, ymm7, ymm2
+	vpshufb zmm2{k7}{z}, zmm3, zmm0

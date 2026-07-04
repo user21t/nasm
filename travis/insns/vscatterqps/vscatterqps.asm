@@ -11,3 +11,6 @@ default rel
 	vscatterqps [xmm31*1], xmm17
 	vscatterqps [ymm22*1], xmm28
 	vscatterqps [zmm26*1], ymm25
+	vscatterqps [xmm0*1]{k3}, xmm1
+	vscatterqps [ymm2*1]{k5}, xmm0
+	vscatterqps [zmm0*1]{k6}, ymm6

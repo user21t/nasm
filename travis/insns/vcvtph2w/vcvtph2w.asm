@@ -11,3 +11,10 @@ default rel
 	vcvtph2w xmm25, xmm30
 	vcvtph2w ymm28, ymm31
 	vcvtph2w zmm28, zmm30
+	vcvtph2w xmm5{k6}, xmm2
+	vcvtph2w ymm5{k4}, ymm4
+	vcvtph2w zmm3{k3}, zmm5
+	vcvtph2w xmm2{k3}{z}, xmm6
+	vcvtph2w ymm2{k7}{z}, ymm0
+	vcvtph2w zmm2{k5}{z}, zmm6
+	vcvtph2w zmm7, zmm7, {rn-sae}

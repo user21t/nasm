@@ -15,3 +15,12 @@ default rel
 	vmovapd xmm31, xmm26
 	vmovapd ymm30, ymm18
 	vmovapd ymm28, ymm17
+	vmovapd xmm0{k4}, xmm2
+	vmovapd ymm4{k1}, ymm4
+	vmovapd zmm5{k6}, zmm0
+	vmovapd xmm5{k7}, xmm4
+	vmovapd ymm4{k1}, ymm6
+	vmovapd zmm6{k6}, zmm6
+	vmovapd oword [0xc80]{k6}, xmm5
+	vmovapd yword [0x5de]{k5}, ymm7
+	vmovapd zword [0x8b7]{k3}, zmm6

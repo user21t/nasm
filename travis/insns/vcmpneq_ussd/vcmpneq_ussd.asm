@@ -6,3 +6,5 @@ default rel
 	vcmpneq_ussd k6, xmm6, xmm0
 	vcmpneq_ussd xmm14, xmm12, xmm8
 	vcmpneq_ussd k2, xmm9, xmm15
+	vcmpneq_ussd k7{k3}, xmm5, xmm6
+	vcmpneq_ussd k2, xmm6, xmm6, {sae}

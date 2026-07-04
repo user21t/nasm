@@ -4,3 +4,6 @@ default rel
 	vaddsh xmm3, xmm1, word [0xaba]
 	vaddsh xmm11, xmm14, xmm13
 	vaddsh xmm21, xmm30, xmm17
+	vaddsh xmm3{k4}, xmm7, xmm3
+	vaddsh xmm0{k1}{z}, xmm1, word [0x75a]
+	vaddsh xmm5, xmm6, xmm4, {rz-sae}

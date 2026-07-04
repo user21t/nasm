@@ -13,3 +13,7 @@ default rel
 	vcmpfalsepd ymm10, ymm13, ymm12
 	vcmpfalsepd k1, xmm12, xmm11
 	vcmpfalsepd k6, ymm12, ymm8
+	vcmpfalsepd k4{k7}, xmm0, xmm7
+	vcmpfalsepd k5{k6}, ymm3, ymm5
+	vcmpfalsepd k6{k1}, zmm7, zmm4
+	vcmpfalsepd k4, zmm6, zmm6, {sae}

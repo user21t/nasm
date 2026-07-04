@@ -15,3 +15,9 @@ default rel
 	vpmovzxbw ymm31, xmm24
 	vpmovzxbw xmm31, xmm26
 	vpmovzxbw ymm17, xmm18
+	vpmovzxbw xmm1{k1}, xmm4
+	vpmovzxbw ymm4{k3}, oword [0xef1]
+	vpmovzxbw zmm1{k1}, ymm6
+	vpmovzxbw xmm0{k2}{z}, xmm1
+	vpmovzxbw ymm2{k6}{z}, xmm0
+	vpmovzxbw zmm6{k2}{z}, yword [0x62c]

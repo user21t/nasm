@@ -14,3 +14,9 @@ default rel
 	vrangepd xmm22, xmm21, xmm26, 0x83
 	vrangepd ymm18, ymm31, ymm23, 0xea
 	vrangepd zmm19, zmm20, zmm24, 0xd5
+	vrangepd xmm0{k5}, xmm4, xmm6, 0x6e
+	vrangepd ymm5{k4}, ymm1, ymm6, 0x34
+	vrangepd zmm2{k3}, zmm7, zword [0x573], 0xca
+	vrangepd xmm4{k5}{z}, xmm2, xmm0, 0x1a
+	vrangepd ymm7{k1}{z}, ymm5, yword [0x353], 0x96
+	vrangepd zmm1{k3}{z}, zmm3, zmm3, 0xd3

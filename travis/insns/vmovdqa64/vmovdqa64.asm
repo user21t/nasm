@@ -15,3 +15,15 @@ default rel
 	vmovdqa64 ymm27, ymm24
 	vmovdqa64 zmm27, zmm21
 	vmovdqa64 xmm31, xmm18
+	vmovdqa64 xmm7{k3}, xmm1
+	vmovdqa64 ymm1{k3}, ymm1
+	vmovdqa64 zmm3{k6}, zmm1
+	vmovdqa64 xmm0{k2}, xmm0
+	vmovdqa64 ymm2{k6}, ymm0
+	vmovdqa64 zmm5{k1}, zmm2
+	vmovdqa64 xmm4{k1}{z}, xmm6
+	vmovdqa64 ymm0{k4}{z}, ymm3
+	vmovdqa64 zmm2{k7}{z}, zmm2
+	vmovdqa64 xmm2{k3}{z}, xmm3
+	vmovdqa64 yword [0x11e]{k1}{z}, ymm4
+	vmovdqa64 zmm2{k5}{z}, zmm3

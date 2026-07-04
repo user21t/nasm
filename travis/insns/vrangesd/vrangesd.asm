@@ -4,3 +4,5 @@ default rel
 	vrangesd xmm5, xmm7, xmm3, 0x76
 	vrangesd xmm13, xmm10, xmm14, 0x77
 	vrangesd xmm16, xmm30, xmm18, 0x54
+	vrangesd xmm6{k5}, xmm4, qword [0x4aa], 0xfc
+	vrangesd xmm5{k4}{z}, xmm1, xmm7, 0x99

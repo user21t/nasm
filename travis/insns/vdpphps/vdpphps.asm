@@ -11,3 +11,9 @@ default rel
 	vdpphps xmm28, xmm25, xmm28
 	vdpphps ymm18, ymm21, ymm18
 	vdpphps zmm21, zmm29, zmm22
+	vdpphps xmm5{k7}, xmm1, oword [0x732]
+	vdpphps ymm3{k7}, ymm2, ymm5
+	vdpphps zmm1{k5}, zmm7, zmm6
+	vdpphps xmm3{k7}{z}, xmm5, oword [0xff1]
+	vdpphps ymm0{k2}{z}, ymm1, ymm5
+	vdpphps zmm0{k4}{z}, zmm3, zmm7

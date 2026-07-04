@@ -11,3 +11,9 @@ default rel
 	vcvthf82ph xmm16, xmm28
 	vcvthf82ph ymm18, xmm31
 	vcvthf82ph zmm30, ymm18
+	vcvthf82ph xmm7{k2}, qword [0x8a9]
+	vcvthf82ph ymm7{k5}, xmm3
+	vcvthf82ph zmm2{k4}, ymm4
+	vcvthf82ph xmm4{k7}{z}, xmm4
+	vcvthf82ph ymm6{k1}{z}, xmm2
+	vcvthf82ph zmm6{k4}{z}, ymm1

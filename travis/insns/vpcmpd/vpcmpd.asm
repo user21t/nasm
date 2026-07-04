@@ -11,3 +11,6 @@ default rel
 	vpcmpd k7, xmm28, xmm18, 0x1
 	vpcmpd k2, ymm16, ymm24, 0x9a
 	vpcmpd k7, zmm19, zmm21, 0x87
+	vpcmpd k2{k7}, xmm3, oword [0xddf], 0xd6
+	vpcmpd k3{k5}, ymm3, ymm7, 0x40
+	vpcmpd k2{k6}, zmm0, zmm7, 0x69

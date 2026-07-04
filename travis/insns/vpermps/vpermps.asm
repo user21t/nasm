@@ -14,3 +14,7 @@ default rel
 	vpermps ymm20, ymm23, ymm20
 	vpermps ymm20, ymm21, ymm29
 	vpermps zmm26, zmm23, zmm28
+	vpermps ymm2{k1}, ymm3, ymm2
+	vpermps zmm3{k4}, zmm0, zmm0
+	vpermps ymm4{k6}{z}, ymm3, yword [0xbc2]
+	vpermps zmm2{k3}{z}, zmm5, zword [0x772]

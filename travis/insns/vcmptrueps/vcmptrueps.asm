@@ -13,3 +13,7 @@ default rel
 	vcmptrueps ymm11, ymm12, ymm8
 	vcmptrueps k4, xmm11, xmm13
 	vcmptrueps k5, ymm11, ymm13
+	vcmptrueps k2{k3}, xmm5, xmm2
+	vcmptrueps k5{k5}, ymm3, ymm7
+	vcmptrueps k4{k1}, zmm1, zmm1
+	vcmptrueps k2, zmm4, zmm6, {sae}

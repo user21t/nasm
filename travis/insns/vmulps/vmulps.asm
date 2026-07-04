@@ -19,3 +19,10 @@ default rel
 	vmulps ymm18, ymm16, ymm21
 	vmulps xmm19, xmm28, xmm20
 	vmulps ymm31, ymm18, ymm31
+	vmulps xmm7{k5}, xmm3, xmm5
+	vmulps ymm4{k1}, ymm3, ymm3
+	vmulps zmm6{k3}, zmm7, zmm4
+	vmulps xmm0{k7}{z}, xmm7, xmm1
+	vmulps ymm0{k7}{z}, ymm3, ymm6
+	vmulps zmm0{k3}{z}, zmm0, zmm0
+	vmulps zmm1, zmm0, zmm5, {rd-sae}

@@ -13,3 +13,7 @@ default rel
 	vcmpnge_uqps ymm14, ymm11, ymm10
 	vcmpnge_uqps k3, xmm9, xmm9
 	vcmpnge_uqps k7, ymm12, ymm13
+	vcmpnge_uqps k1{k2}, xmm0, xmm7
+	vcmpnge_uqps k1{k6}, ymm1, ymm3
+	vcmpnge_uqps k6{k4}, zmm6, zmm6
+	vcmpnge_uqps k6, zmm7, zmm2, {sae}

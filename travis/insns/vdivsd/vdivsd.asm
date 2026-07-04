@@ -9,3 +9,6 @@ default rel
 	vdivsd xmm8, xmm9, xmm13
 	vdivsd xmm31, xmm30, xmm24
 	vdivsd xmm24, xmm22, xmm26
+	vdivsd xmm3{k3}, xmm3, xmm4
+	vdivsd xmm5{k6}{z}, xmm3, qword [0x23e]
+	vdivsd xmm6, xmm0, xmm4, {rd-sae}

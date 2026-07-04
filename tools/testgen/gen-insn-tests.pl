@@ -476,6 +476,122 @@ sub optional_operand_index {
     return undef;
 }
 
+#-----------------------------------------------------------------------
+# EVEX decorator ({k1}/{z}/{1toN}/{sae}/{rn-sae}...) coverage.
+#
+# insns.xda marks operand tokens with the decorators that operand may
+# carry (see x86/insns.pl's decorator-stripping regex,
+# `s/^(b(16|32|64)|mask|z|er|sae)$//`, on the same '|'-separated operand
+# sub-fields as the rest of the token). Semantics (confirmed against
+# `asm/parser.c`'s parse_decorators() and test/avx512*.asm):
+#   mask   - "{k1}".."{k7}" written directly after the register (or,
+#            for masked-store forms, memory) operand text; k0 is
+#            skipped, same as the plain kreg pool (means "no mask").
+#   z      - (always paired with mask in insns.xda) adds "{z}"
+#            immediately after the mask suffix -- zeroing- vs merging-
+#            masking are two independent EVEX bits worth exercising
+#            separately, hence separate "mask" and "maskz" lines below.
+#   b16/32/64 - broadcast decorator "{1toN}", only meaningful when the
+#            marked (register-or-memory) operand resolves to *memory*;
+#            N = (operand's vector width in bits) / (16, 32, or 64).
+#   sae/er - "{sae}" or one of "{rn-sae}"/"{rd-sae}"/"{ru-sae}"/"{rz-sae}"
+#            (embedded rounding always specifies one of the 4 modes;
+#            plain SAE does not), only meaningful when the marked
+#            operand resolves to a *register* -- written as a separate
+#            trailing pseudo-operand after all real operands, e.g.
+#            "vaddpd zmm30,zmm29,zmm28,{rn-sae}".
+#-----------------------------------------------------------------------
+
+sub token_decorators {
+    my ($tok) = @_;
+    my %d;
+    $d{$1} = 1 while $tok =~ /\|(mask|z|sae|er|b16|b32|b64)\b/g;
+    return \%d;
+}
+
+# Vector width in bits implied by a base token name -- used to compute
+# the broadcast count N in "{1toN}".
+sub vec_bits_of_base {
+    my ($base) = @_;
+    return 128 if $base =~ /^xmm/;
+    return 256 if $base =~ /^ymm/;
+    return 512 if $base =~ /^zmm/;
+    return $1 + 0 if $base =~ /^(?:mem|rm)(\d+)$/;
+    return undef;
+}
+
+# Force-memory text for a decorator line's broadcast-marked operand
+# (regmem()-based tokens default to mostly-register; the whole point of
+# this line is to exercise the memory+broadcast form specifically).
+sub force_memory_text {
+    my ($rng, $base) = @_;
+    return mem_operand($rng, $1 + 0) if $base =~ /^(?:mem|rm)(\d+)$/;
+    return mem_operand($rng, 128) if $base =~ /^xmmrm/;
+    return mem_operand($rng, 256) if $base eq 'ymmrm256';
+    return mem_operand($rng, 512) if $base eq 'zmmrm512';
+    return undef;
+}
+
+# Force-register text for a decorator line's sae/er-marked operand
+# (sae/er are only legal when that operand is a register, never
+# memory); always drawn from the 'low' (0-7) tier, and sized according
+# to the token's own declared width (matters for e.g. VCVTSI2SD's
+# rm32-vs-rm64|er templates -- {rn-sae} is only legal with the rm64/
+# 64-bit-register form).
+sub force_register_text {
+    my ($rng, $base) = @_;
+    return pick($rng, @{ gpr_pool($1 + 0, 'low') }) if $base =~ /^rm(8|16|32|64)$/;
+    return pick($rng, @{ gpr_pool(16, 'low') }) if $base eq 'rm_sel';
+    return pick($rng, @xmm_lo) if $base =~ /^xmmrm/;
+    return pick($rng, @ymm_lo) if $base eq 'ymmrm256';
+    return pick($rng, @zmm_lo) if $base eq 'zmmrm512';
+    return undef;
+}
+
+my @saeer_er_suffixes = qw(rn-sae rd-sae ru-sae rz-sae);
+
+# Build one decorated instruction line for $family ('mask', 'maskz',
+# 'broadcast', or 'saeer'), or undef if this template has no operand
+# carrying that decorator family (or generation otherwise fails).
+sub build_decorated_line {
+    my ($rng, $mnem, $ops, $is_branch, $family) = @_;
+    my @operands;
+    my $found = 0;
+    my $trailing;
+    for my $tok (@$ops) {
+        my $base = base_token($tok);
+        my $deco = token_decorators($tok);
+        my $text;
+        if (($family eq 'mask' || $family eq 'maskz') && $deco->{mask}) {
+            $text = gen_operand($rng, $tok, $mnem, $is_branch);
+            return undef unless defined $text;
+            $text .= '{' . pick($rng, @kreg) . '}';
+            $text .= '{z}' if $family eq 'maskz';
+            $found = 1;
+        } elsif ($family eq 'broadcast' && ($deco->{b16} || $deco->{b32} || $deco->{b64})) {
+            my $elem = $deco->{b16} ? 16 : $deco->{b32} ? 32 : 64;
+            $text = force_memory_text($rng, $base);
+            return undef unless defined $text;
+            my $vecbits = vec_bits_of_base($base);
+            return undef unless $vecbits;
+            $text .= '{1to' . int($vecbits / $elem) . '}';
+            $found = 1;
+        } elsif ($family eq 'saeer' && ($deco->{sae} || $deco->{er})) {
+            $text = force_register_text($rng, $base);
+            return undef unless defined $text;
+            $trailing = $deco->{er} ? pick($rng, @saeer_er_suffixes) : 'sae';
+            $found = 1;
+        } else {
+            $text = gen_operand($rng, $tok, $mnem, $is_branch);
+            return undef unless defined $text;
+        }
+        push @operands, $text;
+    }
+    return undef unless $found;
+    push @operands, "{$trailing}" if defined $trailing;
+    return { text => lc($mnem) . ' ' . join(', ', @operands), needs64 => 0 };
+}
+
 sub make_rng {
     my ($seedval) = @_;
     # Small deterministic xorshift-ish PRNG so runs are reproducible
@@ -525,18 +641,23 @@ for my $mnem (sort keys %by_mnemonic) {
     # Sample up to $per_mnem distinct operand-arity/type combinations,
     # deterministically but varied across the available templates.
     my %seen;
-    my @sample;
+    my @dedup_all;    # every distinct operand-arity/type combination, uncapped
     for my $t (@templates) {
         my $key = join(',', @{ $t->{ops} });
         next if $seen{$key}++;
-        push @sample, $t;
+        push @dedup_all, $t;
     }
+    my @sample = @dedup_all;
     @sample = @sample[0 .. $per_mnem-1] if scalar(@sample) > $per_mnem;
 
     my $is_branch = $branch_mnemonic{$mnem} ? 1 : 0;
     my @lines;        # { text => ..., needs64 => 0|1 }
-    my @extra_hireg;  # candidate hireg-tier lines, one per eligible template
-    my @extra_apxreg; # candidate apxreg-tier lines, one per eligible template
+    my @extra_hireg;      # candidate hireg-tier lines, one per eligible template
+    my @extra_apxreg;     # candidate apxreg-tier lines, one per eligible template
+    my @extra_mask;       # candidate {k1}-masked lines
+    my @extra_maskz;      # candidate {k1}{z}-masked lines
+    my @extra_broadcast;  # candidate {1toN}-broadcast lines
+    my @extra_saeer;      # candidate {sae}/{rn-sae}-decorated lines
     for my $t (@sample) {
         my $opt_idx = optional_operand_index($t->{ops});
         my $extendable = has_extendable_token($t->{ops});
@@ -586,6 +707,28 @@ for my $mnem (sort keys %by_mnemonic) {
                 my $al = build_variant_line($rng, $mnem, $t->{ops}, $is_branch, 'apxreg');
                 push @extra_apxreg, $al if defined $al;
             }
+
+        }
+    }
+
+    # EVEX decorator coverage: once per *distinct* template across the
+    # mnemonic's *entire* template set (not just the capped @sample --
+    # decorator-bearing EVEX forms of a mnemonic are frequently appended
+    # well after the plain SSE/AVX forms in insns.xda, e.g. VMOVAPD's
+    # AVX512 mask-on-memory-destination templates come after its first
+    # four (non-decorated) AVX templates, so relying on @sample alone
+    # would silently never exercise them), try each of the four
+    # independent decorator families this template's operand tokens
+    # advertise support for (see build_decorated_line() above).
+    # Candidates only -- whether they actually get included in the
+    # generated file is decided by the staged probe below, for the same
+    # reason as hireg/apxreg above.
+    for my $t (@dedup_all) {
+        for my $fam_pair (['mask', \@extra_mask], ['maskz', \@extra_maskz],
+                           ['broadcast', \@extra_broadcast], ['saeer', \@extra_saeer]) {
+            my ($fam, $bucket) = @$fam_pair;
+            my $dl = build_decorated_line($rng, $mnem, $t->{ops}, $is_branch, $fam);
+            push @$bucket, $dl if defined $dl;
         }
     }
 
@@ -610,51 +753,50 @@ for my $mnem (sort keys %by_mnemonic) {
     # they don't get captured into every stderr golden.
     my $warn_opts = '-w-ea-absolute -w-implicit-abs-deprecated';
 
-    # Staged-fallback probe: if we have hireg/apxreg candidate lines,
-    # try including both, then just hireg, then just apxreg, then
-    # neither -- keeping the first combination that actually assembles.
-    # The last (neither) stage is guaranteed to succeed, since @lines
-    # alone is exactly the pre-existing, already-validated generator
-    # behavior. This bounds the extra probing cost to a handful of
-    # throwaway nasm invocations only for mnemonics where the
-    # extended-register forms don't apply, while costing nothing extra
-    # in the common (all-succeed) case.
+    # Staged-probe: each "extra" candidate-line category (hireg,
+    # apxreg, mask, maskz, broadcast, saeer) is tried independently,
+    # cumulatively on top of whichever earlier categories already
+    # passed, and only kept if it actually assembles. This bounds the
+    # extra probing cost to a handful of throwaway nasm invocations per
+    # category (only paid for mnemonics/templates that have candidates
+    # for that category at all), while guaranteeing @lines alone --
+    # the pre-existing, already-validated generator behavior -- is
+    # always the floor if every category fails.
     #
     # Which bit widths need to be probed: always 64 (that's where the
     # extra lines live), *and* 16/32 too whenever @narrow_lines is
     # empty -- in that case the per-bits loop below reuses the same
     # "full" file for every width (see the $asmfile ternary further
-    # down), so a hireg/apxreg line that only 64-bit mode can encode
-    # would otherwise silently break 16/32-bit coverage for such
-    # mnemonics (all of whose *only* templates happen to need 64-bit
+    # down), so a candidate line that only 64-bit mode can encode would
+    # otherwise silently break 16/32-bit coverage for such mnemonics
+    # (all of whose *only* templates happen to need 64-bit-sized
     # register operands, e.g. URDMSR/UWRMSR).
-    my @full_lines = @lines;
-    if (@extra_hireg || @extra_apxreg) {
-        my @probe_bits = @narrow_lines ? (64) : (16, 32, 64);
-        my @attempts = ([@extra_hireg, @extra_apxreg], [@extra_hireg], [@extra_apxreg], []);
-        for my $extra (@attempts) {
-            next if !@$extra && $extra != $attempts[-1]; # skip empty non-final combos
-            my $candidate = [@lines, @$extra];
-            my $body = render_body($candidate, $is_branch, 1);
-            my $probe_asm = "$dirname/.probe_" . lc($mnem) . '.asm';
-            my $probe_bin = "$probe_asm.bin";
-            open(my $pfh, '>', $probe_asm) or die "$probe_asm: $!\n";
-            print $pfh $body;
-            close($pfh);
-            my $ok = 1;
-            for my $pbits (@probe_bits) {
-                my $cmd = sprintf('%s --bits %d -f bin %s %s -o %s >/dev/null 2>&1',
-                                   $nasm_bin, $pbits, $warn_opts, $probe_asm, $probe_bin);
-                system($cmd);
-                if ($? != 0 || !-s $probe_bin) { $ok = 0; last; }
-                unlink($probe_bin);
-            }
-            unlink($probe_asm, $probe_bin);
-            if ($ok) {
-                @full_lines = @$candidate;
-                last;
-            }
+    my @probe_bits = @narrow_lines ? (64) : (16, 32, 64);
+    my $probe_asm = "$dirname/.probe_" . lc($mnem) . '.asm';
+    my $probe_bin = "$probe_asm.bin";
+    my $probe_ok = sub {
+        my ($candidate) = @_;
+        open(my $pfh, '>', $probe_asm) or die "$probe_asm: $!\n";
+        print $pfh render_body($candidate, $is_branch, 1);
+        close($pfh);
+        my $ok = 1;
+        for my $pbits (@probe_bits) {
+            my $cmd = sprintf('%s --bits %d -f bin %s %s -o %s >/dev/null 2>&1',
+                               $nasm_bin, $pbits, $warn_opts, $probe_asm, $probe_bin);
+            system($cmd);
+            if ($? != 0 || !-s $probe_bin) { $ok = 0; last; }
+            unlink($probe_bin);
         }
+        unlink($probe_asm, $probe_bin);
+        return $ok;
+    };
+
+    my @full_lines = @lines;
+    for my $cat (\@extra_hireg, \@extra_apxreg, \@extra_mask, \@extra_maskz,
+                 \@extra_broadcast, \@extra_saeer) {
+        next unless @$cat;
+        my $candidate = [@full_lines, @$cat];
+        @full_lines = @$candidate if $probe_ok->($candidate);
     }
 
     my $asmfile_full = lc($mnem) . '.asm';

@@ -13,3 +13,6 @@ default rel
 	vcmppd ymm8, ymm8, ymm10, 0xb7
 	vcmppd k7, xmm15, xmm9, 0xfa
 	vcmppd k5, ymm13, ymm15, 0x8a
+	vcmppd k7{k6}, xmm7, xmm6, 0x50
+	vcmppd k7{k6}, ymm7, ymm4, 0x7a
+	vcmppd k1{k2}, zmm4, zmm7, 0x5f

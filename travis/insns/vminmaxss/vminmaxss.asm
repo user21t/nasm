@@ -3,3 +3,5 @@ default rel
 	vminmaxss xmm0, xmm6, xmm4, 0x4d
 	vminmaxss xmm15, xmm9, xmm13, 0x30
 	vminmaxss xmm25, xmm20, xmm18, 0x89
+	vminmaxss xmm2{k6}, xmm0, xmm4, 0x5d
+	vminmaxss xmm4{k1}{z}, xmm5, xmm4, 0x8

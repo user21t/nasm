@@ -19,3 +19,9 @@ default rel
 	vunpcklps ymm30, ymm31, ymm22
 	vunpcklps xmm16, xmm28, xmm18
 	vunpcklps ymm21, ymm21, ymm21
+	vunpcklps xmm2{k7}, xmm5, oword [0xfff]
+	vunpcklps ymm3{k5}, ymm2, yword [0x8e9]
+	vunpcklps zmm6{k3}, zmm4, zmm4
+	vunpcklps xmm3{k2}{z}, xmm7, xmm3
+	vunpcklps ymm3{k6}{z}, ymm2, yword [0xf0d]
+	vunpcklps zmm2{k2}{z}, zmm1, zmm1

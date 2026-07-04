@@ -11,3 +11,10 @@ default rel
 	vsqrtph xmm17, xmm31
 	vsqrtph ymm22, ymm17
 	vsqrtph zmm21, zmm29
+	vsqrtph xmm6{k3}, xmm7
+	vsqrtph ymm2{k2}, yword [0xcf0]
+	vsqrtph zmm0{k1}, zmm0
+	vsqrtph xmm2{k3}{z}, xmm5
+	vsqrtph ymm5{k7}{z}, ymm0
+	vsqrtph zmm0{k1}{z}, zmm6
+	vsqrtph zmm3, zmm3, {rz-sae}

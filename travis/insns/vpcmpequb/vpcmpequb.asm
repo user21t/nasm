@@ -11,3 +11,6 @@ default rel
 	vpcmpequb k5, xmm27, xmm21
 	vpcmpequb k2, ymm20, ymm31
 	vpcmpequb k2, zmm26, zmm25
+	vpcmpequb k7{k7}, xmm0, xmm7
+	vpcmpequb k3{k1}, ymm2, yword [0x34d]
+	vpcmpequb k2{k5}, zmm5, zword [0x4ff]

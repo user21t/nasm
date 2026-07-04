@@ -11,3 +11,6 @@ default rel
 	vpscatterqq [xmm17*1], xmm28
 	vpscatterqq [ymm27*1], ymm17
 	vpscatterqq [zmm23*1], zmm23
+	vpscatterqq [xmm3*1]{k3}, xmm0
+	vpscatterqq [ymm7*1]{k1}, ymm0
+	vpscatterqq [zmm3*1]{k3}, zmm2

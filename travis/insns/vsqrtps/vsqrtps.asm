@@ -15,3 +15,10 @@ default rel
 	vsqrtps ymm30, ymm31
 	vsqrtps xmm27, xmm18
 	vsqrtps ymm23, ymm27
+	vsqrtps xmm4{k4}, xmm3
+	vsqrtps ymm7{k6}, ymm1
+	vsqrtps zmm3{k3}, zmm1
+	vsqrtps xmm5{k5}{z}, xmm5
+	vsqrtps ymm5{k1}{z}, ymm4
+	vsqrtps zmm0{k7}{z}, zmm7
+	vsqrtps zmm2, zmm5, {rn-sae}

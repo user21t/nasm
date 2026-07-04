@@ -19,3 +19,10 @@ default rel
 	vsubps ymm17, ymm22, ymm22
 	vsubps xmm25, xmm19, xmm21
 	vsubps ymm16, ymm23, ymm18
+	vsubps xmm2{k2}, xmm3, xmm4
+	vsubps ymm5{k5}, ymm2, ymm6
+	vsubps zmm1{k5}, zmm3, zmm0
+	vsubps xmm5{k2}{z}, xmm2, xmm2
+	vsubps ymm1{k2}{z}, ymm7, yword [0x786]
+	vsubps zmm6{k5}{z}, zmm1, zmm0
+	vsubps zmm5, zmm6, zmm4, {rd-sae}

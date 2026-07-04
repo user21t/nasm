@@ -11,3 +11,6 @@ default rel
 	vpcmpnleuq k3, xmm19, xmm19
 	vpcmpnleuq k7, ymm27, ymm25
 	vpcmpnleuq k5, zmm25, zmm25
+	vpcmpnleuq k2{k3}, xmm3, xmm3
+	vpcmpnleuq k7{k4}, ymm3, ymm0
+	vpcmpnleuq k3{k2}, zmm7, zmm5

@@ -15,3 +15,15 @@ default rel
 	vmovdqu16 ymm16, ymm27
 	vmovdqu16 zmm25, zmm18
 	vmovdqu16 xmm28, xmm29
+	vmovdqu16 xmm4{k5}, oword [0xf5a]
+	vmovdqu16 ymm7{k3}, ymm6
+	vmovdqu16 zmm1{k1}, zmm3
+	vmovdqu16 xmm1{k3}, xmm2
+	vmovdqu16 ymm2{k6}, ymm2
+	vmovdqu16 zmm0{k2}, zmm0
+	vmovdqu16 xmm7{k2}{z}, xmm4
+	vmovdqu16 ymm2{k2}{z}, ymm7
+	vmovdqu16 zmm2{k3}{z}, zmm6
+	vmovdqu16 oword [0xfc0]{k1}{z}, xmm1
+	vmovdqu16 ymm7{k4}{z}, ymm6
+	vmovdqu16 zmm6{k7}{z}, zmm5

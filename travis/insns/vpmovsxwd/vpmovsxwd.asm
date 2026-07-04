@@ -15,3 +15,9 @@ default rel
 	vpmovsxwd ymm18, xmm17
 	vpmovsxwd xmm29, xmm17
 	vpmovsxwd ymm18, xmm27
+	vpmovsxwd xmm6{k5}, xmm1
+	vpmovsxwd ymm1{k7}, xmm2
+	vpmovsxwd zmm0{k7}, yword [0x815]
+	vpmovsxwd xmm7{k2}{z}, xmm2
+	vpmovsxwd ymm6{k6}{z}, xmm3
+	vpmovsxwd zmm5{k4}{z}, yword [0x9fe]

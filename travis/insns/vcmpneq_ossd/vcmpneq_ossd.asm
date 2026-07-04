@@ -6,3 +6,5 @@ default rel
 	vcmpneq_ossd k4, xmm7, xmm7
 	vcmpneq_ossd xmm14, xmm10, xmm14
 	vcmpneq_ossd k5, xmm9, xmm12
+	vcmpneq_ossd k4{k4}, xmm4, xmm2
+	vcmpneq_ossd k4, xmm1, xmm0, {sae}

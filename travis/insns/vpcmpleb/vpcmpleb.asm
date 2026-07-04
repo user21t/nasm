@@ -11,3 +11,6 @@ default rel
 	vpcmpleb k7, xmm19, xmm20
 	vpcmpleb k7, ymm16, ymm24
 	vpcmpleb k5, zmm21, zmm19
+	vpcmpleb k2{k2}, xmm0, oword [0x5d1]
+	vpcmpleb k3{k3}, ymm1, ymm1
+	vpcmpleb k2{k7}, zmm7, zmm4

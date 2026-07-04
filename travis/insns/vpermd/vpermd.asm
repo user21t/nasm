@@ -14,3 +14,7 @@ default rel
 	vpermd ymm31, ymm24, ymm21
 	vpermd ymm21, ymm21, ymm17
 	vpermd zmm19, zmm19, zmm29
+	vpermd ymm4{k3}, ymm3, ymm2
+	vpermd zmm2{k4}, zmm3, zword [0x859]
+	vpermd ymm6{k4}{z}, ymm2, yword [0xa08]
+	vpermd zmm4{k1}{z}, zmm0, zmm0

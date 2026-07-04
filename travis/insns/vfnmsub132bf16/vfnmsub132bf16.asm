@@ -11,3 +11,9 @@ default rel
 	vfnmsub132bf16 xmm16, xmm24, xmm19
 	vfnmsub132bf16 ymm19, ymm26, ymm28
 	vfnmsub132bf16 zmm31, zmm19, zmm20
+	vfnmsub132bf16 xmm2{k4}, xmm1, xmm0
+	vfnmsub132bf16 ymm2{k6}, ymm7, ymm4
+	vfnmsub132bf16 zmm3{k4}, zmm5, zword [0x34f]
+	vfnmsub132bf16 xmm6{k3}{z}, xmm5, xmm3
+	vfnmsub132bf16 ymm5{k1}{z}, ymm0, ymm1
+	vfnmsub132bf16 zmm7{k7}{z}, zmm3, zmm7

@@ -6,3 +6,5 @@ default rel
 	vcmpfalse_ossd k6, xmm0, qword [0x660]
 	vcmpfalse_ossd xmm11, xmm14, xmm14
 	vcmpfalse_ossd k3, xmm13, xmm12
+	vcmpfalse_ossd k2{k4}, xmm7, qword [0x1f5]
+	vcmpfalse_ossd k1, xmm2, xmm6, {sae}

@@ -15,3 +15,10 @@ default rel
 	vsqrtpd ymm31, ymm18
 	vsqrtpd xmm18, xmm23
 	vsqrtpd ymm22, ymm29
+	vsqrtpd xmm3{k1}, xmm6
+	vsqrtpd ymm5{k1}, yword [0x4be]
+	vsqrtpd zmm1{k5}, zmm7
+	vsqrtpd xmm7{k6}{z}, oword [0x3c3]
+	vsqrtpd ymm2{k3}{z}, ymm2
+	vsqrtpd zmm6{k1}{z}, zmm2
+	vsqrtpd zmm3, zmm4, {rn-sae}

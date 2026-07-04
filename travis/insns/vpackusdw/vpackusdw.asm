@@ -19,3 +19,9 @@ default rel
 	vpackusdw ymm28, ymm16, ymm27
 	vpackusdw xmm29, xmm26, xmm25
 	vpackusdw ymm26, ymm23, ymm27
+	vpackusdw xmm6{k5}, xmm4, xmm2
+	vpackusdw ymm5{k1}, ymm5, ymm6
+	vpackusdw zmm5{k1}, zmm1, zmm4
+	vpackusdw xmm3{k6}{z}, xmm4, xmm1
+	vpackusdw ymm6{k1}{z}, ymm3, ymm6
+	vpackusdw zmm5{k7}{z}, zmm2, zmm5

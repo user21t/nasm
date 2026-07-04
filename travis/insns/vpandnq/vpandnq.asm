@@ -14,3 +14,9 @@ default rel
 	vpandnq xmm24, xmm22, xmm30
 	vpandnq ymm30, ymm24, ymm30
 	vpandnq zmm17, zmm25, zmm20
+	vpandnq xmm5{k3}, xmm0, xmm6
+	vpandnq ymm7{k3}, ymm3, ymm7
+	vpandnq zmm7{k1}, zmm2, zmm2
+	vpandnq xmm0{k6}{z}, xmm7, xmm5
+	vpandnq ymm4{k2}{z}, ymm5, ymm1
+	vpandnq zmm4{k2}{z}, zmm5, zmm0

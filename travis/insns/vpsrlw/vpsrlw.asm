@@ -19,3 +19,15 @@ default rel
 	vpsrlw xmm17, xmm30, 0x34
 	vpsrlw ymm31, ymm27, xmm23
 	vpsrlw ymm20, ymm16, 0x2c
+	vpsrlw xmm2{k6}, xmm6, oword [0xd19]
+	vpsrlw ymm3{k7}, ymm3, xmm0
+	vpsrlw zmm2{k5}, zmm4, oword [0x339]
+	vpsrlw xmm0{k5}, xmm1, 0xc5
+	vpsrlw ymm1{k7}, yword [0xd22], 0xed
+	vpsrlw zmm2{k3}, zword [0x1bf], 0x5b
+	vpsrlw xmm4{k7}{z}, xmm2, oword [0xcb0]
+	vpsrlw ymm1{k2}{z}, ymm7, xmm6
+	vpsrlw zmm5{k6}{z}, zmm1, xmm5
+	vpsrlw xmm5{k6}{z}, oword [0xba4], 0xb0
+	vpsrlw ymm4{k1}{z}, ymm6, 0xa5
+	vpsrlw zmm1{k3}{z}, zmm6, 0x78

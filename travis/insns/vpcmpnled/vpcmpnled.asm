@@ -11,3 +11,6 @@ default rel
 	vpcmpnled k2, xmm29, xmm17
 	vpcmpnled k4, ymm25, ymm19
 	vpcmpnled k5, zmm23, zmm22
+	vpcmpnled k6{k7}, xmm2, xmm3
+	vpcmpnled k4{k5}, ymm3, ymm3
+	vpcmpnled k4{k2}, zmm3, zmm7

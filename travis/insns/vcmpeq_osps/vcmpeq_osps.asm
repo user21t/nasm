@@ -13,3 +13,7 @@ default rel
 	vcmpeq_osps ymm9, ymm8, ymm12
 	vcmpeq_osps k1, xmm11, xmm13
 	vcmpeq_osps k5, ymm14, ymm14
+	vcmpeq_osps k7{k6}, xmm7, oword [0x3da]
+	vcmpeq_osps k5{k4}, ymm1, ymm5
+	vcmpeq_osps k1{k1}, zmm1, zmm3
+	vcmpeq_osps k6, zmm0, zmm5, {sae}

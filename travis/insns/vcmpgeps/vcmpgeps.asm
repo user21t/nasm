@@ -13,3 +13,7 @@ default rel
 	vcmpgeps ymm13, ymm9, ymm15
 	vcmpgeps k1, xmm8, xmm12
 	vcmpgeps k5, ymm13, ymm14
+	vcmpgeps k4{k3}, xmm1, xmm6
+	vcmpgeps k3{k7}, ymm4, ymm2
+	vcmpgeps k4{k1}, zmm0, zmm3
+	vcmpgeps k7, zmm0, zmm2, {sae}

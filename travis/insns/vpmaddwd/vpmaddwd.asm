@@ -19,3 +19,9 @@ default rel
 	vpmaddwd ymm28, ymm21, ymm20
 	vpmaddwd xmm16, xmm27, xmm22
 	vpmaddwd ymm31, ymm29, ymm29
+	vpmaddwd xmm3{k1}, xmm3, oword [0x4c3]
+	vpmaddwd ymm3{k2}, ymm5, ymm6
+	vpmaddwd zmm2{k3}, zmm4, zword [0xb57]
+	vpmaddwd xmm1{k4}{z}, xmm3, oword [0x692]
+	vpmaddwd ymm2{k2}{z}, ymm3, ymm0
+	vpmaddwd zmm7{k6}{z}, zmm7, zword [0xc9a]

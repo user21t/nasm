@@ -11,3 +11,6 @@ default rel
 	vpcmpgeb k7, xmm31, xmm26
 	vpcmpgeb k7, ymm21, ymm30
 	vpcmpgeb k3, zmm18, zmm21
+	vpcmpgeb k6{k2}, xmm1, xmm5
+	vpcmpgeb k1{k7}, ymm3, ymm2
+	vpcmpgeb k3{k4}, zmm5, zword [0xad9]

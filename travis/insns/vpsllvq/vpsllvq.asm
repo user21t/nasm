@@ -19,3 +19,9 @@ default rel
 	vpsllvq ymm23, ymm20, ymm28
 	vpsllvq xmm27, xmm22, xmm30
 	vpsllvq ymm22, ymm28, ymm18
+	vpsllvq xmm5{k6}, xmm0, xmm4
+	vpsllvq ymm0{k7}, ymm6, ymm7
+	vpsllvq zmm2{k5}, zmm6, zmm2
+	vpsllvq xmm2{k7}{z}, xmm4, xmm7
+	vpsllvq ymm6{k4}{z}, ymm7, ymm0
+	vpsllvq zmm1{k3}{z}, zmm7, zmm1

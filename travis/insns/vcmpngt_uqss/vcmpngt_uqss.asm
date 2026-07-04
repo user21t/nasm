@@ -6,3 +6,5 @@ default rel
 	vcmpngt_uqss k1, xmm2, dword [0x900]
 	vcmpngt_uqss xmm8, xmm13, xmm14
 	vcmpngt_uqss k1, xmm10, xmm15
+	vcmpngt_uqss k6{k6}, xmm6, xmm7
+	vcmpngt_uqss k3, xmm0, xmm7, {sae}

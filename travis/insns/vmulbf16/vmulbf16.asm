@@ -11,3 +11,9 @@ default rel
 	vmulbf16 xmm28, xmm28, xmm27
 	vmulbf16 ymm24, ymm28, ymm31
 	vmulbf16 zmm19, zmm24, zmm26
+	vmulbf16 xmm0{k5}, xmm3, oword [0xff0]
+	vmulbf16 ymm1{k3}, ymm1, ymm7
+	vmulbf16 zmm7{k4}, zmm7, zmm6
+	vmulbf16 xmm7{k6}{z}, xmm0, oword [0x9da]
+	vmulbf16 ymm5{k7}{z}, ymm2, ymm3
+	vmulbf16 zmm4{k3}{z}, zmm1, zmm0

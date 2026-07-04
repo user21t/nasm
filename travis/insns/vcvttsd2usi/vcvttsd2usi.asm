@@ -7,3 +7,5 @@ default rel
 	vcvttsd2usi r12, xmm13
 	vcvttsd2usi r25d, xmm21
 	vcvttsd2usi r18, xmm16
+	vcvttsd2usi ebx, xmm3, {sae}
+	vcvttsd2usi rbx, xmm5, {sae}

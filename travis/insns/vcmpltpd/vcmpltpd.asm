@@ -13,3 +13,7 @@ default rel
 	vcmpltpd ymm12, ymm11, ymm11
 	vcmpltpd k6, xmm13, xmm14
 	vcmpltpd k3, ymm15, ymm14
+	vcmpltpd k5{k7}, xmm0, oword [0xb6b]
+	vcmpltpd k1{k7}, ymm3, ymm5
+	vcmpltpd k5{k7}, zmm2, zmm1
+	vcmpltpd k5, zmm7, zmm5, {sae}

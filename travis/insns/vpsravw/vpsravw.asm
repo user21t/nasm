@@ -14,3 +14,9 @@ default rel
 	vpsravw xmm19, xmm28, xmm18
 	vpsravw ymm24, ymm28, ymm21
 	vpsravw zmm20, zmm21, zmm26
+	vpsravw xmm4{k5}, xmm1, xmm3
+	vpsravw ymm7{k2}, ymm6, ymm1
+	vpsravw zmm4{k2}, zmm0, zword [0xce5]
+	vpsravw xmm0{k7}{z}, xmm3, xmm2
+	vpsravw ymm5{k2}{z}, ymm2, ymm5
+	vpsravw zmm4{k4}{z}, zmm5, zword [0x35e]

@@ -11,3 +11,9 @@ default rel
 	vreduceph xmm22, xmm28, 0x69
 	vreduceph ymm23, ymm22, 0x8e
 	vreduceph zmm27, zmm25, 0x9b
+	vreduceph xmm1{k6}, xmm5, 0x18
+	vreduceph ymm5{k7}, ymm6, 0x9f
+	vreduceph zmm0{k5}, zmm5, 0xa6
+	vreduceph xmm6{k2}{z}, oword [0xf02], 0xd2
+	vreduceph ymm0{k6}{z}, ymm6, 0x2
+	vreduceph zmm7{k3}{z}, zmm4, 0x9c

@@ -14,3 +14,10 @@ default rel
 	vminph xmm19, xmm25, xmm25
 	vminph ymm20, ymm29, ymm16
 	vminph zmm26, zmm17, zmm29
+	vminph xmm5{k6}, xmm6, xmm3
+	vminph ymm1{k7}, ymm6, ymm0
+	vminph zmm3{k3}, zmm3, zmm2
+	vminph xmm7{k1}{z}, xmm7, oword [0xb68]
+	vminph ymm6{k1}{z}, ymm7, yword [0xabe]
+	vminph zmm7{k1}{z}, zmm2, zmm4
+	vminph zmm1, zmm4, zmm0, {sae}

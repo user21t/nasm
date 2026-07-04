@@ -15,3 +15,12 @@ default rel
 	vmovups xmm24, xmm20
 	vmovups ymm17, ymm18
 	vmovups ymm17, ymm29
+	vmovups xmm3{k6}, xmm7
+	vmovups ymm6{k3}, ymm7
+	vmovups zmm6{k5}, zmm2
+	vmovups xmm5{k6}, xmm6
+	vmovups ymm0{k3}, ymm5
+	vmovups zmm2{k2}, zmm3
+	vmovups oword [0x5c0]{k5}, xmm0
+	vmovups yword [0x6b9]{k4}, ymm3
+	vmovups zword [0x14d]{k5}, zmm2

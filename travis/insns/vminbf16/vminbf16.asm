@@ -11,3 +11,9 @@ default rel
 	vminbf16 xmm20, xmm22, xmm24
 	vminbf16 ymm20, ymm17, ymm29
 	vminbf16 zmm17, zmm28, zmm31
+	vminbf16 xmm4{k7}, xmm3, xmm1
+	vminbf16 ymm5{k3}, ymm6, ymm5
+	vminbf16 zmm2{k4}, zmm0, zword [0xdad]
+	vminbf16 xmm7{k1}{z}, xmm5, xmm6
+	vminbf16 ymm1{k3}{z}, ymm0, yword [0x23c]
+	vminbf16 zmm4{k3}{z}, zmm3, zmm6

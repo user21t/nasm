@@ -11,3 +11,6 @@ default rel
 	vptestmw k4, xmm26, xmm28
 	vptestmw k7, ymm24, ymm27
 	vptestmw k4, zmm27, zmm31
+	vptestmw k3{k6}, xmm4, xmm6
+	vptestmw k6{k3}, ymm4, ymm2
+	vptestmw k2{k1}, zmm2, zword [0x3c8]

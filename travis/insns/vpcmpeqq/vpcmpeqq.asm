@@ -13,3 +13,6 @@ default rel
 	vpcmpeqq ymm8, ymm10, ymm11
 	vpcmpeqq k4, xmm8, xmm8
 	vpcmpeqq k5, ymm12, ymm9
+	vpcmpeqq k2{k2}, xmm4, xmm2
+	vpcmpeqq k1{k4}, ymm1, ymm2
+	vpcmpeqq k3{k5}, zmm4, zmm4

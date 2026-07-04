@@ -14,3 +14,9 @@ default rel
 	valignq xmm19, xmm21, xmm19, 0xa4
 	valignq ymm24, ymm19, ymm29, 0x69
 	valignq zmm19, zmm16, zmm16, 0xd8
+	valignq xmm7{k2}, xmm2, xmm2, 0x89
+	valignq ymm2{k1}, ymm7, yword [0x187], 0x7a
+	valignq zmm7{k3}, zmm1, zmm5, 0x78
+	valignq xmm6{k3}{z}, xmm3, oword [0xf0e], 0x84
+	valignq ymm0{k7}{z}, ymm0, yword [0xa11], 0x95
+	valignq zmm2{k7}{z}, zmm4, zmm7, 0x59

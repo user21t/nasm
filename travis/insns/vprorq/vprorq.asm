@@ -14,3 +14,9 @@ default rel
 	vprorq xmm21, xmm29, 0xe7
 	vprorq ymm31, ymm31, 0xd6
 	vprorq zmm24, zmm29, 0xe5
+	vprorq xmm4{k2}, xmm4, 0xe9
+	vprorq ymm1{k6}, ymm3, 0x4c
+	vprorq zmm4{k2}, zword [0x439], 0xba
+	vprorq xmm1{k1}{z}, oword [0xe46], 0x16
+	vprorq ymm0{k4}{z}, ymm4, 0xca
+	vprorq zmm5{k4}{z}, zword [0x286], 0x8e

@@ -11,3 +11,9 @@ default rel
 	vrcp14ps xmm29, xmm20
 	vrcp14ps ymm26, ymm27
 	vrcp14ps zmm22, zmm28
+	vrcp14ps xmm2{k7}, oword [0x4ec]
+	vrcp14ps ymm2{k2}, ymm4
+	vrcp14ps zmm5{k3}, zword [0xde8]
+	vrcp14ps xmm5{k5}{z}, xmm1
+	vrcp14ps ymm4{k2}{z}, yword [0x5cf]
+	vrcp14ps zmm1{k5}{z}, zmm3

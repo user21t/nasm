@@ -13,3 +13,7 @@ default rel
 	vcmpngepd ymm12, ymm10, ymm12
 	vcmpngepd k6, xmm14, xmm15
 	vcmpngepd k1, ymm10, ymm8
+	vcmpngepd k6{k5}, xmm2, xmm5
+	vcmpngepd k4{k1}, ymm0, ymm2
+	vcmpngepd k1{k7}, zmm3, zword [0x744]
+	vcmpngepd k4, zmm7, zmm6, {sae}

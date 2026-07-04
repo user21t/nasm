@@ -11,3 +11,6 @@ default rel
 	vptestmb k3, xmm20, xmm21
 	vptestmb k2, ymm18, ymm23
 	vptestmb k5, zmm30, zmm26
+	vptestmb k6{k3}, xmm6, xmm6
+	vptestmb k5{k5}, ymm3, ymm2
+	vptestmb k3{k2}, zmm0, zmm0

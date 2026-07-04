@@ -6,3 +6,5 @@ default rel
 	vcmpngesd k5, xmm0, xmm1
 	vcmpngesd xmm9, xmm10, xmm13
 	vcmpngesd k7, xmm10, xmm13
+	vcmpngesd k1{k6}, xmm0, xmm4
+	vcmpngesd k1, xmm1, xmm7, {sae}

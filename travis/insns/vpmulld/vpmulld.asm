@@ -19,3 +19,9 @@ default rel
 	vpmulld ymm20, ymm24, ymm24
 	vpmulld xmm22, xmm18, xmm26
 	vpmulld ymm23, ymm22, ymm17
+	vpmulld xmm4{k4}, xmm4, xmm2
+	vpmulld ymm0{k3}, ymm6, ymm6
+	vpmulld zmm4{k7}, zmm1, zmm4
+	vpmulld xmm1{k2}{z}, xmm6, oword [0x93c]
+	vpmulld ymm4{k5}{z}, ymm3, yword [0xe59]
+	vpmulld zmm7{k3}{z}, zmm6, zmm2

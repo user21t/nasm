@@ -7,3 +7,7 @@ default rel
 	vbroadcasti32x4 zmm13, oword [0x212]
 	vbroadcasti32x4 ymm17, oword [0x4c3]
 	vbroadcasti32x4 zmm29, oword [0xb1b]
+	vbroadcasti32x4 ymm0{k5}, oword [0x58e]
+	vbroadcasti32x4 zmm0{k7}, oword [0xbbd]
+	vbroadcasti32x4 ymm0{k6}{z}, oword [0x4c6]
+	vbroadcasti32x4 zmm5{k7}{z}, oword [0xb4d]

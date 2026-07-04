@@ -6,3 +6,5 @@ default rel
 	vcmpord_qsd k5, xmm5, qword [0x1a1]
 	vcmpord_qsd xmm14, xmm12, xmm14
 	vcmpord_qsd k1, xmm8, xmm15
+	vcmpord_qsd k4{k1}, xmm5, xmm1
+	vcmpord_qsd k4, xmm4, xmm3, {sae}

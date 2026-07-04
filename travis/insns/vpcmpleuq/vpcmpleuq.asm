@@ -11,3 +11,6 @@ default rel
 	vpcmpleuq k5, xmm29, xmm24
 	vpcmpleuq k4, ymm22, ymm26
 	vpcmpleuq k6, zmm23, zmm28
+	vpcmpleuq k5{k6}, xmm0, oword [0x8f4]
+	vpcmpleuq k7{k6}, ymm0, ymm3
+	vpcmpleuq k5{k4}, zmm7, zmm4

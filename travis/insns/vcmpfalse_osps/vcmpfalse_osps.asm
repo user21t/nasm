@@ -13,3 +13,7 @@ default rel
 	vcmpfalse_osps ymm11, ymm10, ymm12
 	vcmpfalse_osps k5, xmm15, xmm15
 	vcmpfalse_osps k5, ymm11, ymm8
+	vcmpfalse_osps k3{k3}, xmm4, xmm6
+	vcmpfalse_osps k1{k3}, ymm0, yword [0xf03]
+	vcmpfalse_osps k3{k3}, zmm2, zword [0xe04]
+	vcmpfalse_osps k6, zmm0, zmm0, {sae}

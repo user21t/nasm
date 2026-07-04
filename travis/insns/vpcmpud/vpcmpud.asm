@@ -11,3 +11,6 @@ default rel
 	vpcmpud k4, xmm20, xmm25, 0x2
 	vpcmpud k2, ymm28, ymm20, 0xde
 	vpcmpud k6, zmm21, zmm30, 0x99
+	vpcmpud k6{k2}, xmm7, xmm2, 0xc9
+	vpcmpud k7{k4}, ymm5, ymm1, 0x18
+	vpcmpud k1{k5}, zmm1, zmm2, 0xee

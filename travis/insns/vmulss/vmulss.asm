@@ -9,3 +9,6 @@ default rel
 	vmulss xmm14, xmm13, xmm14
 	vmulss xmm28, xmm29, xmm19
 	vmulss xmm30, xmm25, xmm31
+	vmulss xmm4{k2}, xmm6, xmm6
+	vmulss xmm3{k6}{z}, xmm6, xmm3
+	vmulss xmm4, xmm7, xmm1, {rn-sae}

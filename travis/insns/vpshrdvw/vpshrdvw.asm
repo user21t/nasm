@@ -14,3 +14,9 @@ default rel
 	vpshrdvw xmm21, xmm16, xmm25
 	vpshrdvw ymm30, ymm27, ymm23
 	vpshrdvw zmm17, zmm17, zmm17
+	vpshrdvw xmm2{k2}, xmm4, oword [0x7e3]
+	vpshrdvw ymm5{k2}, ymm2, ymm2
+	vpshrdvw zmm0{k3}, zmm0, zword [0xbdd]
+	vpshrdvw xmm3{k3}{z}, xmm4, oword [0x11c]
+	vpshrdvw ymm1{k7}{z}, ymm4, ymm0
+	vpshrdvw zmm7{k7}{z}, zmm1, zmm5

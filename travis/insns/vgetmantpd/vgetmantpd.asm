@@ -11,3 +11,9 @@ default rel
 	vgetmantpd xmm22, xmm18, 0x34
 	vgetmantpd ymm16, ymm29, 0x79
 	vgetmantpd zmm21, zmm22, 0xb5
+	vgetmantpd xmm2{k7}, xmm0, 0x2d
+	vgetmantpd ymm4{k1}, yword [0xa56], 0x28
+	vgetmantpd zmm2{k1}, zmm0, 0xad
+	vgetmantpd xmm3{k5}{z}, xmm2, 0xd4
+	vgetmantpd ymm0{k2}{z}, ymm0, 0xca
+	vgetmantpd zmm0{k2}{z}, zmm5, 0xc1

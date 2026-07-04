@@ -15,3 +15,9 @@ default rel
 	vpcompressw yword [0x88c], ymm24
 	vpcompressw zword [0x7b6], zmm18
 	vpcompressw xmm28, xmm16
+	vpcompressw oword [0x5f8]{k5}, xmm6
+	vpcompressw yword [0xe10]{k4}, ymm2
+	vpcompressw zword [0xc48]{k5}, zmm5
+	vpcompressw xmm2{k6}, xmm7
+	vpcompressw ymm7{k1}, ymm4
+	vpcompressw zmm7{k6}, zmm4

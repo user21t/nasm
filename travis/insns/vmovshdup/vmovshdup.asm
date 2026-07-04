@@ -15,3 +15,9 @@ default rel
 	vmovshdup ymm23, ymm28
 	vmovshdup xmm18, xmm26
 	vmovshdup ymm27, ymm25
+	vmovshdup xmm5{k2}, oword [0xa0d]
+	vmovshdup ymm4{k6}, ymm3
+	vmovshdup zmm5{k3}, zword [0x4ae]
+	vmovshdup xmm2{k7}{z}, xmm6
+	vmovshdup ymm5{k6}{z}, ymm5
+	vmovshdup zmm7{k1}{z}, zmm7

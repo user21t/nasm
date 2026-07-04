@@ -15,3 +15,9 @@ default rel
 	vpmovsqd xmm31, ymm22
 	vpmovsqd ymm19, zmm16
 	vpmovsqd qword [0x1b0], xmm26
+	vpmovsqd xmm2{k4}, xmm1
+	vpmovsqd xmm7{k4}, ymm0
+	vpmovsqd ymm7{k1}, zmm5
+	vpmovsqd qword [0x72b]{k6}, xmm0
+	vpmovsqd oword [0xae5]{k5}, ymm4
+	vpmovsqd yword [0x134]{k1}, zmm4

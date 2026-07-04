@@ -19,3 +19,9 @@ default rel
 	vpminub ymm31, ymm19, ymm25
 	vpminub xmm21, xmm16, xmm30
 	vpminub ymm26, ymm27, ymm16
+	vpminub xmm3{k5}, xmm2, xmm5
+	vpminub ymm6{k4}, ymm4, yword [0x8a0]
+	vpminub zmm0{k1}, zmm6, zword [0xf33]
+	vpminub xmm7{k7}{z}, xmm4, xmm6
+	vpminub ymm6{k3}{z}, ymm0, yword [0x166]
+	vpminub zmm4{k7}{z}, zmm4, zmm3

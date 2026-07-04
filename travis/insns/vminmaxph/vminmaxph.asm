@@ -11,3 +11,9 @@ default rel
 	vminmaxph xmm19, xmm30, xmm30, 0xaf
 	vminmaxph ymm19, ymm22, ymm31, 0x33
 	vminmaxph zmm30, zmm19, zmm19, 0x53
+	vminmaxph xmm5{k6}, xmm6, oword [0xa46], 0x2
+	vminmaxph ymm0{k1}, ymm3, yword [0x91a], 0x4a
+	vminmaxph zmm0{k6}, zmm5, zmm4, 0x3a
+	vminmaxph xmm5{k2}{z}, xmm0, xmm7, 0x80
+	vminmaxph ymm5{k1}{z}, ymm4, ymm2, 0x57
+	vminmaxph zmm3{k2}{z}, zmm0, zmm4, 0x4a

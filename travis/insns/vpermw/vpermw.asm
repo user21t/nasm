@@ -14,3 +14,9 @@ default rel
 	vpermw xmm17, xmm24, xmm17
 	vpermw ymm24, ymm17, ymm29
 	vpermw zmm29, zmm30, zmm24
+	vpermw xmm3{k7}, xmm4, oword [0xc6f]
+	vpermw ymm1{k4}, ymm6, ymm2
+	vpermw zmm3{k6}, zmm7, zmm5
+	vpermw xmm5{k4}{z}, xmm7, xmm7
+	vpermw ymm2{k2}{z}, ymm1, ymm0
+	vpermw zmm2{k1}{z}, zmm7, zword [0xe45]

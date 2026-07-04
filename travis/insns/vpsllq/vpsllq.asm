@@ -19,3 +19,15 @@ default rel
 	vpsllq xmm24, xmm28, 0x9f
 	vpsllq ymm17, ymm19, xmm20
 	vpsllq ymm24, ymm22, 0x81
+	vpsllq xmm3{k1}, xmm7, oword [0xcff]
+	vpsllq ymm5{k5}, ymm3, xmm2
+	vpsllq zmm6{k3}, zmm5, xmm0
+	vpsllq xmm7{k3}, xmm0, 0x6e
+	vpsllq ymm2{k5}, ymm5, 0xda
+	vpsllq zmm0{k5}, zmm1, 0xd9
+	vpsllq xmm2{k5}{z}, xmm2, xmm4
+	vpsllq ymm4{k7}{z}, ymm4, oword [0x7ff]
+	vpsllq zmm5{k4}{z}, zmm0, xmm4
+	vpsllq xmm5{k1}{z}, xmm5, 0x5c
+	vpsllq ymm5{k2}{z}, yword [0xe95], 0x87
+	vpsllq zmm5{k1}{z}, zmm5, 0x2d

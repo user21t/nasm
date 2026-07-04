@@ -6,3 +6,5 @@ default rel
 	vcmpgt_oqsd k6, xmm5, xmm1
 	vcmpgt_oqsd xmm9, xmm12, xmm9
 	vcmpgt_oqsd k7, xmm11, xmm10
+	vcmpgt_oqsd k7{k4}, xmm0, xmm3
+	vcmpgt_oqsd k6, xmm4, xmm6, {sae}

@@ -14,3 +14,10 @@ default rel
 	vfnmadd213ph xmm18, xmm19, xmm30
 	vfnmadd213ph ymm27, ymm20, ymm30
 	vfnmadd213ph zmm27, zmm29, zmm17
+	vfnmadd213ph xmm5{k6}, xmm4, oword [0xeb0]
+	vfnmadd213ph ymm2{k6}, ymm4, ymm0
+	vfnmadd213ph zmm3{k7}, zmm1, zmm6
+	vfnmadd213ph xmm2{k4}{z}, xmm0, oword [0xed1]
+	vfnmadd213ph ymm2{k5}{z}, ymm1, ymm6
+	vfnmadd213ph zmm0{k4}{z}, zmm2, zmm6
+	vfnmadd213ph zmm2, zmm1, zmm6, {ru-sae}

@@ -19,3 +19,9 @@ default rel
 	vpaddq ymm28, ymm23, ymm24
 	vpaddq xmm30, xmm20, xmm27
 	vpaddq ymm17, ymm25, ymm24
+	vpaddq xmm5{k1}, xmm3, xmm7
+	vpaddq ymm4{k6}, ymm0, ymm6
+	vpaddq zmm7{k2}, zmm7, zmm1
+	vpaddq xmm3{k4}{z}, xmm7, xmm5
+	vpaddq ymm1{k2}{z}, ymm7, yword [0x7af]
+	vpaddq zmm0{k4}{z}, zmm3, zword [0xe69]

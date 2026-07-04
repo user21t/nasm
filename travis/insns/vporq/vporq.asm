@@ -14,3 +14,9 @@ default rel
 	vporq xmm27, xmm26, xmm29
 	vporq ymm18, ymm24, ymm25
 	vporq zmm29, zmm20, zmm25
+	vporq xmm6{k6}, xmm1, xmm5
+	vporq ymm1{k6}, ymm4, ymm3
+	vporq zmm1{k4}, zmm7, zword [0x86d]
+	vporq xmm7{k6}{z}, xmm2, xmm4
+	vporq ymm7{k2}{z}, ymm5, yword [0xfb9]
+	vporq zmm4{k6}{z}, zmm1, zmm6

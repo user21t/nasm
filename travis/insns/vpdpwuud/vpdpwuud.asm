@@ -15,3 +15,9 @@ default rel
 	vpdpwuud ymm23, ymm19, ymm30
 	vpdpwuud xmm24, xmm22, xmm28
 	vpdpwuud ymm23, ymm19, ymm19
+	vpdpwuud xmm3{k1}, xmm7, xmm3
+	vpdpwuud ymm6{k1}, ymm6, ymm6
+	vpdpwuud zmm3{k6}, zmm5, zmm1
+	vpdpwuud xmm3{k7}{z}, xmm3, xmm2
+	vpdpwuud ymm7{k1}{z}, ymm6, ymm1
+	vpdpwuud zmm5{k7}{z}, zmm6, zmm0

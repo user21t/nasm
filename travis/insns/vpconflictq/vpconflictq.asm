@@ -11,3 +11,9 @@ default rel
 	vpconflictq xmm30, xmm16
 	vpconflictq ymm21, ymm30
 	vpconflictq zmm20, zmm26
+	vpconflictq xmm5{k5}, xmm0
+	vpconflictq ymm2{k4}, ymm0
+	vpconflictq zmm0{k3}, zmm5
+	vpconflictq xmm5{k4}{z}, xmm0
+	vpconflictq ymm2{k1}{z}, yword [0x60a]
+	vpconflictq zmm3{k5}{z}, zmm6

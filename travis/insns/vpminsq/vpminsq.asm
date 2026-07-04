@@ -14,3 +14,9 @@ default rel
 	vpminsq xmm18, xmm17, xmm28
 	vpminsq ymm21, ymm21, ymm20
 	vpminsq zmm29, zmm17, zmm19
+	vpminsq xmm2{k2}, xmm4, oword [0x423]
+	vpminsq ymm2{k1}, ymm4, ymm0
+	vpminsq zmm3{k2}, zmm6, zmm2
+	vpminsq xmm6{k4}{z}, xmm5, xmm5
+	vpminsq ymm6{k7}{z}, ymm0, ymm3
+	vpminsq zmm0{k5}{z}, zmm1, zmm0

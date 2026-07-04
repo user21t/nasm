@@ -9,3 +9,6 @@ default rel
 	vcvtss2sd xmm15, xmm12, xmm13
 	vcvtss2sd xmm22, xmm25, xmm31
 	vcvtss2sd xmm16, xmm18, xmm23
+	vcvtss2sd xmm2{k3}, xmm5, xmm5
+	vcvtss2sd xmm5{k2}{z}, xmm7, dword [0xe8e]
+	vcvtss2sd xmm5, xmm1, xmm0, {sae}

@@ -11,3 +11,6 @@ default rel
 	vpcmpltuw k1, xmm25, xmm23
 	vpcmpltuw k6, ymm31, ymm16
 	vpcmpltuw k4, zmm30, zmm22
+	vpcmpltuw k4{k6}, xmm4, xmm7
+	vpcmpltuw k2{k2}, ymm3, ymm3
+	vpcmpltuw k3{k1}, zmm2, zmm4

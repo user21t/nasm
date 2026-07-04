@@ -14,3 +14,10 @@ default rel
 	vfmaddsub231ph xmm22, xmm26, xmm21
 	vfmaddsub231ph ymm24, ymm30, ymm25
 	vfmaddsub231ph zmm22, zmm29, zmm20
+	vfmaddsub231ph xmm1{k2}, xmm5, oword [0x1ab]
+	vfmaddsub231ph ymm5{k4}, ymm3, ymm3
+	vfmaddsub231ph zmm2{k5}, zmm5, zmm5
+	vfmaddsub231ph xmm2{k3}{z}, xmm5, oword [0x6ce]
+	vfmaddsub231ph ymm5{k7}{z}, ymm1, ymm7
+	vfmaddsub231ph zmm0{k3}{z}, zmm5, zmm0
+	vfmaddsub231ph zmm6, zmm3, zmm4, {rd-sae}

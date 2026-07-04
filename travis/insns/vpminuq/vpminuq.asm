@@ -14,3 +14,9 @@ default rel
 	vpminuq xmm21, xmm28, xmm29
 	vpminuq ymm22, ymm31, ymm23
 	vpminuq zmm17, zmm29, zmm25
+	vpminuq xmm0{k2}, xmm5, xmm6
+	vpminuq ymm3{k7}, ymm3, ymm3
+	vpminuq zmm6{k4}, zmm0, zword [0xab1]
+	vpminuq xmm3{k4}{z}, xmm1, oword [0xaf1]
+	vpminuq ymm6{k3}{z}, ymm1, ymm5
+	vpminuq zmm7{k6}{z}, zmm1, zmm0

@@ -14,3 +14,9 @@ default rel
 	vpord xmm28, xmm26, xmm21
 	vpord ymm26, ymm16, ymm25
 	vpord zmm21, zmm17, zmm27
+	vpord xmm7{k6}, xmm2, oword [0x906]
+	vpord ymm0{k2}, ymm1, ymm4
+	vpord zmm2{k6}, zmm7, zmm0
+	vpord xmm2{k1}{z}, xmm3, xmm1
+	vpord ymm3{k3}{z}, ymm4, yword [0xe20]
+	vpord zmm4{k1}{z}, zmm6, zmm6

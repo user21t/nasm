@@ -13,3 +13,7 @@ default rel
 	vcmpunord_spd ymm10, ymm13, ymm12
 	vcmpunord_spd k4, xmm9, xmm14
 	vcmpunord_spd k5, ymm13, ymm10
+	vcmpunord_spd k1{k3}, xmm3, oword [0x4f9]
+	vcmpunord_spd k1{k1}, ymm6, ymm4
+	vcmpunord_spd k5{k6}, zmm7, zmm3
+	vcmpunord_spd k6, zmm5, zmm6, {sae}

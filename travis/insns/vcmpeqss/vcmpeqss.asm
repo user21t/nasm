@@ -6,3 +6,5 @@ default rel
 	vcmpeqss k5, xmm7, dword [0x4d6]
 	vcmpeqss xmm10, xmm10, xmm14
 	vcmpeqss k5, xmm12, xmm13
+	vcmpeqss k5{k4}, xmm2, xmm6
+	vcmpeqss k4, xmm6, xmm5, {sae}

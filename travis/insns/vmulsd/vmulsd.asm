@@ -9,3 +9,6 @@ default rel
 	vmulsd xmm15, xmm13, xmm15
 	vmulsd xmm18, xmm16, xmm28
 	vmulsd xmm16, xmm24, xmm25
+	vmulsd xmm4{k7}, xmm2, xmm0
+	vmulsd xmm5{k7}{z}, xmm6, qword [0xd91]
+	vmulsd xmm4, xmm7, xmm6, {rd-sae}

@@ -8,3 +8,9 @@ default rel
 	vminsh xmm10, xmm13, xmm10
 	vminsh xmm28, xmm25, xmm26
 	vminsh xmm28, xmm27, xmm19
+	vminsh xmm1{k3}, xmm0, word [0xc9c]
+	vminsh xmm0{k3}, xmm1, xmm7
+	vminsh xmm5{k3}{z}, xmm1, xmm6
+	vminsh xmm3{k6}{z}, xmm1, xmm1
+	vminsh xmm1, xmm7, xmm2, {sae}
+	vminsh xmm7, xmm4, xmm4, {sae}

@@ -19,3 +19,9 @@ default rel
 	vshufpd ymm27, ymm25, ymm29, 0x72
 	vshufpd xmm21, xmm21, xmm20, 0xad
 	vshufpd ymm24, ymm29, ymm25, 0x92
+	vshufpd xmm6{k7}, xmm5, xmm7, 0x48
+	vshufpd ymm7{k7}, ymm7, yword [0xca6], 0xed
+	vshufpd zmm1{k2}, zmm6, zmm3, 0xc5
+	vshufpd xmm6{k1}{z}, xmm2, oword [0x553], 0xd6
+	vshufpd ymm1{k5}{z}, ymm5, yword [0xf94], 0xa6
+	vshufpd zmm4{k7}{z}, zmm5, zword [0xdf2], 0xe2

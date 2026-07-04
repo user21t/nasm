@@ -14,3 +14,9 @@ default rel
 	vmulph xmm26, xmm19, xmm30
 	vmulph ymm26, ymm19, ymm30
 	vmulph zmm21, zmm31, zmm17
+	vmulph xmm7{k5}, xmm6, oword [0x6c0]
+	vmulph ymm6{k7}, ymm2, ymm6
+	vmulph zmm0{k1}, zmm1, zmm7
+	vmulph xmm3{k4}{z}, xmm7, xmm4
+	vmulph ymm4{k6}{z}, ymm7, ymm1
+	vmulph zmm1{k6}{z}, zmm2, zmm3

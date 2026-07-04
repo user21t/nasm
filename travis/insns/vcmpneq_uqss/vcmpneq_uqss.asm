@@ -6,3 +6,5 @@ default rel
 	vcmpneq_uqss k4, xmm5, dword [0xd38]
 	vcmpneq_uqss xmm10, xmm9, xmm12
 	vcmpneq_uqss k3, xmm9, xmm10
+	vcmpneq_uqss k4{k5}, xmm3, xmm1
+	vcmpneq_uqss k3, xmm0, xmm2, {sae}

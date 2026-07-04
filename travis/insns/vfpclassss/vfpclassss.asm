@@ -3,3 +3,4 @@ default rel
 	vfpclassss k6, xmm4, 0xba
 	vfpclassss k1, xmm15, 0x2b
 	vfpclassss k5, xmm22, 0x76
+	vfpclassss k2{k1}, dword [0xe4e], 0x4b

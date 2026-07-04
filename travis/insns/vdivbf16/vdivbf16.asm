@@ -11,3 +11,9 @@ default rel
 	vdivbf16 xmm23, xmm31, xmm29
 	vdivbf16 ymm23, ymm18, ymm16
 	vdivbf16 zmm28, zmm30, zmm20
+	vdivbf16 xmm5{k1}, xmm7, oword [0x149]
+	vdivbf16 ymm7{k5}, ymm1, ymm7
+	vdivbf16 zmm7{k4}, zmm2, zword [0xdfe]
+	vdivbf16 xmm2{k6}{z}, xmm7, xmm2
+	vdivbf16 ymm7{k4}{z}, ymm7, ymm4
+	vdivbf16 zmm1{k6}{z}, zmm6, zmm3

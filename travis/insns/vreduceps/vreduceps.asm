@@ -11,3 +11,9 @@ default rel
 	vreduceps xmm25, xmm17, 0xc6
 	vreduceps ymm21, ymm23, 0xcd
 	vreduceps zmm26, zmm28, 0xa7
+	vreduceps xmm2{k1}, xmm0, 0xd8
+	vreduceps ymm4{k5}, ymm7, 0x7a
+	vreduceps zmm7{k4}, zword [0x912], 0xdf
+	vreduceps xmm4{k5}{z}, xmm2, 0x93
+	vreduceps ymm4{k7}{z}, ymm4, 0x24
+	vreduceps zmm4{k6}{z}, zmm6, 0x6

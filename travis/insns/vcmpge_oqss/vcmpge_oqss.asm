@@ -6,3 +6,5 @@ default rel
 	vcmpge_oqss k7, xmm2, dword [0x125]
 	vcmpge_oqss xmm12, xmm11, xmm14
 	vcmpge_oqss k3, xmm9, xmm9
+	vcmpge_oqss k3{k4}, xmm6, xmm4
+	vcmpge_oqss k2, xmm3, xmm0, {sae}

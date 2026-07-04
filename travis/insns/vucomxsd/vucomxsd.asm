@@ -3,3 +3,4 @@ default rel
 	vucomxsd xmm4, qword [0x38f]
 	vucomxsd xmm15, xmm13
 	vucomxsd xmm16, xmm22
+	vucomxsd xmm1, xmm1, {sae}

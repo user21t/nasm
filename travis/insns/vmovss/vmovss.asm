@@ -16,3 +16,6 @@ default rel
 	vmovss xmm28, dword [0xf7c]
 	vmovss dword [0xc59], xmm16
 	vmovss xmm18, dword [0x22e]
+	vmovss xmm2{k7}, dword [0x11a]
+	vmovss dword [0x59e]{k5}, xmm1
+	vmovss xmm6{k3}, xmm0, xmm5

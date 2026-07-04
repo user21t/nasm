@@ -11,3 +11,9 @@ default rel
 	vblendmpd xmm25, xmm21, xmm29
 	vblendmpd ymm18, ymm19, ymm17
 	vblendmpd zmm17, zmm19, zmm19
+	vblendmpd xmm7{k7}, xmm5, oword [0x5fb]
+	vblendmpd ymm2{k6}, ymm3, yword [0x12b]
+	vblendmpd zmm2{k5}, zmm1, zmm5
+	vblendmpd xmm6{k5}{z}, xmm7, xmm6
+	vblendmpd ymm7{k3}{z}, ymm0, yword [0xcf8]
+	vblendmpd zmm0{k6}{z}, zmm2, zmm3

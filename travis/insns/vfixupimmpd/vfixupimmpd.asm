@@ -14,3 +14,9 @@ default rel
 	vfixupimmpd xmm31, xmm24, xmm31, 0x58
 	vfixupimmpd ymm21, ymm20, ymm23, 0xa6
 	vfixupimmpd zmm25, zmm19, zmm17, 0xcd
+	vfixupimmpd xmm6{k1}, xmm5, xmm5, 0x24
+	vfixupimmpd ymm6{k1}, ymm6, ymm0, 0x42
+	vfixupimmpd zmm6{k2}, zmm5, zmm5, 0xe6
+	vfixupimmpd xmm1{k3}{z}, xmm3, xmm7, 0x2a
+	vfixupimmpd ymm6{k6}{z}, ymm4, ymm2, 0x85
+	vfixupimmpd zmm0{k4}{z}, zmm0, zword [0x599], 0xfd

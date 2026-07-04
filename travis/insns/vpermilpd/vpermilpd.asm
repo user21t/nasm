@@ -17,3 +17,15 @@ default rel
 	vpermilpd ymm16, ymm19, ymm18
 	vpermilpd xmm28, xmm17, 0xb0
 	vpermilpd ymm18, ymm18, 0xef
+	vpermilpd xmm0{k6}, xmm5, 0x59
+	vpermilpd ymm2{k4}, ymm4, 0x28
+	vpermilpd zmm6{k4}, zword [0x710], 0x61
+	vpermilpd xmm2{k2}, xmm6, xmm0
+	vpermilpd ymm1{k1}, ymm0, ymm7
+	vpermilpd zmm3{k6}, zmm2, zmm2
+	vpermilpd xmm7{k2}{z}, xmm4, 0xcc
+	vpermilpd ymm2{k1}{z}, ymm1, 0x4a
+	vpermilpd zmm1{k5}{z}, zmm5, 0xdb
+	vpermilpd xmm1{k6}{z}, xmm1, xmm7
+	vpermilpd ymm7{k6}{z}, ymm2, ymm3
+	vpermilpd zmm6{k5}{z}, zmm0, zword [0xf12]

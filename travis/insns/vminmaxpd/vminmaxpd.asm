@@ -11,3 +11,9 @@ default rel
 	vminmaxpd xmm30, xmm26, xmm18, 0x1d
 	vminmaxpd ymm22, ymm19, ymm21, 0x1a
 	vminmaxpd zmm20, zmm28, zmm23, 0xc6
+	vminmaxpd xmm5{k1}, xmm7, oword [0xc91], 0xaf
+	vminmaxpd ymm3{k5}, ymm2, yword [0x5ab], 0x93
+	vminmaxpd zmm2{k6}, zmm5, zmm3, 0xad
+	vminmaxpd xmm2{k3}{z}, xmm1, oword [0x9b2], 0xf9
+	vminmaxpd ymm3{k5}{z}, ymm0, yword [0x302], 0x27
+	vminmaxpd zmm5{k5}{z}, zmm0, zmm3, 0x4e

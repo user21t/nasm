@@ -6,3 +6,5 @@ default rel
 	vcmptrue_usss k4, xmm6, xmm2
 	vcmptrue_usss xmm15, xmm12, xmm8
 	vcmptrue_usss k3, xmm14, xmm15
+	vcmptrue_usss k1{k2}, xmm5, xmm0
+	vcmptrue_usss k5, xmm1, xmm7, {sae}

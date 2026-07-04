@@ -14,3 +14,10 @@ default rel
 	vscalefph xmm21, xmm19, xmm23
 	vscalefph ymm17, ymm29, ymm23
 	vscalefph zmm23, zmm20, zmm17
+	vscalefph xmm6{k6}, xmm4, oword [0x2c3]
+	vscalefph ymm0{k7}, ymm7, ymm1
+	vscalefph zmm1{k4}, zmm2, zmm0
+	vscalefph xmm2{k3}{z}, xmm4, xmm0
+	vscalefph ymm5{k4}{z}, ymm4, ymm5
+	vscalefph zmm5{k4}{z}, zmm3, zmm4
+	vscalefph zmm6, zmm5, zmm2, {ru-sae}

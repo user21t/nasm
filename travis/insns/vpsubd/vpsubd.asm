@@ -19,3 +19,9 @@ default rel
 	vpsubd ymm17, ymm16, ymm29
 	vpsubd xmm19, xmm25, xmm23
 	vpsubd ymm31, ymm27, ymm27
+	vpsubd xmm6{k3}, xmm3, xmm0
+	vpsubd ymm7{k6}, ymm0, yword [0x6c4]
+	vpsubd zmm5{k7}, zmm0, zmm7
+	vpsubd xmm3{k2}{z}, xmm6, xmm1
+	vpsubd ymm5{k4}{z}, ymm2, ymm4
+	vpsubd zmm2{k2}{z}, zmm0, zmm2

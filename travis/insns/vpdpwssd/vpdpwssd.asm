@@ -17,3 +17,9 @@ default rel
 	vpdpwssd ymm30, ymm30, ymm28
 	vpdpwssd xmm30, xmm19, xmm30
 	vpdpwssd ymm27, ymm18, ymm23
+	vpdpwssd xmm4{k3}, xmm6, xmm6
+	vpdpwssd ymm4{k6}, ymm6, ymm7
+	vpdpwssd zmm2{k5}, zmm4, zmm6
+	vpdpwssd xmm1{k7}{z}, xmm7, xmm4
+	vpdpwssd ymm1{k5}{z}, ymm6, yword [0x907]
+	vpdpwssd zmm4{k1}{z}, zmm5, zmm4

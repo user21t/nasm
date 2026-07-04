@@ -14,3 +14,9 @@ default rel
 	vpandd xmm24, xmm18, xmm29
 	vpandd ymm19, ymm30, ymm22
 	vpandd zmm24, zmm20, zmm19
+	vpandd xmm2{k1}, xmm0, oword [0x84a]
+	vpandd ymm7{k5}, ymm1, yword [0x8ba]
+	vpandd zmm7{k2}, zmm5, zword [0xd84]
+	vpandd xmm5{k1}{z}, xmm4, xmm7
+	vpandd ymm7{k3}{z}, ymm5, ymm2
+	vpandd zmm0{k4}{z}, zmm3, zword [0x133]

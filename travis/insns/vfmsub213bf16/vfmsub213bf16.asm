@@ -11,3 +11,9 @@ default rel
 	vfmsub213bf16 xmm25, xmm27, xmm29
 	vfmsub213bf16 ymm28, ymm20, ymm20
 	vfmsub213bf16 zmm24, zmm16, zmm25
+	vfmsub213bf16 xmm1{k6}, xmm2, xmm1
+	vfmsub213bf16 ymm2{k4}, ymm2, ymm3
+	vfmsub213bf16 zmm4{k4}, zmm1, zmm0
+	vfmsub213bf16 xmm1{k3}{z}, xmm1, xmm1
+	vfmsub213bf16 ymm2{k4}{z}, ymm7, ymm0
+	vfmsub213bf16 zmm4{k2}{z}, zmm6, zword [0x33c]

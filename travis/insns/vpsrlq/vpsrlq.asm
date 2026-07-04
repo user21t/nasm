@@ -19,3 +19,15 @@ default rel
 	vpsrlq xmm24, xmm17, 0x95
 	vpsrlq ymm30, ymm18, xmm24
 	vpsrlq ymm19, ymm18, 0x11
+	vpsrlq xmm7{k1}, xmm5, xmm1
+	vpsrlq ymm0{k5}, ymm2, oword [0xe37]
+	vpsrlq zmm0{k4}, zmm3, oword [0xa2c]
+	vpsrlq xmm3{k4}, xmm5, 0xdc
+	vpsrlq ymm2{k7}, ymm5, 0xa8
+	vpsrlq zmm4{k4}, zmm1, 0xad
+	vpsrlq xmm3{k6}{z}, xmm5, oword [0xeb3]
+	vpsrlq ymm7{k1}{z}, ymm0, xmm7
+	vpsrlq zmm3{k2}{z}, zmm4, xmm7
+	vpsrlq xmm5{k4}{z}, xmm3, 0xfe
+	vpsrlq ymm5{k3}{z}, ymm3, 0x8c
+	vpsrlq zmm3{k5}{z}, zmm7, 0x51

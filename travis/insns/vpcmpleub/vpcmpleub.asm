@@ -11,3 +11,6 @@ default rel
 	vpcmpleub k2, xmm22, xmm27
 	vpcmpleub k5, ymm19, ymm20
 	vpcmpleub k3, zmm20, zmm28
+	vpcmpleub k4{k1}, xmm4, xmm2
+	vpcmpleub k4{k6}, ymm3, ymm3
+	vpcmpleub k2{k6}, zmm2, zmm0

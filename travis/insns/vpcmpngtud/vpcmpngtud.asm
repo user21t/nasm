@@ -11,3 +11,6 @@ default rel
 	vpcmpngtud k6, xmm19, xmm23
 	vpcmpngtud k5, ymm25, ymm25
 	vpcmpngtud k1, zmm19, zmm20
+	vpcmpngtud k6{k2}, xmm6, xmm7
+	vpcmpngtud k6{k5}, ymm7, ymm7
+	vpcmpngtud k3{k2}, zmm6, zmm0

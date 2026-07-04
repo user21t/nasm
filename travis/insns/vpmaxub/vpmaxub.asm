@@ -19,3 +19,9 @@ default rel
 	vpmaxub ymm19, ymm26, ymm25
 	vpmaxub xmm27, xmm31, xmm16
 	vpmaxub ymm29, ymm26, ymm21
+	vpmaxub xmm7{k3}, xmm5, oword [0x3ae]
+	vpmaxub ymm2{k2}, ymm7, ymm7
+	vpmaxub zmm0{k5}, zmm5, zmm5
+	vpmaxub xmm7{k4}{z}, xmm7, xmm4
+	vpmaxub ymm4{k5}{z}, ymm0, ymm2
+	vpmaxub zmm7{k7}{z}, zmm1, zmm6

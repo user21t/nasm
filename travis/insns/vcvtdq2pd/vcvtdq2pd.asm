@@ -15,3 +15,10 @@ default rel
 	vcvtdq2pd ymm27, xmm21
 	vcvtdq2pd xmm18, xmm28
 	vcvtdq2pd ymm23, xmm25
+	vcvtdq2pd xmm4{k4}, xmm3
+	vcvtdq2pd ymm7{k4}, xmm7
+	vcvtdq2pd zmm4{k2}, ymm3
+	vcvtdq2pd xmm4{k2}{z}, qword [0x145]
+	vcvtdq2pd ymm6{k1}{z}, xmm5
+	vcvtdq2pd zmm1{k2}{z}, ymm2
+	vcvtdq2pd zmm7, ymm5, {rn-sae}

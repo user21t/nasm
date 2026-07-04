@@ -6,3 +6,5 @@ default rel
 	vcmple_oqsd k5, xmm6, qword [0xbb2]
 	vcmple_oqsd xmm12, xmm15, xmm8
 	vcmple_oqsd k5, xmm15, xmm8
+	vcmple_oqsd k6{k5}, xmm1, xmm2
+	vcmple_oqsd k1, xmm5, xmm7, {sae}

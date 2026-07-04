@@ -3,3 +3,4 @@ default rel
 	vucomxsh xmm7, word [0x4c1]
 	vucomxsh xmm12, xmm10
 	vucomxsh xmm29, xmm31
+	vucomxsh xmm2, xmm3, {sae}

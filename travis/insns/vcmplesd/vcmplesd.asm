@@ -6,3 +6,5 @@ default rel
 	vcmplesd k1, xmm2, xmm2
 	vcmplesd xmm13, xmm12, xmm9
 	vcmplesd k1, xmm15, xmm8
+	vcmplesd k5{k3}, xmm4, xmm4
+	vcmplesd k6, xmm6, xmm0, {sae}

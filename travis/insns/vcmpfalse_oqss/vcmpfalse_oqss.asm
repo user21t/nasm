@@ -6,3 +6,5 @@ default rel
 	vcmpfalse_oqss k2, xmm3, xmm5
 	vcmpfalse_oqss xmm11, xmm14, xmm14
 	vcmpfalse_oqss k5, xmm11, xmm11
+	vcmpfalse_oqss k3{k4}, xmm2, xmm4
+	vcmpfalse_oqss k2, xmm4, xmm6, {sae}

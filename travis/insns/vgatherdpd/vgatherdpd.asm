@@ -11,3 +11,6 @@ default rel
 	vgatherdpd ymm11, [xmm14*1], ymm14
 	vgatherdpd xmm9, [xmm15*1]
 	vgatherdpd ymm11, [xmm12*1]
+	vgatherdpd xmm6{k3}, [xmm3*1]
+	vgatherdpd ymm3{k4}, [xmm0*1]
+	vgatherdpd zmm2{k1}, [ymm0*1]

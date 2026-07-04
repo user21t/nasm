@@ -13,3 +13,7 @@ default rel
 	vcmpgt_oqps ymm12, ymm8, ymm8
 	vcmpgt_oqps k5, xmm9, xmm10
 	vcmpgt_oqps k2, ymm12, ymm14
+	vcmpgt_oqps k3{k7}, xmm2, xmm2
+	vcmpgt_oqps k6{k7}, ymm2, ymm0
+	vcmpgt_oqps k3{k1}, zmm4, zmm2
+	vcmpgt_oqps k1, zmm7, zmm5, {sae}

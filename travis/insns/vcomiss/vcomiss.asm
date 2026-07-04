@@ -7,3 +7,4 @@ default rel
 	vcomiss xmm8, xmm11
 	vcomiss xmm31, xmm26
 	vcomiss xmm22, xmm24
+	vcomiss xmm5, xmm1, {sae}

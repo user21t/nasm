@@ -11,3 +11,6 @@ default rel
 	vpcmpled k3, xmm23, xmm31
 	vpcmpled k5, ymm20, ymm21
 	vpcmpled k2, zmm22, zmm17
+	vpcmpled k2{k7}, xmm1, xmm1
+	vpcmpled k3{k2}, ymm2, ymm3
+	vpcmpled k6{k5}, zmm7, zmm6

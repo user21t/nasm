@@ -7,3 +7,6 @@ default rel
 	vfnmsub231sd xmm12, xmm10, xmm10
 	vfnmsub231sd xmm18, xmm16, xmm24
 	vfnmsub231sd xmm29, xmm26, xmm22
+	vfnmsub231sd xmm2{k2}, xmm5, qword [0x318]
+	vfnmsub231sd xmm1{k5}{z}, xmm4, xmm6
+	vfnmsub231sd xmm3, xmm2, xmm0, {rz-sae}

@@ -11,3 +11,9 @@ default rel
 	vcvtbiasph2bf8s xmm30, xmm29, xmm30
 	vcvtbiasph2bf8s xmm20, ymm30, ymm30
 	vcvtbiasph2bf8s ymm23, zmm28, zmm21
+	vcvtbiasph2bf8s xmm5{k7}, xmm5, xmm2
+	vcvtbiasph2bf8s xmm6{k7}, ymm5, ymm0
+	vcvtbiasph2bf8s ymm6{k2}, zmm0, zmm5
+	vcvtbiasph2bf8s xmm1{k3}{z}, xmm3, xmm7
+	vcvtbiasph2bf8s xmm3{k5}{z}, ymm3, ymm4
+	vcvtbiasph2bf8s ymm0{k7}{z}, zmm0, zmm1

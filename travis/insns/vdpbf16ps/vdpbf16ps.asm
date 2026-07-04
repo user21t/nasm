@@ -14,3 +14,9 @@ default rel
 	vdpbf16ps xmm24, xmm26, xmm25
 	vdpbf16ps ymm17, ymm28, ymm19
 	vdpbf16ps zmm18, zmm16, zmm23
+	vdpbf16ps xmm4{k6}, xmm3, xmm4
+	vdpbf16ps ymm7{k1}, ymm0, ymm3
+	vdpbf16ps zmm0{k5}, zmm1, zmm5
+	vdpbf16ps xmm1{k2}{z}, xmm5, xmm2
+	vdpbf16ps ymm7{k5}{z}, ymm2, ymm5
+	vdpbf16ps zmm3{k6}{z}, zmm0, zmm6

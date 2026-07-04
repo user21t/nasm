@@ -6,3 +6,5 @@ default rel
 	vcmpunordsd k4, xmm0, qword [0x77e]
 	vcmpunordsd xmm10, xmm14, xmm13
 	vcmpunordsd k4, xmm10, xmm15
+	vcmpunordsd k2{k3}, xmm4, qword [0x64c]
+	vcmpunordsd k3, xmm3, xmm7, {sae}

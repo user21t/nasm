@@ -6,3 +6,5 @@ default rel
 	vcmptruess k1, xmm6, dword [0xac5]
 	vcmptruess xmm12, xmm12, xmm11
 	vcmptruess k3, xmm8, xmm13
+	vcmptruess k7{k2}, xmm3, xmm5
+	vcmptruess k6, xmm1, xmm5, {sae}

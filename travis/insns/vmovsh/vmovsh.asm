@@ -12,3 +12,6 @@ default rel
 	vmovsh xmm29, word [0xf4a]
 	vmovsh word [0x156], xmm18
 	vmovsh xmm17, xmm16, xmm24
+	vmovsh xmm3{k2}, word [0x599]
+	vmovsh word [0x28a]{k6}, xmm4
+	vmovsh xmm7{k3}, xmm7, xmm5

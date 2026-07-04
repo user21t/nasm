@@ -14,3 +14,10 @@ default rel
 	vdivph xmm18, xmm17, xmm29
 	vdivph ymm30, ymm24, ymm27
 	vdivph zmm16, zmm27, zmm20
+	vdivph xmm0{k1}, xmm2, xmm7
+	vdivph ymm2{k3}, ymm4, yword [0x83b]
+	vdivph zmm5{k1}, zmm2, zword [0xc58]
+	vdivph xmm3{k4}{z}, xmm1, xmm3
+	vdivph ymm3{k3}{z}, ymm3, yword [0x4cf]
+	vdivph zmm4{k4}{z}, zmm1, zmm3
+	vdivph zmm7, zmm0, zmm2, {ru-sae}

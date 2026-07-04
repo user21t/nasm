@@ -15,3 +15,9 @@ default rel
 	vpdpbsud ymm22, ymm30, ymm16
 	vpdpbsud xmm31, xmm22, xmm24
 	vpdpbsud ymm21, ymm22, ymm27
+	vpdpbsud xmm4{k7}, xmm7, xmm0
+	vpdpbsud ymm5{k6}, ymm7, ymm2
+	vpdpbsud zmm0{k4}, zmm3, zword [0x5b6]
+	vpdpbsud xmm7{k3}{z}, xmm5, xmm3
+	vpdpbsud ymm1{k2}{z}, ymm1, ymm7
+	vpdpbsud zmm6{k3}{z}, zmm7, zword [0xe06]

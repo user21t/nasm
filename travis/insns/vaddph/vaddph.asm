@@ -14,3 +14,10 @@ default rel
 	vaddph xmm20, xmm22, xmm26
 	vaddph ymm26, ymm20, ymm16
 	vaddph zmm20, zmm28, zmm22
+	vaddph xmm2{k4}, xmm5, xmm6
+	vaddph ymm6{k4}, ymm1, yword [0x6e9]
+	vaddph zmm3{k5}, zmm3, zmm5
+	vaddph xmm3{k6}{z}, xmm4, xmm5
+	vaddph ymm1{k4}{z}, ymm4, ymm3
+	vaddph zmm5{k5}{z}, zmm3, zword [0xa89]
+	vaddph zmm3, zmm4, zmm6, {rd-sae}

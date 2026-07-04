@@ -14,3 +14,10 @@ default rel
 	vscalefps xmm25, xmm18, xmm20
 	vscalefps ymm21, ymm29, ymm27
 	vscalefps zmm27, zmm16, zmm29
+	vscalefps xmm7{k4}, xmm7, xmm0
+	vscalefps ymm4{k2}, ymm3, ymm3
+	vscalefps zmm3{k4}, zmm5, zmm2
+	vscalefps xmm1{k2}{z}, xmm2, xmm7
+	vscalefps ymm3{k6}{z}, ymm4, ymm4
+	vscalefps zmm6{k6}{z}, zmm2, zmm4
+	vscalefps zmm1, zmm6, zmm4, {ru-sae}

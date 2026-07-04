@@ -6,3 +6,4 @@ default rel
 	vcmpsd k6, xmm5, qword [0x2d6], 0xe8
 	vcmpsd xmm13, xmm10, xmm8, 0x8b
 	vcmpsd k7, xmm12, xmm11, 0x51
+	vcmpsd k6{k7}, xmm2, xmm6, 0x1f

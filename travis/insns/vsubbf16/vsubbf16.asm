@@ -11,3 +11,9 @@ default rel
 	vsubbf16 xmm27, xmm20, xmm23
 	vsubbf16 ymm17, ymm26, ymm24
 	vsubbf16 zmm18, zmm30, zmm16
+	vsubbf16 xmm3{k6}, xmm2, oword [0x416]
+	vsubbf16 ymm7{k7}, ymm5, ymm5
+	vsubbf16 zmm2{k7}, zmm3, zmm0
+	vsubbf16 xmm6{k4}{z}, xmm0, xmm3
+	vsubbf16 ymm7{k6}{z}, ymm5, yword [0x1d0]
+	vsubbf16 zmm3{k6}{z}, zmm4, zmm7

@@ -14,3 +14,10 @@ default rel
 	vfcmaddcph xmm23, xmm30, xmm26
 	vfcmaddcph ymm20, ymm25, ymm26
 	vfcmaddcph zmm30, zmm26, zmm27
+	vfcmaddcph xmm6{k3}, xmm0, xmm6
+	vfcmaddcph ymm0{k1}, ymm0, ymm2
+	vfcmaddcph zmm7{k3}, zmm5, zword [0x61e]
+	vfcmaddcph xmm7{k5}{z}, xmm3, oword [0xbcf]
+	vfcmaddcph ymm0{k5}{z}, ymm0, ymm1
+	vfcmaddcph zmm0{k2}{z}, zmm6, zmm2
+	vfcmaddcph zmm6, zmm4, zmm0, {rd-sae}

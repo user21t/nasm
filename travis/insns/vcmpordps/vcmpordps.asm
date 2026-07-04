@@ -13,3 +13,7 @@ default rel
 	vcmpordps ymm8, ymm14, ymm10
 	vcmpordps k6, xmm12, xmm10
 	vcmpordps k6, ymm9, ymm12
+	vcmpordps k3{k1}, xmm1, oword [0x927]
+	vcmpordps k7{k7}, ymm1, ymm7
+	vcmpordps k3{k3}, zmm7, zmm4
+	vcmpordps k7, zmm5, zmm7, {sae}

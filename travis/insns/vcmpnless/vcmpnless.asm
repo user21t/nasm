@@ -6,3 +6,5 @@ default rel
 	vcmpnless k6, xmm4, dword [0x54a]
 	vcmpnless xmm9, xmm12, xmm9
 	vcmpnless k3, xmm13, xmm12
+	vcmpnless k5{k4}, xmm7, xmm6
+	vcmpnless k2, xmm1, xmm1, {sae}

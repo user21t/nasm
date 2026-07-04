@@ -19,3 +19,9 @@ default rel
 	vpaddb ymm26, ymm23, ymm26
 	vpaddb xmm19, xmm20, xmm18
 	vpaddb ymm27, ymm28, ymm22
+	vpaddb xmm1{k6}, xmm5, xmm1
+	vpaddb ymm1{k4}, ymm6, ymm1
+	vpaddb zmm5{k6}, zmm6, zword [0x54c]
+	vpaddb xmm2{k5}{z}, xmm6, oword [0x370]
+	vpaddb ymm6{k3}{z}, ymm3, yword [0xb4c]
+	vpaddb zmm1{k4}{z}, zmm4, zword [0x5cc]

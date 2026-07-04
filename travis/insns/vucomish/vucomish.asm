@@ -3,3 +3,4 @@ default rel
 	vucomish xmm1, xmm4
 	vucomish xmm15, xmm9
 	vucomish xmm26, xmm28
+	vucomish xmm2, xmm4, {sae}

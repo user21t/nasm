@@ -16,3 +16,11 @@ default rel
 	vpermpd ymm28, ymm27, 0x31
 	vpermpd zmm23, zmm27, 0x73
 	vpermpd ymm19, ymm20, ymm28
+	vpermpd ymm7{k4}, ymm5, 0x7b
+	vpermpd zmm3{k6}, zword [0xa41], 0x53
+	vpermpd ymm6{k4}, ymm1, ymm4
+	vpermpd zmm0{k6}, zmm6, zmm6
+	vpermpd ymm6{k6}{z}, ymm1, 0x9
+	vpermpd zmm5{k7}{z}, zword [0xe62], 0x4e
+	vpermpd ymm6{k4}{z}, ymm1, ymm0
+	vpermpd zmm3{k7}{z}, zmm7, zword [0xaa3]

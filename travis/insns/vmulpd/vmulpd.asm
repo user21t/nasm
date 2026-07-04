@@ -19,3 +19,10 @@ default rel
 	vmulpd ymm23, ymm20, ymm23
 	vmulpd xmm21, xmm31, xmm22
 	vmulpd ymm21, ymm28, ymm22
+	vmulpd xmm3{k3}, xmm7, xmm6
+	vmulpd ymm5{k7}, ymm2, ymm1
+	vmulpd zmm7{k2}, zmm5, zmm5
+	vmulpd xmm7{k1}{z}, xmm4, oword [0x9f2]
+	vmulpd ymm1{k1}{z}, ymm0, ymm0
+	vmulpd zmm6{k2}{z}, zmm7, zmm6
+	vmulpd zmm1, zmm1, zmm2, {rz-sae}

@@ -3,3 +3,6 @@ default rel
 	vrsqrt28pd zmm4, zword [0x470]
 	vrsqrt28pd zmm12, zmm11
 	vrsqrt28pd zmm29, zmm22
+	vrsqrt28pd zmm5{k7}, zmm3
+	vrsqrt28pd zmm6{k1}{z}, zmm0
+	vrsqrt28pd zmm1, zmm6, {sae}

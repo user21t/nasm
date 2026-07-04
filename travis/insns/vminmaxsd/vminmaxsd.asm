@@ -3,3 +3,5 @@ default rel
 	vminmaxsd xmm0, xmm6, qword [0x41e], 0xbf
 	vminmaxsd xmm8, xmm9, xmm9, 0x39
 	vminmaxsd xmm19, xmm23, xmm30, 0x68
+	vminmaxsd xmm7{k1}, xmm6, qword [0x390], 0x5f
+	vminmaxsd xmm4{k7}{z}, xmm3, xmm2, 0x44

@@ -13,3 +13,6 @@ default rel
 	vpcmpgtq ymm13, ymm10, ymm11
 	vpcmpgtq k3, xmm8, xmm9
 	vpcmpgtq k2, ymm11, ymm14
+	vpcmpgtq k6{k4}, xmm4, xmm1
+	vpcmpgtq k4{k2}, ymm2, yword [0x4d1]
+	vpcmpgtq k7{k2}, zmm0, zmm0

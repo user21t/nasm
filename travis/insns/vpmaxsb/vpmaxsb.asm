@@ -19,3 +19,9 @@ default rel
 	vpmaxsb ymm20, ymm24, ymm26
 	vpmaxsb xmm20, xmm17, xmm27
 	vpmaxsb ymm25, ymm21, ymm31
+	vpmaxsb xmm5{k3}, xmm7, xmm6
+	vpmaxsb ymm2{k1}, ymm1, ymm2
+	vpmaxsb zmm1{k4}, zmm1, zmm4
+	vpmaxsb xmm7{k3}{z}, xmm6, xmm5
+	vpmaxsb ymm6{k7}{z}, ymm1, ymm2
+	vpmaxsb zmm2{k2}{z}, zmm7, zword [0xafb]

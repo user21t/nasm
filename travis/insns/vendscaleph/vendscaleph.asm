@@ -11,3 +11,9 @@ default rel
 	vendscaleph xmm30, xmm21, 0xd4
 	vendscaleph ymm31, ymm30, 0x69
 	vendscaleph zmm20, zmm22, 0x2
+	vendscaleph xmm2{k6}, xmm5, 0x63
+	vendscaleph ymm5{k4}, yword [0xa01], 0xf1
+	vendscaleph zmm5{k2}, zword [0xc84], 0x51
+	vendscaleph xmm6{k3}{z}, xmm3, 0xc7
+	vendscaleph ymm7{k3}{z}, ymm0, 0xc6
+	vendscaleph zmm0{k4}{z}, zword [0x34a], 0x4b

@@ -15,3 +15,9 @@ default rel
 	vpdpwusd ymm20, ymm23, ymm26
 	vpdpwusd xmm21, xmm16, xmm28
 	vpdpwusd ymm28, ymm18, ymm27
+	vpdpwusd xmm7{k2}, xmm4, oword [0x8be]
+	vpdpwusd ymm3{k4}, ymm7, ymm1
+	vpdpwusd zmm2{k1}, zmm2, zmm5
+	vpdpwusd xmm7{k4}{z}, xmm2, xmm5
+	vpdpwusd ymm3{k6}{z}, ymm0, ymm7
+	vpdpwusd zmm7{k6}{z}, zmm0, zmm5

@@ -11,3 +11,9 @@ default rel
 	vcvt2ps2phx xmm27, xmm21, xmm31
 	vcvt2ps2phx ymm16, ymm17, ymm23
 	vcvt2ps2phx zmm22, zmm25, zmm28
+	vcvt2ps2phx xmm3{k2}, xmm2, xmm7
+	vcvt2ps2phx ymm7{k2}, ymm1, ymm5
+	vcvt2ps2phx zmm5{k6}, zmm1, zmm1
+	vcvt2ps2phx xmm2{k7}{z}, xmm2, xmm3
+	vcvt2ps2phx ymm1{k2}{z}, ymm1, ymm4
+	vcvt2ps2phx zmm1{k1}{z}, zmm4, zmm4

@@ -11,3 +11,6 @@ default rel
 	vpshufbitqmb k3, xmm23, xmm30
 	vpshufbitqmb k7, ymm21, ymm19
 	vpshufbitqmb k1, zmm25, zmm20
+	vpshufbitqmb k1{k6}, xmm7, oword [0xafa]
+	vpshufbitqmb k3{k5}, ymm3, ymm7
+	vpshufbitqmb k6{k6}, zmm4, zmm4

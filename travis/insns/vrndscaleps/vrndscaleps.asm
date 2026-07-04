@@ -11,3 +11,9 @@ default rel
 	vrndscaleps xmm24, xmm17, 0xea
 	vrndscaleps ymm17, ymm19, 0xf1
 	vrndscaleps zmm16, zmm31, 0xe2
+	vrndscaleps xmm7{k2}, oword [0x13c], 0x3b
+	vrndscaleps ymm2{k2}, ymm3, 0xa3
+	vrndscaleps zmm1{k2}, zword [0xfe2], 0xc3
+	vrndscaleps xmm1{k7}{z}, xmm2, 0x9f
+	vrndscaleps ymm1{k2}{z}, ymm3, 0xef
+	vrndscaleps zmm0{k4}{z}, zmm6, 0x8b

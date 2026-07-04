@@ -13,3 +13,7 @@ default rel
 	vcmptrue_uspd ymm9, ymm13, ymm15
 	vcmptrue_uspd k7, xmm12, xmm11
 	vcmptrue_uspd k1, ymm12, ymm12
+	vcmptrue_uspd k5{k5}, xmm5, xmm3
+	vcmptrue_uspd k5{k3}, ymm1, yword [0x527]
+	vcmptrue_uspd k2{k4}, zmm1, zword [0xcfa]
+	vcmptrue_uspd k7, zmm3, zmm0, {sae}

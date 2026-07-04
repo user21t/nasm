@@ -11,3 +11,9 @@ default rel
 	vcvtbf162ibs xmm16, xmm22
 	vcvtbf162ibs ymm25, ymm20
 	vcvtbf162ibs zmm31, zmm26
+	vcvtbf162ibs xmm2{k7}, oword [0xfe9]
+	vcvtbf162ibs ymm4{k6}, ymm1
+	vcvtbf162ibs zmm0{k5}, zmm2
+	vcvtbf162ibs xmm7{k4}{z}, oword [0xa6e]
+	vcvtbf162ibs ymm2{k6}{z}, ymm7
+	vcvtbf162ibs zmm7{k5}{z}, zmm2

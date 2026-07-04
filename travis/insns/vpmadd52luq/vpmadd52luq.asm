@@ -15,3 +15,9 @@ default rel
 	vpmadd52luq ymm21, ymm23, ymm20
 	vpmadd52luq xmm30, xmm30, xmm29
 	vpmadd52luq ymm24, ymm29, ymm22
+	vpmadd52luq xmm0{k6}, xmm0, xmm7
+	vpmadd52luq ymm6{k3}, ymm3, yword [0x1b3]
+	vpmadd52luq zmm3{k1}, zmm3, zmm7
+	vpmadd52luq xmm2{k5}{z}, xmm0, xmm5
+	vpmadd52luq ymm2{k4}{z}, ymm5, yword [0xd79]
+	vpmadd52luq zmm2{k2}{z}, zmm2, zmm5

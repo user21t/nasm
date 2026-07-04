@@ -11,3 +11,10 @@ default rel
 	vgetexppd xmm22, xmm30
 	vgetexppd ymm28, ymm22
 	vgetexppd zmm31, zmm17
+	vgetexppd xmm5{k7}, xmm1
+	vgetexppd ymm3{k6}, ymm7
+	vgetexppd zmm3{k5}, zmm2
+	vgetexppd xmm6{k3}{z}, xmm5
+	vgetexppd ymm4{k2}{z}, yword [0xf6e]
+	vgetexppd zmm3{k3}{z}, zmm0
+	vgetexppd zmm4, zmm1, {sae}

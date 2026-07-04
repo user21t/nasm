@@ -19,3 +19,9 @@ default rel
 	vpaddsb ymm29, ymm29, ymm25
 	vpaddsb xmm20, xmm16, xmm18
 	vpaddsb ymm31, ymm29, ymm28
+	vpaddsb xmm5{k4}, xmm6, xmm5
+	vpaddsb ymm7{k6}, ymm0, ymm4
+	vpaddsb zmm4{k7}, zmm7, zword [0x717]
+	vpaddsb xmm2{k1}{z}, xmm4, xmm3
+	vpaddsb ymm1{k3}{z}, ymm6, yword [0xa67]
+	vpaddsb zmm0{k7}{z}, zmm2, zword [0xe01]

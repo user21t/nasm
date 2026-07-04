@@ -6,3 +6,5 @@ default rel
 	vcmpneqss k1, xmm2, xmm0
 	vcmpneqss xmm12, xmm12, xmm15
 	vcmpneqss k6, xmm9, xmm15
+	vcmpneqss k4{k3}, xmm2, dword [0xb94]
+	vcmpneqss k5, xmm2, xmm2, {sae}

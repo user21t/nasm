@@ -14,3 +14,9 @@ default rel
 	vpermb xmm24, xmm24, xmm16
 	vpermb ymm31, ymm31, ymm31
 	vpermb zmm25, zmm29, zmm22
+	vpermb xmm4{k1}, xmm3, oword [0xfc8]
+	vpermb ymm2{k5}, ymm4, ymm6
+	vpermb zmm4{k6}, zmm1, zmm4
+	vpermb xmm2{k2}{z}, xmm1, xmm1
+	vpermb ymm7{k3}{z}, ymm2, ymm1
+	vpermb zmm5{k6}{z}, zmm0, zmm7

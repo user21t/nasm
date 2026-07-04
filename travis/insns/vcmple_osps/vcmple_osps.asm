@@ -13,3 +13,7 @@ default rel
 	vcmple_osps ymm14, ymm12, ymm12
 	vcmple_osps k7, xmm8, xmm14
 	vcmple_osps k1, ymm13, ymm14
+	vcmple_osps k3{k7}, xmm1, xmm7
+	vcmple_osps k2{k7}, ymm0, ymm2
+	vcmple_osps k4{k6}, zmm5, zmm0
+	vcmple_osps k4, zmm0, zmm4, {sae}

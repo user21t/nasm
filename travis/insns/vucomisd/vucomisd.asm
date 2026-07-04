@@ -7,3 +7,4 @@ default rel
 	vucomisd xmm15, xmm8
 	vucomisd xmm30, xmm18
 	vucomisd xmm23, xmm27
+	vucomisd xmm0, xmm6, {sae}

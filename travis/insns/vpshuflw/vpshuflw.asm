@@ -15,3 +15,9 @@ default rel
 	vpshuflw ymm16, ymm16, 0x31
 	vpshuflw xmm16, xmm29, 0x58
 	vpshuflw ymm25, ymm17, 0xf0
+	vpshuflw xmm4{k5}, xmm0, 0x88
+	vpshuflw ymm1{k3}, ymm7, 0x18
+	vpshuflw zmm5{k3}, zmm3, 0x22
+	vpshuflw xmm1{k4}{z}, oword [0x343], 0xea
+	vpshuflw ymm4{k3}{z}, ymm7, 0x36
+	vpshuflw zmm7{k3}{z}, zword [0x405], 0x2b

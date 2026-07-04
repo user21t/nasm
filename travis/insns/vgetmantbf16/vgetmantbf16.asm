@@ -11,3 +11,9 @@ default rel
 	vgetmantbf16 xmm24, xmm17, 0xf3
 	vgetmantbf16 ymm25, ymm21, 0xa8
 	vgetmantbf16 zmm25, zmm23, 0x70
+	vgetmantbf16 xmm5{k5}, xmm5, 0x68
+	vgetmantbf16 ymm3{k2}, ymm6, 0x11
+	vgetmantbf16 zmm5{k4}, zmm2, 0xab
+	vgetmantbf16 xmm7{k4}{z}, xmm6, 0x96
+	vgetmantbf16 ymm7{k4}{z}, ymm5, 0x2
+	vgetmantbf16 zmm2{k1}{z}, zmm0, 0x24

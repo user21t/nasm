@@ -11,3 +11,9 @@ default rel
 	vplzcntd xmm17, xmm21
 	vplzcntd ymm22, ymm31
 	vplzcntd zmm24, zmm31
+	vplzcntd xmm5{k6}, xmm5
+	vplzcntd ymm0{k4}, yword [0xc58]
+	vplzcntd zmm3{k5}, zmm2
+	vplzcntd xmm7{k6}{z}, xmm2
+	vplzcntd ymm2{k6}{z}, yword [0xedd]
+	vplzcntd zmm7{k3}{z}, zmm3

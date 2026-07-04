@@ -13,3 +13,7 @@ default rel
 	vcmple_oqpd ymm10, ymm13, ymm10
 	vcmple_oqpd k6, xmm10, xmm8
 	vcmple_oqpd k7, ymm14, ymm9
+	vcmple_oqpd k3{k3}, xmm3, xmm3
+	vcmple_oqpd k4{k4}, ymm6, ymm5
+	vcmple_oqpd k1{k4}, zmm4, zword [0xca9]
+	vcmple_oqpd k7, zmm5, zmm2, {sae}

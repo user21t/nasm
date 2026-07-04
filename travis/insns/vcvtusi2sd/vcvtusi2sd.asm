@@ -9,3 +9,5 @@ default rel
 	vcvtusi2sd xmm13, xmm10, r8
 	vcvtusi2sd xmm19, xmm17, r27d
 	vcvtusi2sd xmm16, xmm17, r16
+	vcvtusi2sd xmm4, xmm0, ebp, {ru-sae}
+	vcvtusi2sd xmm5, xmm4, rdx, {rz-sae}

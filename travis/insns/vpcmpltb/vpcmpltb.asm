@@ -11,3 +11,6 @@ default rel
 	vpcmpltb k2, xmm27, xmm21
 	vpcmpltb k4, ymm29, ymm25
 	vpcmpltb k3, zmm22, zmm31
+	vpcmpltb k5{k4}, xmm4, xmm4
+	vpcmpltb k3{k1}, ymm3, ymm5
+	vpcmpltb k7{k2}, zmm4, zword [0x3ac]

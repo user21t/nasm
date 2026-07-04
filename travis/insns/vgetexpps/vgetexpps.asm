@@ -11,3 +11,10 @@ default rel
 	vgetexpps xmm21, xmm24
 	vgetexpps ymm28, ymm29
 	vgetexpps zmm18, zmm28
+	vgetexpps xmm3{k5}, oword [0xb64]
+	vgetexpps ymm3{k1}, ymm7
+	vgetexpps zmm5{k3}, zmm2
+	vgetexpps xmm1{k7}{z}, oword [0xe6b]
+	vgetexpps ymm2{k5}{z}, ymm1
+	vgetexpps zmm7{k1}{z}, zword [0x370]
+	vgetexpps zmm3, zmm5, {sae}

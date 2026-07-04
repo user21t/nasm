@@ -13,3 +13,7 @@ default rel
 	vcmpeq_uqps ymm12, ymm9, ymm12
 	vcmpeq_uqps k3, xmm14, xmm8
 	vcmpeq_uqps k7, ymm14, ymm12
+	vcmpeq_uqps k6{k3}, xmm4, oword [0x3b4]
+	vcmpeq_uqps k4{k3}, ymm2, ymm7
+	vcmpeq_uqps k4{k1}, zmm2, zword [0xf33]
+	vcmpeq_uqps k3, zmm0, zmm3, {sae}

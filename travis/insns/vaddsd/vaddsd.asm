@@ -9,3 +9,6 @@ default rel
 	vaddsd xmm15, xmm8, xmm11
 	vaddsd xmm29, xmm22, xmm16
 	vaddsd xmm26, xmm26, xmm20
+	vaddsd xmm1{k7}, xmm4, xmm2
+	vaddsd xmm1{k2}{z}, xmm0, qword [0x8eb]
+	vaddsd xmm0, xmm1, xmm6, {rn-sae}

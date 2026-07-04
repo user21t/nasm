@@ -15,3 +15,21 @@ default rel
 	vpbroadcastq xmm17, xmm26
 	vpbroadcastq ymm17, qword [0x5f2]
 	vpbroadcastq ymm19, xmm24
+	vpbroadcastq xmm6{k6}, qword [0xc50]
+	vpbroadcastq ymm0{k7}, qword [0xdbf]
+	vpbroadcastq zmm2{k2}, qword [0x4dc]
+	vpbroadcastq xmm1{k5}, xmm4
+	vpbroadcastq ymm7{k6}, xmm7
+	vpbroadcastq zmm1{k6}, xmm3
+	vpbroadcastq xmm6{k4}, rdi
+	vpbroadcastq ymm1{k3}, rbp
+	vpbroadcastq zmm0{k1}, rdi
+	vpbroadcastq xmm2{k4}{z}, qword [0xe92]
+	vpbroadcastq ymm4{k7}{z}, qword [0xbc7]
+	vpbroadcastq zmm1{k5}{z}, qword [0xdc9]
+	vpbroadcastq xmm4{k2}{z}, xmm5
+	vpbroadcastq ymm6{k5}{z}, xmm5
+	vpbroadcastq zmm7{k3}{z}, xmm6
+	vpbroadcastq xmm7{k1}{z}, rbp
+	vpbroadcastq ymm6{k5}{z}, rbx
+	vpbroadcastq zmm4{k3}{z}, rcx

@@ -15,3 +15,9 @@ default rel
 	vpabsw ymm24, ymm24
 	vpabsw xmm24, xmm28
 	vpabsw ymm31, ymm29
+	vpabsw xmm0{k3}, xmm6
+	vpabsw ymm4{k6}, ymm7
+	vpabsw zmm7{k3}, zword [0x848]
+	vpabsw xmm1{k5}{z}, xmm0
+	vpabsw ymm7{k6}{z}, ymm6
+	vpabsw zmm3{k5}{z}, zmm4

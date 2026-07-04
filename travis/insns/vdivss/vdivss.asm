@@ -9,3 +9,6 @@ default rel
 	vdivss xmm12, xmm15, xmm10
 	vdivss xmm29, xmm22, xmm26
 	vdivss xmm21, xmm30, xmm27
+	vdivss xmm0{k1}, xmm3, xmm5
+	vdivss xmm2{k3}{z}, xmm6, dword [0x4ff]
+	vdivss xmm5, xmm0, xmm7, {rz-sae}

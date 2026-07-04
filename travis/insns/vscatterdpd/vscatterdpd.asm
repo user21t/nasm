@@ -11,3 +11,6 @@ default rel
 	vscatterdpd [xmm25*1], xmm28
 	vscatterdpd [xmm25*1], ymm18
 	vscatterdpd [ymm29*1], zmm27
+	vscatterdpd [xmm0*1]{k2}, xmm4
+	vscatterdpd [xmm7*1]{k2}, ymm4
+	vscatterdpd [ymm7*1]{k4}, zmm7

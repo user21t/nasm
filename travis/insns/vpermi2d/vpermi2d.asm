@@ -11,3 +11,9 @@ default rel
 	vpermi2d xmm30, xmm23, xmm28
 	vpermi2d ymm16, ymm29, ymm26
 	vpermi2d zmm20, zmm16, zmm16
+	vpermi2d xmm0{k2}, xmm0, oword [0xd9b]
+	vpermi2d ymm2{k1}, ymm1, ymm4
+	vpermi2d zmm3{k6}, zmm3, zmm3
+	vpermi2d xmm4{k3}{z}, xmm6, oword [0xf82]
+	vpermi2d ymm1{k3}{z}, ymm1, yword [0x5ca]
+	vpermi2d zmm3{k3}{z}, zmm5, zmm1

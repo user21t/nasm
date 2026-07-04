@@ -14,3 +14,9 @@ default rel
 	vpsllvw xmm31, xmm25, xmm24
 	vpsllvw ymm22, ymm25, ymm26
 	vpsllvw zmm19, zmm23, zmm24
+	vpsllvw xmm6{k1}, xmm7, xmm3
+	vpsllvw ymm6{k2}, ymm5, yword [0x36c]
+	vpsllvw zmm0{k1}, zmm3, zword [0x99e]
+	vpsllvw xmm0{k3}{z}, xmm6, xmm0
+	vpsllvw ymm2{k2}{z}, ymm3, ymm3
+	vpsllvw zmm1{k1}{z}, zmm0, zword [0x6a2]

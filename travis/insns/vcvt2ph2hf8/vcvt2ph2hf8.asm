@@ -11,3 +11,9 @@ default rel
 	vcvt2ph2hf8 xmm24, xmm28, xmm23
 	vcvt2ph2hf8 ymm28, ymm18, ymm31
 	vcvt2ph2hf8 zmm16, zmm22, zmm18
+	vcvt2ph2hf8 xmm5{k5}, xmm3, xmm1
+	vcvt2ph2hf8 ymm2{k4}, ymm4, ymm0
+	vcvt2ph2hf8 zmm5{k6}, zmm0, zword [0xded]
+	vcvt2ph2hf8 xmm1{k6}{z}, xmm2, xmm1
+	vcvt2ph2hf8 ymm2{k6}{z}, ymm6, ymm0
+	vcvt2ph2hf8 zmm4{k1}{z}, zmm0, zmm1

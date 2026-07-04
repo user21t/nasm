@@ -11,3 +11,6 @@ default rel
 	vptestnmq k7, xmm19, xmm21
 	vptestnmq k4, ymm16, ymm28
 	vptestnmq k4, zmm30, zmm19
+	vptestnmq k7{k4}, xmm5, xmm3
+	vptestnmq k1{k7}, ymm7, yword [0xc45]
+	vptestnmq k4{k7}, zmm3, zmm7

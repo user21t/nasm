@@ -11,3 +11,10 @@ default rel
 	vcvtuqq2ps xmm20, xmm31
 	vcvtuqq2ps xmm21, ymm16
 	vcvtuqq2ps ymm19, zmm20
+	vcvtuqq2ps xmm0{k3}, oword [0x71b]
+	vcvtuqq2ps xmm7{k1}, ymm7
+	vcvtuqq2ps ymm7{k7}, zword [0x5f8]
+	vcvtuqq2ps xmm0{k5}{z}, xmm1
+	vcvtuqq2ps xmm4{k1}{z}, ymm3
+	vcvtuqq2ps ymm3{k6}{z}, zmm1
+	vcvtuqq2ps ymm6, zmm6, {rz-sae}

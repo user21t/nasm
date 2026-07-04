@@ -14,3 +14,9 @@ default rel
 	vpmultishiftqb xmm21, xmm30, xmm18
 	vpmultishiftqb ymm19, ymm20, ymm30
 	vpmultishiftqb zmm17, zmm21, zmm30
+	vpmultishiftqb xmm3{k6}, xmm7, xmm3
+	vpmultishiftqb ymm7{k4}, ymm2, ymm6
+	vpmultishiftqb zmm2{k4}, zmm6, zmm7
+	vpmultishiftqb xmm2{k7}{z}, xmm3, xmm7
+	vpmultishiftqb ymm1{k4}{z}, ymm2, ymm1
+	vpmultishiftqb zmm6{k5}{z}, zmm5, zmm2

@@ -9,3 +9,7 @@ default rel
 	vshufi64x2 zmm10, zmm14, zmm14, 0x3c
 	vshufi64x2 ymm30, ymm18, ymm17, 0x5b
 	vshufi64x2 zmm26, zmm18, zmm22, 0xd0
+	vshufi64x2 ymm5{k7}, ymm0, ymm3, 0x5b
+	vshufi64x2 zmm2{k2}, zmm5, zmm6, 0x82
+	vshufi64x2 ymm1{k4}{z}, ymm0, ymm2, 0xb5
+	vshufi64x2 zmm5{k6}{z}, zmm7, zmm0, 0x55

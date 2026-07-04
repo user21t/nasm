@@ -19,3 +19,9 @@ default rel
 	vgf2p8mulb ymm29, ymm20, ymm20
 	vgf2p8mulb xmm29, xmm28, xmm29
 	vgf2p8mulb ymm21, ymm18, ymm18
+	vgf2p8mulb xmm5{k3}, xmm1, xmm0
+	vgf2p8mulb ymm7{k3}, ymm3, ymm6
+	vgf2p8mulb zmm4{k5}, zmm3, zmm5
+	vgf2p8mulb xmm4{k7}{z}, xmm1, xmm3
+	vgf2p8mulb ymm6{k2}{z}, ymm0, ymm4
+	vgf2p8mulb zmm1{k3}{z}, zmm0, zmm2

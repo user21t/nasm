@@ -11,3 +11,6 @@ default rel
 	vpcmpgtub k6, xmm27, xmm25
 	vpcmpgtub k4, ymm26, ymm21
 	vpcmpgtub k6, zmm29, zmm27
+	vpcmpgtub k2{k4}, xmm2, xmm5
+	vpcmpgtub k4{k3}, ymm0, ymm1
+	vpcmpgtub k3{k2}, zmm7, zword [0x4c5]

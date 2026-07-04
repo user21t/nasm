@@ -11,3 +11,6 @@ default rel
 	vpcmpw k2, xmm28, xmm23, 0xe8
 	vpcmpw k5, ymm18, ymm22, 0xe3
 	vpcmpw k2, zmm29, zmm17, 0x29
+	vpcmpw k6{k2}, xmm3, xmm5, 0xd4
+	vpcmpw k4{k1}, ymm3, yword [0xc02], 0x18
+	vpcmpw k5{k1}, zmm2, zword [0xdfe], 0x2b

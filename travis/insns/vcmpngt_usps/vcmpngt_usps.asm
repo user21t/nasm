@@ -13,3 +13,7 @@ default rel
 	vcmpngt_usps ymm9, ymm10, ymm15
 	vcmpngt_usps k2, xmm11, xmm8
 	vcmpngt_usps k5, ymm12, ymm14
+	vcmpngt_usps k3{k1}, xmm0, xmm1
+	vcmpngt_usps k5{k2}, ymm2, ymm3
+	vcmpngt_usps k1{k6}, zmm5, zmm0
+	vcmpngt_usps k6, zmm1, zmm5, {sae}

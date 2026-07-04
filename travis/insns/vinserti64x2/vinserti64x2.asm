@@ -9,3 +9,7 @@ default rel
 	vinserti64x2 zmm15, zmm8, xmm8, 0xd6
 	vinserti64x2 ymm23, ymm25, xmm16, 0xd4
 	vinserti64x2 zmm21, zmm19, xmm20, 0x93
+	vinserti64x2 ymm3{k2}, ymm5, oword [0xa99], 0x2f
+	vinserti64x2 zmm6{k2}, zmm4, xmm3, 0x3
+	vinserti64x2 ymm5{k4}{z}, ymm3, xmm1, 0x31
+	vinserti64x2 zmm1{k7}{z}, zmm1, xmm5, 0x60

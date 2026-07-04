@@ -11,3 +11,6 @@ default rel
 	vpcmpnequd k5, xmm17, xmm19
 	vpcmpnequd k6, ymm24, ymm16
 	vpcmpnequd k1, zmm19, zmm31
+	vpcmpnequd k4{k6}, xmm6, xmm4
+	vpcmpnequd k6{k3}, ymm1, yword [0x405]
+	vpcmpnequd k1{k1}, zmm5, zmm0

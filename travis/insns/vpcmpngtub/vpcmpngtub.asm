@@ -11,3 +11,6 @@ default rel
 	vpcmpngtub k1, xmm26, xmm31
 	vpcmpngtub k4, ymm18, ymm17
 	vpcmpngtub k4, zmm20, zmm24
+	vpcmpngtub k5{k7}, xmm2, xmm7
+	vpcmpngtub k1{k2}, ymm7, ymm6
+	vpcmpngtub k5{k4}, zmm6, zmm6

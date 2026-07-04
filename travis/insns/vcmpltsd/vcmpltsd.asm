@@ -6,3 +6,5 @@ default rel
 	vcmpltsd k3, xmm7, xmm2
 	vcmpltsd xmm13, xmm11, xmm9
 	vcmpltsd k6, xmm11, xmm15
+	vcmpltsd k6{k1}, xmm1, xmm1
+	vcmpltsd k3, xmm2, xmm1, {sae}

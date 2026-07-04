@@ -17,3 +17,9 @@ default rel
 	vpdpbusds ymm24, ymm28, ymm30
 	vpdpbusds xmm18, xmm18, xmm16
 	vpdpbusds ymm24, ymm17, ymm18
+	vpdpbusds xmm0{k6}, xmm3, xmm2
+	vpdpbusds ymm7{k7}, ymm5, ymm2
+	vpdpbusds zmm5{k2}, zmm5, zmm2
+	vpdpbusds xmm0{k2}{z}, xmm3, xmm1
+	vpdpbusds ymm3{k6}{z}, ymm3, ymm3
+	vpdpbusds zmm0{k7}{z}, zmm7, zmm3

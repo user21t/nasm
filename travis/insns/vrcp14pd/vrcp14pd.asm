@@ -11,3 +11,9 @@ default rel
 	vrcp14pd xmm17, xmm20
 	vrcp14pd ymm20, ymm30
 	vrcp14pd zmm26, zmm23
+	vrcp14pd xmm2{k5}, xmm0
+	vrcp14pd ymm0{k1}, ymm0
+	vrcp14pd zmm7{k7}, zword [0xe30]
+	vrcp14pd xmm5{k3}{z}, xmm0
+	vrcp14pd ymm0{k3}{z}, yword [0xb04]
+	vrcp14pd zmm4{k5}{z}, zmm2

@@ -11,3 +11,6 @@ default rel
 	vpcmpnltq k6, xmm21, xmm30
 	vpcmpnltq k7, ymm25, ymm17
 	vpcmpnltq k3, zmm23, zmm25
+	vpcmpnltq k2{k6}, xmm1, xmm1
+	vpcmpnltq k5{k3}, ymm0, ymm0
+	vpcmpnltq k7{k4}, zmm2, zword [0x821]

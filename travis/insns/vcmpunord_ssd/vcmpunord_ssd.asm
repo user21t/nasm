@@ -6,3 +6,5 @@ default rel
 	vcmpunord_ssd k4, xmm4, xmm6
 	vcmpunord_ssd xmm11, xmm14, xmm15
 	vcmpunord_ssd k4, xmm13, xmm8
+	vcmpunord_ssd k6{k3}, xmm1, xmm4
+	vcmpunord_ssd k6, xmm0, xmm7, {sae}

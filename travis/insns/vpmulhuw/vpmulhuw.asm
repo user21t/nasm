@@ -19,3 +19,9 @@ default rel
 	vpmulhuw ymm24, ymm16, ymm21
 	vpmulhuw xmm31, xmm27, xmm28
 	vpmulhuw ymm31, ymm16, ymm30
+	vpmulhuw xmm7{k7}, xmm2, xmm7
+	vpmulhuw ymm2{k2}, ymm2, ymm5
+	vpmulhuw zmm4{k3}, zmm3, zmm6
+	vpmulhuw xmm1{k7}{z}, xmm6, xmm4
+	vpmulhuw ymm4{k7}{z}, ymm4, ymm1
+	vpmulhuw zmm0{k7}{z}, zmm3, zmm3

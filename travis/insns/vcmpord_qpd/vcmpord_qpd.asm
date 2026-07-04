@@ -13,3 +13,7 @@ default rel
 	vcmpord_qpd ymm15, ymm13, ymm11
 	vcmpord_qpd k4, xmm8, xmm9
 	vcmpord_qpd k3, ymm14, ymm9
+	vcmpord_qpd k4{k4}, xmm5, xmm0
+	vcmpord_qpd k6{k2}, ymm2, ymm1
+	vcmpord_qpd k5{k4}, zmm5, zmm2
+	vcmpord_qpd k7, zmm1, zmm5, {sae}

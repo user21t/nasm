@@ -14,3 +14,9 @@ default rel
 	vpshldvd xmm26, xmm17, xmm26
 	vpshldvd ymm18, ymm16, ymm26
 	vpshldvd zmm22, zmm28, zmm20
+	vpshldvd xmm2{k4}, xmm3, xmm0
+	vpshldvd ymm7{k3}, ymm2, yword [0xdcb]
+	vpshldvd zmm7{k1}, zmm4, zmm7
+	vpshldvd xmm6{k4}{z}, xmm0, xmm0
+	vpshldvd ymm1{k1}{z}, ymm6, yword [0x6ce]
+	vpshldvd zmm4{k7}{z}, zmm1, zword [0xa7f]

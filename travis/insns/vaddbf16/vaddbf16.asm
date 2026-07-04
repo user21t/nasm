@@ -11,3 +11,9 @@ default rel
 	vaddbf16 xmm24, xmm19, xmm24
 	vaddbf16 ymm18, ymm29, ymm20
 	vaddbf16 zmm17, zmm25, zmm27
+	vaddbf16 xmm5{k1}, xmm6, oword [0x9d7]
+	vaddbf16 ymm4{k3}, ymm3, yword [0xb92]
+	vaddbf16 zmm2{k1}, zmm0, zmm3
+	vaddbf16 xmm3{k5}{z}, xmm5, xmm3
+	vaddbf16 ymm3{k5}{z}, ymm7, ymm0
+	vaddbf16 zmm2{k1}{z}, zmm2, zword [0x39d]

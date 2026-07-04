@@ -13,3 +13,7 @@ default rel
 	vcmpgepd ymm11, ymm8, ymm11
 	vcmpgepd k5, xmm8, xmm8
 	vcmpgepd k5, ymm15, ymm15
+	vcmpgepd k1{k1}, xmm6, oword [0x371]
+	vcmpgepd k4{k7}, ymm2, yword [0x5ab]
+	vcmpgepd k5{k5}, zmm6, zword [0xebd]
+	vcmpgepd k2, zmm5, zmm7, {sae}

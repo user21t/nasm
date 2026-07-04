@@ -14,3 +14,10 @@ default rel
 	vscalefpd xmm22, xmm22, xmm22
 	vscalefpd ymm24, ymm20, ymm26
 	vscalefpd zmm27, zmm18, zmm24
+	vscalefpd xmm3{k7}, xmm7, xmm4
+	vscalefpd ymm1{k1}, ymm2, ymm7
+	vscalefpd zmm2{k7}, zmm5, zword [0x8f1]
+	vscalefpd xmm0{k2}{z}, xmm3, xmm1
+	vscalefpd ymm3{k5}{z}, ymm5, ymm3
+	vscalefpd zmm3{k4}{z}, zmm1, zmm7
+	vscalefpd zmm0, zmm4, zmm5, {rn-sae}

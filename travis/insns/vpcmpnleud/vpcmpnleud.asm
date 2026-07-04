@@ -11,3 +11,6 @@ default rel
 	vpcmpnleud k1, xmm20, xmm28
 	vpcmpnleud k4, ymm21, ymm19
 	vpcmpnleud k1, zmm27, zmm26
+	vpcmpnleud k2{k6}, xmm2, oword [0x3ca]
+	vpcmpnleud k6{k7}, ymm0, ymm0
+	vpcmpnleud k5{k2}, zmm5, zword [0x892]

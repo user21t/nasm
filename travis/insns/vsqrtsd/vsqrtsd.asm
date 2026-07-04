@@ -9,3 +9,6 @@ default rel
 	vsqrtsd xmm12, xmm13, xmm10
 	vsqrtsd xmm20, xmm28, xmm19
 	vsqrtsd xmm22, xmm26, xmm27
+	vsqrtsd xmm1{k3}, xmm5, xmm5
+	vsqrtsd xmm4{k2}{z}, xmm5, xmm1
+	vsqrtsd xmm5, xmm5, xmm2, {ru-sae}

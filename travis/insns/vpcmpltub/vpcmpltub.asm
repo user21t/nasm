@@ -11,3 +11,6 @@ default rel
 	vpcmpltub k5, xmm20, xmm21
 	vpcmpltub k3, ymm27, ymm29
 	vpcmpltub k1, zmm26, zmm19
+	vpcmpltub k3{k5}, xmm2, xmm0
+	vpcmpltub k4{k5}, ymm4, ymm6
+	vpcmpltub k2{k7}, zmm4, zmm1

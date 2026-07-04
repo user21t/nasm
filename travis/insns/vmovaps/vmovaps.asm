@@ -15,3 +15,12 @@ default rel
 	vmovaps xmm24, xmm19
 	vmovaps ymm29, ymm23
 	vmovaps ymm26, ymm27
+	vmovaps xmm4{k5}, xmm6
+	vmovaps ymm7{k3}, yword [0xec6]
+	vmovaps zmm2{k1}, zword [0x3a1]
+	vmovaps xmm4{k3}, xmm2
+	vmovaps ymm0{k4}, ymm5
+	vmovaps zmm5{k7}, zmm5
+	vmovaps oword [0x1f7]{k2}, xmm3
+	vmovaps yword [0xef0]{k4}, ymm5
+	vmovaps zword [0x33d]{k6}, zmm3

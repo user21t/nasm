@@ -11,3 +11,6 @@ default rel
 	vpcmpgtud k4, xmm28, xmm28
 	vpcmpgtud k7, ymm21, ymm28
 	vpcmpgtud k4, zmm30, zmm25
+	vpcmpgtud k7{k4}, xmm3, oword [0xb16]
+	vpcmpgtud k2{k7}, ymm1, ymm2
+	vpcmpgtud k4{k1}, zmm2, zword [0xb3a]

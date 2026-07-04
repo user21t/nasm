@@ -19,3 +19,10 @@ default rel
 	vdivpd ymm30, ymm22, ymm29
 	vdivpd xmm23, xmm20, xmm22
 	vdivpd ymm20, ymm19, ymm21
+	vdivpd xmm3{k6}, xmm2, xmm1
+	vdivpd ymm7{k1}, ymm5, ymm0
+	vdivpd zmm5{k7}, zmm5, zmm0
+	vdivpd xmm4{k1}{z}, xmm5, xmm4
+	vdivpd ymm4{k7}{z}, ymm4, ymm1
+	vdivpd zmm5{k5}{z}, zmm7, zmm7
+	vdivpd zmm3, zmm6, zmm2, {rd-sae}

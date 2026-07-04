@@ -19,3 +19,10 @@ default rel
 	vdivps ymm20, ymm26, ymm20
 	vdivps xmm24, xmm31, xmm23
 	vdivps ymm17, ymm17, ymm30
+	vdivps xmm1{k5}, xmm3, xmm7
+	vdivps ymm5{k5}, ymm5, yword [0xa45]
+	vdivps zmm5{k5}, zmm2, zmm2
+	vdivps xmm6{k2}{z}, xmm6, oword [0xc4c]
+	vdivps ymm1{k6}{z}, ymm2, ymm2
+	vdivps zmm5{k4}{z}, zmm2, zmm6
+	vdivps zmm7, zmm3, zmm4, {rd-sae}

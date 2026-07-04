@@ -15,3 +15,5 @@ default rel
 	vcvttss2si r22, xmm23
 	vcvttss2si r22d, xmm28
 	vcvttss2si r19, xmm31
+	vcvttss2si ebp, xmm1, {sae}
+	vcvttss2si rbp, xmm5, {sae}

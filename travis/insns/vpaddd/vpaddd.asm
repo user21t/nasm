@@ -19,3 +19,9 @@ default rel
 	vpaddd ymm31, ymm30, ymm30
 	vpaddd xmm19, xmm31, xmm18
 	vpaddd ymm24, ymm30, ymm23
+	vpaddd xmm0{k3}, xmm0, xmm3
+	vpaddd ymm6{k3}, ymm3, yword [0x4be]
+	vpaddd zmm4{k7}, zmm0, zmm7
+	vpaddd xmm0{k2}{z}, xmm1, xmm5
+	vpaddd ymm5{k7}{z}, ymm3, ymm3
+	vpaddd zmm6{k2}{z}, zmm0, zword [0xc4b]

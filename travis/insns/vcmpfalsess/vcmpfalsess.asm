@@ -6,3 +6,5 @@ default rel
 	vcmpfalsess k2, xmm2, dword [0xa39]
 	vcmpfalsess xmm15, xmm14, xmm14
 	vcmpfalsess k7, xmm13, xmm9
+	vcmpfalsess k7{k6}, xmm7, xmm7
+	vcmpfalsess k2, xmm5, xmm2, {sae}

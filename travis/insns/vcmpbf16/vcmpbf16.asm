@@ -11,3 +11,6 @@ default rel
 	vcmpbf16 k2, xmm17, xmm23, 0x6
 	vcmpbf16 k3, ymm19, ymm31, 0x2b
 	vcmpbf16 k3, zmm30, zmm19, 0x75
+	vcmpbf16 k7{k1}, xmm3, xmm4, 0x3
+	vcmpbf16 k1{k7}, ymm0, ymm2, 0xcf
+	vcmpbf16 k5{k5}, zmm0, zmm1, 0x53

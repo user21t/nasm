@@ -7,3 +7,7 @@ default rel
 	vbroadcastf64x2 zmm9, oword [0xb5c]
 	vbroadcastf64x2 ymm20, oword [0x39f]
 	vbroadcastf64x2 zmm30, oword [0xb7d]
+	vbroadcastf64x2 ymm6{k3}, oword [0x6e2]
+	vbroadcastf64x2 zmm5{k6}, oword [0x617]
+	vbroadcastf64x2 ymm6{k6}{z}, oword [0x691]
+	vbroadcastf64x2 zmm3{k7}{z}, oword [0xbcb]

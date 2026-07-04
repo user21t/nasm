@@ -19,3 +19,9 @@ default rel
 	vpavgw ymm23, ymm22, ymm22
 	vpavgw xmm21, xmm21, xmm18
 	vpavgw ymm20, ymm24, ymm27
+	vpavgw xmm0{k1}, xmm5, xmm4
+	vpavgw ymm0{k1}, ymm4, yword [0xdb2]
+	vpavgw zmm0{k5}, zmm3, zword [0x2bf]
+	vpavgw xmm3{k1}{z}, xmm6, oword [0xf5d]
+	vpavgw ymm0{k4}{z}, ymm2, ymm7
+	vpavgw zmm7{k5}{z}, zmm1, zword [0x312]

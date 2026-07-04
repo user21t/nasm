@@ -19,3 +19,9 @@ default rel
 	vpmaxud ymm22, ymm28, ymm30
 	vpmaxud xmm23, xmm20, xmm26
 	vpmaxud ymm26, ymm30, ymm19
+	vpmaxud xmm2{k3}, xmm6, xmm5
+	vpmaxud ymm2{k1}, ymm5, ymm4
+	vpmaxud zmm4{k5}, zmm6, zmm7
+	vpmaxud xmm0{k4}{z}, xmm2, xmm4
+	vpmaxud ymm2{k6}{z}, ymm1, ymm0
+	vpmaxud zmm4{k3}{z}, zmm1, zmm4

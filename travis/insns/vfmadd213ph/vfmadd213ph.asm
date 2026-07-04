@@ -14,3 +14,10 @@ default rel
 	vfmadd213ph xmm19, xmm31, xmm30
 	vfmadd213ph ymm29, ymm30, ymm24
 	vfmadd213ph zmm17, zmm19, zmm28
+	vfmadd213ph xmm0{k2}, xmm1, xmm2
+	vfmadd213ph ymm4{k3}, ymm0, ymm0
+	vfmadd213ph zmm0{k5}, zmm4, zword [0x62c]
+	vfmadd213ph xmm6{k5}{z}, xmm7, oword [0x264]
+	vfmadd213ph ymm0{k2}{z}, ymm5, ymm2
+	vfmadd213ph zmm4{k4}{z}, zmm4, zmm3
+	vfmadd213ph zmm7, zmm2, zmm0, {rd-sae}

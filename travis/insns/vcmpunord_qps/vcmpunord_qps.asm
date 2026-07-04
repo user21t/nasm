@@ -13,3 +13,7 @@ default rel
 	vcmpunord_qps ymm13, ymm9, ymm9
 	vcmpunord_qps k6, xmm13, xmm15
 	vcmpunord_qps k1, ymm15, ymm12
+	vcmpunord_qps k6{k1}, xmm7, oword [0x34f]
+	vcmpunord_qps k6{k7}, ymm1, ymm4
+	vcmpunord_qps k3{k4}, zmm6, zmm3
+	vcmpunord_qps k6, zmm7, zmm5, {sae}

@@ -19,3 +19,9 @@ default rel
 	vpsubq ymm25, ymm31, ymm29
 	vpsubq xmm26, xmm22, xmm20
 	vpsubq ymm28, ymm30, ymm23
+	vpsubq xmm1{k5}, xmm3, oword [0x6f1]
+	vpsubq ymm6{k7}, ymm3, yword [0x8f1]
+	vpsubq zmm3{k4}, zmm4, zmm0
+	vpsubq xmm1{k6}{z}, xmm3, oword [0xa04]
+	vpsubq ymm3{k6}{z}, ymm6, ymm0
+	vpsubq zmm7{k6}{z}, zmm5, zmm0

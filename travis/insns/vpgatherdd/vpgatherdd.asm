@@ -11,3 +11,6 @@ default rel
 	vpgatherdd ymm11, [ymm11*1], ymm14
 	vpgatherdd xmm8, [xmm15*1]
 	vpgatherdd ymm11, [ymm8*1]
+	vpgatherdd xmm6{k5}, [xmm2*1]
+	vpgatherdd ymm3{k4}, [ymm7*1]
+	vpgatherdd zmm5{k4}, [zmm5*1]

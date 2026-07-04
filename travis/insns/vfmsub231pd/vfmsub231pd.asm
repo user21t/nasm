@@ -15,3 +15,10 @@ default rel
 	vfmsub231pd ymm31, ymm16, ymm25
 	vfmsub231pd xmm24, xmm20, xmm17
 	vfmsub231pd ymm29, ymm28, ymm27
+	vfmsub231pd xmm5{k5}, xmm3, xmm1
+	vfmsub231pd ymm6{k3}, ymm6, yword [0xfab]
+	vfmsub231pd zmm7{k7}, zmm1, zmm0
+	vfmsub231pd xmm3{k6}{z}, xmm5, oword [0x1c2]
+	vfmsub231pd ymm0{k7}{z}, ymm2, yword [0x104]
+	vfmsub231pd zmm7{k7}{z}, zmm2, zmm0
+	vfmsub231pd zmm6, zmm2, zmm7, {rd-sae}

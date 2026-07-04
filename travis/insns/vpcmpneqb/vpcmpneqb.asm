@@ -11,3 +11,6 @@ default rel
 	vpcmpneqb k2, xmm23, xmm24
 	vpcmpneqb k2, ymm28, ymm19
 	vpcmpneqb k3, zmm31, zmm31
+	vpcmpneqb k3{k7}, xmm4, xmm1
+	vpcmpneqb k4{k2}, ymm5, ymm4
+	vpcmpneqb k4{k6}, zmm1, zword [0x346]

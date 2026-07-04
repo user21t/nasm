@@ -13,3 +13,6 @@ default rel
 	vpcmpeqb ymm11, ymm12, ymm15
 	vpcmpeqb k5, xmm12, xmm8
 	vpcmpeqb k1, ymm14, ymm9
+	vpcmpeqb k4{k1}, xmm5, xmm4
+	vpcmpeqb k2{k6}, ymm0, yword [0x791]
+	vpcmpeqb k7{k7}, zmm2, zword [0xd9c]

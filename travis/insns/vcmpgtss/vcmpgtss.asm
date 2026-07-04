@@ -6,3 +6,5 @@ default rel
 	vcmpgtss k1, xmm7, xmm1
 	vcmpgtss xmm13, xmm11, xmm8
 	vcmpgtss k5, xmm15, xmm14
+	vcmpgtss k5{k3}, xmm5, xmm2
+	vcmpgtss k6, xmm3, xmm0, {sae}

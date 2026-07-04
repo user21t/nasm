@@ -11,3 +11,10 @@ default rel
 	vcvttps2ibs xmm17, xmm25
 	vcvttps2ibs ymm20, ymm29
 	vcvttps2ibs zmm31, zmm19
+	vcvttps2ibs xmm4{k4}, xmm0
+	vcvttps2ibs ymm6{k6}, ymm0
+	vcvttps2ibs zmm1{k7}, zmm3
+	vcvttps2ibs xmm7{k2}{z}, xmm5
+	vcvttps2ibs ymm1{k2}{z}, yword [0xf46]
+	vcvttps2ibs zmm4{k4}{z}, zmm5
+	vcvttps2ibs zmm5, zmm5, {sae}

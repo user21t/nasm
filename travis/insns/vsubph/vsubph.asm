@@ -14,3 +14,10 @@ default rel
 	vsubph xmm28, xmm31, xmm17
 	vsubph ymm25, ymm26, ymm16
 	vsubph zmm16, zmm26, zmm22
+	vsubph xmm2{k7}, xmm0, oword [0x23d]
+	vsubph ymm4{k6}, ymm4, ymm6
+	vsubph zmm2{k2}, zmm6, zmm0
+	vsubph xmm0{k4}{z}, xmm0, xmm2
+	vsubph ymm3{k6}{z}, ymm3, ymm2
+	vsubph zmm4{k5}{z}, zmm6, zword [0x98d]
+	vsubph zmm4, zmm4, zmm1, {ru-sae}

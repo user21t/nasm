@@ -11,3 +11,6 @@ default rel
 	vfpclassps k1, xmm16, 0xb3
 	vfpclassps k6, ymm27, 0x57
 	vfpclassps k3, zmm29, 0xda
+	vfpclassps k4{k4}, oword [0x2a7], 0xaa
+	vfpclassps k3{k5}, ymm2, 0xa7
+	vfpclassps k4{k5}, zmm2, 0x76

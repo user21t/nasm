@@ -6,3 +6,5 @@ default rel
 	vcmpunord_sss k2, xmm2, xmm5
 	vcmpunord_sss xmm13, xmm11, xmm12
 	vcmpunord_sss k1, xmm10, xmm12
+	vcmpunord_sss k4{k3}, xmm1, xmm0
+	vcmpunord_sss k3, xmm5, xmm0, {sae}

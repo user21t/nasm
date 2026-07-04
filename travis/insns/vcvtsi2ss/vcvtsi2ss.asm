@@ -19,3 +19,5 @@ default rel
 	vcvtsi2ss xmm18, xmm26, dword [0xf6d]
 	vcvtsi2ss xmm23, xmm16, r16
 	vcvtsi2ss xmm18, xmm29, r20d
+	vcvtsi2ss xmm6, xmm3, eax, {rd-sae}
+	vcvtsi2ss xmm4, xmm0, rdx, {ru-sae}

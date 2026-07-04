@@ -14,3 +14,9 @@ default rel
 	vprolq xmm24, xmm22, 0xf1
 	vprolq ymm20, ymm28, 0xf
 	vprolq zmm23, zmm28, 0x51
+	vprolq xmm7{k2}, xmm3, 0x62
+	vprolq ymm1{k1}, ymm4, 0x9f
+	vprolq zmm5{k4}, zmm4, 0x1
+	vprolq xmm7{k1}{z}, xmm6, 0x68
+	vprolq ymm1{k6}{z}, ymm6, 0xff
+	vprolq zmm1{k3}{z}, zword [0xf10], 0x95

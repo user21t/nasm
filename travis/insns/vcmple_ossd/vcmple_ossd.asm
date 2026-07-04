@@ -6,3 +6,5 @@ default rel
 	vcmple_ossd k5, xmm4, xmm0
 	vcmple_ossd xmm10, xmm13, xmm8
 	vcmple_ossd k2, xmm9, xmm13
+	vcmple_ossd k4{k5}, xmm2, qword [0x781]
+	vcmple_ossd k4, xmm6, xmm1, {sae}

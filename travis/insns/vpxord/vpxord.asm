@@ -14,3 +14,9 @@ default rel
 	vpxord xmm23, xmm18, xmm16
 	vpxord ymm20, ymm25, ymm20
 	vpxord zmm19, zmm19, zmm27
+	vpxord xmm1{k4}, xmm6, xmm1
+	vpxord ymm3{k2}, ymm1, yword [0x76e]
+	vpxord zmm5{k3}, zmm6, zword [0xca4]
+	vpxord xmm5{k5}{z}, xmm7, xmm0
+	vpxord ymm1{k7}{z}, ymm0, ymm3
+	vpxord zmm1{k4}{z}, zmm5, zmm6

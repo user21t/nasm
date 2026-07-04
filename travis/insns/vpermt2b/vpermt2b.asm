@@ -11,3 +11,9 @@ default rel
 	vpermt2b xmm27, xmm18, xmm17
 	vpermt2b ymm18, ymm28, ymm20
 	vpermt2b zmm22, zmm26, zmm20
+	vpermt2b xmm1{k1}, xmm1, xmm5
+	vpermt2b ymm1{k4}, ymm6, ymm3
+	vpermt2b zmm0{k3}, zmm0, zmm6
+	vpermt2b xmm0{k1}{z}, xmm0, xmm3
+	vpermt2b ymm2{k4}{z}, ymm2, yword [0x2ca]
+	vpermt2b zmm6{k4}{z}, zmm3, zword [0x1a0]

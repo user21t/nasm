@@ -14,3 +14,9 @@ default rel
 	vpsrlvw xmm30, xmm17, xmm29
 	vpsrlvw ymm31, ymm28, ymm17
 	vpsrlvw zmm23, zmm30, zmm20
+	vpsrlvw xmm6{k5}, xmm1, xmm3
+	vpsrlvw ymm7{k1}, ymm6, ymm2
+	vpsrlvw zmm7{k3}, zmm5, zmm7
+	vpsrlvw xmm1{k3}{z}, xmm5, oword [0xeca]
+	vpsrlvw ymm4{k3}{z}, ymm2, ymm7
+	vpsrlvw zmm5{k7}{z}, zmm3, zmm4

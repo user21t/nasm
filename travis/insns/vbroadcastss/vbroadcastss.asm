@@ -15,3 +15,15 @@ default rel
 	vbroadcastss ymm20, dword [0x994]
 	vbroadcastss xmm26, xmm17
 	vbroadcastss ymm25, xmm21
+	vbroadcastss xmm0{k4}, dword [0x9e6]
+	vbroadcastss ymm2{k7}, dword [0xde1]
+	vbroadcastss zmm2{k2}, dword [0x73c]
+	vbroadcastss xmm2{k5}, xmm5
+	vbroadcastss ymm3{k4}, xmm4
+	vbroadcastss zmm3{k2}, xmm3
+	vbroadcastss xmm4{k2}{z}, dword [0xaed]
+	vbroadcastss ymm1{k2}{z}, dword [0xe0c]
+	vbroadcastss zmm7{k1}{z}, dword [0x1ad]
+	vbroadcastss xmm6{k7}{z}, xmm0
+	vbroadcastss ymm2{k7}{z}, xmm3
+	vbroadcastss zmm3{k4}{z}, xmm3

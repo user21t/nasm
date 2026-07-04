@@ -6,3 +6,5 @@ default rel
 	vcmpneq_oqss k2, xmm2, xmm0
 	vcmpneq_oqss xmm12, xmm12, xmm14
 	vcmpneq_oqss k7, xmm8, xmm15
+	vcmpneq_oqss k2{k4}, xmm7, xmm2
+	vcmpneq_oqss k6, xmm3, xmm0, {sae}

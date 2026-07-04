@@ -13,3 +13,7 @@ default rel
 	vcmpleps ymm13, ymm10, ymm12
 	vcmpleps k4, xmm13, xmm8
 	vcmpleps k6, ymm14, ymm12
+	vcmpleps k2{k6}, xmm0, xmm7
+	vcmpleps k2{k4}, ymm5, yword [0xb83]
+	vcmpleps k3{k2}, zmm1, zmm2
+	vcmpleps k5, zmm0, zmm6, {sae}

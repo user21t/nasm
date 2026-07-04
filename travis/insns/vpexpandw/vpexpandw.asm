@@ -11,3 +11,9 @@ default rel
 	vpexpandw xmm25, xmm29
 	vpexpandw ymm24, ymm25
 	vpexpandw zmm28, zmm27
+	vpexpandw xmm0{k3}, oword [0xc77]
+	vpexpandw ymm1{k4}, ymm6
+	vpexpandw zmm6{k5}, zmm3
+	vpexpandw xmm6{k4}{z}, oword [0x99e]
+	vpexpandw ymm7{k4}{z}, ymm6
+	vpexpandw zmm2{k1}{z}, zmm7

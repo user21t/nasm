@@ -7,3 +7,4 @@ default rel
 	vucomiss xmm12, xmm13
 	vucomiss xmm17, xmm25
 	vucomiss xmm28, xmm24
+	vucomiss xmm6, xmm5, {sae}

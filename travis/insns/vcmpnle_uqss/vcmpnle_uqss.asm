@@ -6,3 +6,5 @@ default rel
 	vcmpnle_uqss k5, xmm6, xmm2
 	vcmpnle_uqss xmm10, xmm11, xmm12
 	vcmpnle_uqss k3, xmm13, xmm11
+	vcmpnle_uqss k6{k2}, xmm4, xmm6
+	vcmpnle_uqss k5, xmm4, xmm0, {sae}

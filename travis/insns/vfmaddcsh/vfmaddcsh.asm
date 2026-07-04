@@ -4,3 +4,6 @@ default rel
 	vfmaddcsh xmm0, xmm4, xmm2
 	vfmaddcsh xmm8, xmm14, xmm9
 	vfmaddcsh xmm17, xmm29, xmm25
+	vfmaddcsh xmm3{k2}, xmm3, xmm6
+	vfmaddcsh xmm0{k1}{z}, xmm3, dword [0xd90]
+	vfmaddcsh xmm0, xmm6, xmm6, {rz-sae}

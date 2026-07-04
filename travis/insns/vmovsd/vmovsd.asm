@@ -16,3 +16,6 @@ default rel
 	vmovsd xmm28, qword [0x921]
 	vmovsd qword [0xc9a], xmm27
 	vmovsd xmm19, qword [0x47c]
+	vmovsd xmm5{k4}, qword [0xf4f]
+	vmovsd qword [0xd55]{k3}, xmm7
+	vmovsd xmm3{k5}, xmm3, xmm2

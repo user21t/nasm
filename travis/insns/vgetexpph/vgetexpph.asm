@@ -11,3 +11,10 @@ default rel
 	vgetexpph xmm26, xmm17
 	vgetexpph ymm22, ymm21
 	vgetexpph zmm22, zmm22
+	vgetexpph xmm5{k3}, xmm4
+	vgetexpph ymm1{k5}, yword [0x38c]
+	vgetexpph zmm5{k1}, zword [0x6ac]
+	vgetexpph xmm1{k4}{z}, xmm7
+	vgetexpph ymm5{k4}{z}, ymm4
+	vgetexpph zmm6{k4}{z}, zword [0x68f]
+	vgetexpph zmm1, zmm7, {sae}

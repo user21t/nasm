@@ -11,3 +11,6 @@ default rel
 	vpgatherdq ymm10, [xmm8*1], ymm14
 	vpgatherdq xmm12, [xmm14*1]
 	vpgatherdq ymm10, [xmm11*1]
+	vpgatherdq xmm1{k1}, [xmm6*1]
+	vpgatherdq ymm4{k1}, [xmm4*1]
+	vpgatherdq zmm4{k5}, [ymm4*1]

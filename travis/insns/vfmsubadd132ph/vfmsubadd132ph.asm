@@ -14,3 +14,10 @@ default rel
 	vfmsubadd132ph xmm24, xmm24, xmm22
 	vfmsubadd132ph ymm28, ymm19, ymm25
 	vfmsubadd132ph zmm29, zmm31, zmm25
+	vfmsubadd132ph xmm7{k6}, xmm7, oword [0x5e1]
+	vfmsubadd132ph ymm2{k3}, ymm7, ymm6
+	vfmsubadd132ph zmm1{k4}, zmm4, zword [0x81c]
+	vfmsubadd132ph xmm1{k5}{z}, xmm1, oword [0x98f]
+	vfmsubadd132ph ymm5{k6}{z}, ymm4, yword [0x81b]
+	vfmsubadd132ph zmm2{k2}{z}, zmm6, zmm2
+	vfmsubadd132ph zmm0, zmm0, zmm4, {rd-sae}

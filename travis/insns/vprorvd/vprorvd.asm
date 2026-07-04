@@ -14,3 +14,9 @@ default rel
 	vprorvd xmm16, xmm27, xmm22
 	vprorvd ymm31, ymm29, ymm19
 	vprorvd zmm26, zmm16, zmm20
+	vprorvd xmm1{k6}, xmm3, xmm2
+	vprorvd ymm0{k6}, ymm1, ymm7
+	vprorvd zmm0{k6}, zmm1, zmm0
+	vprorvd xmm0{k7}{z}, xmm1, oword [0x313]
+	vprorvd ymm7{k3}{z}, ymm0, ymm1
+	vprorvd zmm0{k3}{z}, zmm3, zword [0xb9f]

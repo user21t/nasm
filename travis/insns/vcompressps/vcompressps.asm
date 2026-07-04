@@ -15,3 +15,9 @@ default rel
 	vcompressps yword [0x153], ymm19
 	vcompressps zword [0xe1c], zmm21
 	vcompressps xmm27, xmm17
+	vcompressps oword [0xc41]{k7}, xmm0
+	vcompressps yword [0x7dd]{k3}, ymm0
+	vcompressps zword [0xd66]{k5}, zmm5
+	vcompressps xmm1{k7}, xmm4
+	vcompressps ymm0{k5}, ymm2
+	vcompressps zmm3{k2}, zmm4

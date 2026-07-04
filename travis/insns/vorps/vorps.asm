@@ -19,3 +19,9 @@ default rel
 	vorps ymm18, ymm30, ymm22
 	vorps xmm21, xmm19, xmm20
 	vorps ymm29, ymm23, ymm25
+	vorps xmm4{k5}, xmm6, xmm2
+	vorps ymm2{k5}, ymm7, yword [0x9cc]
+	vorps zmm1{k1}, zmm4, zword [0x737]
+	vorps xmm6{k2}{z}, xmm4, xmm7
+	vorps ymm6{k1}{z}, ymm1, yword [0xba6]
+	vorps zmm0{k6}{z}, zmm1, zmm2

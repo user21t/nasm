@@ -11,3 +11,6 @@ default rel
 	vpcmpltud k1, xmm21, xmm29
 	vpcmpltud k7, ymm30, ymm21
 	vpcmpltud k1, zmm19, zmm23
+	vpcmpltud k7{k7}, xmm2, xmm0
+	vpcmpltud k7{k1}, ymm0, yword [0xb93]
+	vpcmpltud k5{k7}, zmm6, zmm6

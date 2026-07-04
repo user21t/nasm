@@ -4,3 +4,4 @@ default rel
 	vcvtss2sh xmm0, xmm4, xmm3
 	vcvtss2sh xmm8, xmm15, xmm11
 	vcvtss2sh xmm21, xmm25, xmm29
+	vcvtss2sh xmm0, xmm7, xmm3, {rd-sae}

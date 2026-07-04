@@ -19,3 +19,9 @@ default rel
 	vpmaxuw ymm26, ymm18, ymm28
 	vpmaxuw xmm17, xmm21, xmm25
 	vpmaxuw ymm27, ymm24, ymm26
+	vpmaxuw xmm6{k2}, xmm7, xmm2
+	vpmaxuw ymm0{k1}, ymm7, ymm4
+	vpmaxuw zmm1{k3}, zmm3, zmm4
+	vpmaxuw xmm4{k7}{z}, xmm4, oword [0xa9e]
+	vpmaxuw ymm0{k1}{z}, ymm3, ymm1
+	vpmaxuw zmm3{k4}{z}, zmm7, zmm5

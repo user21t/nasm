@@ -6,3 +6,5 @@ default rel
 	vcmpeq_ussd k2, xmm6, qword [0x150]
 	vcmpeq_ussd xmm15, xmm10, xmm9
 	vcmpeq_ussd k4, xmm13, xmm15
+	vcmpeq_ussd k4{k7}, xmm2, xmm3
+	vcmpeq_ussd k4, xmm4, xmm7, {sae}

@@ -13,3 +13,7 @@ default rel
 	vcmpeqps ymm13, ymm11, ymm14
 	vcmpeqps k6, xmm10, xmm10
 	vcmpeqps k6, ymm10, ymm10
+	vcmpeqps k4{k1}, xmm0, xmm3
+	vcmpeqps k1{k2}, ymm7, ymm6
+	vcmpeqps k2{k6}, zmm5, zmm4
+	vcmpeqps k3, zmm6, zmm6, {sae}

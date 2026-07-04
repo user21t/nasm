@@ -11,3 +11,9 @@ default rel
 	vpopcntd xmm30, xmm23
 	vpopcntd ymm29, ymm26
 	vpopcntd zmm20, zmm20
+	vpopcntd xmm4{k3}, xmm1
+	vpopcntd ymm0{k3}, ymm2
+	vpopcntd zmm7{k7}, zmm7
+	vpopcntd xmm4{k7}{z}, xmm1
+	vpopcntd ymm2{k6}{z}, ymm0
+	vpopcntd zmm4{k1}{z}, zmm2

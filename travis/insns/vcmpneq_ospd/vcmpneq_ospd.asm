@@ -13,3 +13,7 @@ default rel
 	vcmpneq_ospd ymm11, ymm10, ymm8
 	vcmpneq_ospd k5, xmm15, xmm15
 	vcmpneq_ospd k5, ymm9, ymm14
+	vcmpneq_ospd k6{k4}, xmm6, oword [0xfa8]
+	vcmpneq_ospd k4{k3}, ymm2, ymm1
+	vcmpneq_ospd k3{k4}, zmm6, zmm1
+	vcmpneq_ospd k1, zmm7, zmm4, {sae}

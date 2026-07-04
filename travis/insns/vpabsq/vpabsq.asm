@@ -11,3 +11,9 @@ default rel
 	vpabsq xmm28, xmm31
 	vpabsq ymm26, ymm16
 	vpabsq zmm16, zmm20
+	vpabsq xmm6{k2}, oword [0x204]
+	vpabsq ymm4{k4}, ymm7
+	vpabsq zmm5{k2}, zmm6
+	vpabsq xmm0{k2}{z}, xmm2
+	vpabsq ymm4{k1}{z}, yword [0xc67]
+	vpabsq zmm1{k6}{z}, zmm7

@@ -11,3 +11,10 @@ default rel
 	vcvtpd2uqq xmm16, xmm24
 	vcvtpd2uqq ymm17, ymm17
 	vcvtpd2uqq zmm30, zmm23
+	vcvtpd2uqq xmm3{k3}, xmm2
+	vcvtpd2uqq ymm1{k2}, ymm5
+	vcvtpd2uqq zmm2{k3}, zmm6
+	vcvtpd2uqq xmm4{k1}{z}, xmm2
+	vcvtpd2uqq ymm3{k5}{z}, ymm7
+	vcvtpd2uqq zmm1{k5}{z}, zmm4
+	vcvtpd2uqq zmm7, zmm2, {ru-sae}

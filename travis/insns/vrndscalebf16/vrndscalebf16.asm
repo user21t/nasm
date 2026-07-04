@@ -11,3 +11,9 @@ default rel
 	vrndscalebf16 xmm30, xmm28, 0x25
 	vrndscalebf16 ymm22, ymm16, 0x5c
 	vrndscalebf16 zmm20, zmm22, 0x3
+	vrndscalebf16 xmm3{k2}, xmm3, 0x7e
+	vrndscalebf16 ymm1{k6}, ymm2, 0xcb
+	vrndscalebf16 zmm5{k3}, zmm7, 0xec
+	vrndscalebf16 xmm4{k6}{z}, xmm7, 0x7a
+	vrndscalebf16 ymm2{k7}{z}, yword [0x820], 0x24
+	vrndscalebf16 zmm2{k4}{z}, zmm0, 0x2e

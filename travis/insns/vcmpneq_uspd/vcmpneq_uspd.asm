@@ -13,3 +13,7 @@ default rel
 	vcmpneq_uspd ymm8, ymm10, ymm11
 	vcmpneq_uspd k4, xmm15, xmm8
 	vcmpneq_uspd k7, ymm14, ymm10
+	vcmpneq_uspd k7{k5}, xmm7, xmm5
+	vcmpneq_uspd k6{k5}, ymm6, yword [0xd98]
+	vcmpneq_uspd k7{k5}, zmm0, zmm7
+	vcmpneq_uspd k2, zmm1, zmm5, {sae}

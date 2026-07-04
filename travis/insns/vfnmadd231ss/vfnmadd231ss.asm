@@ -7,3 +7,6 @@ default rel
 	vfnmadd231ss xmm14, xmm9, xmm14
 	vfnmadd231ss xmm16, xmm22, xmm18
 	vfnmadd231ss xmm16, xmm17, xmm19
+	vfnmadd231ss xmm2{k4}, xmm6, dword [0xcda]
+	vfnmadd231ss xmm3{k3}{z}, xmm5, xmm2
+	vfnmadd231ss xmm0, xmm7, xmm7, {rd-sae}

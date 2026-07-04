@@ -19,3 +19,10 @@ default rel
 	vmaxps ymm30, ymm20, ymm30
 	vmaxps xmm20, xmm26, xmm23
 	vmaxps ymm16, ymm29, ymm16
+	vmaxps xmm0{k6}, xmm1, xmm2
+	vmaxps ymm4{k3}, ymm1, ymm0
+	vmaxps zmm3{k1}, zmm6, zmm6
+	vmaxps xmm7{k5}{z}, xmm6, xmm6
+	vmaxps ymm5{k4}{z}, ymm1, ymm2
+	vmaxps zmm3{k1}{z}, zmm4, zword [0xab6]
+	vmaxps zmm2, zmm3, zmm4, {sae}

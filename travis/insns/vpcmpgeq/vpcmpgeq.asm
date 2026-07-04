@@ -11,3 +11,6 @@ default rel
 	vpcmpgeq k5, xmm21, xmm16
 	vpcmpgeq k1, ymm25, ymm19
 	vpcmpgeq k4, zmm17, zmm16
+	vpcmpgeq k7{k5}, xmm5, xmm0
+	vpcmpgeq k6{k5}, ymm0, ymm7
+	vpcmpgeq k3{k6}, zmm4, zmm2

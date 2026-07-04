@@ -19,3 +19,9 @@ default rel
 	vxorpd ymm17, ymm21, ymm31
 	vxorpd xmm24, xmm23, xmm16
 	vxorpd ymm26, ymm24, ymm17
+	vxorpd xmm4{k2}, xmm1, oword [0x4a1]
+	vxorpd ymm2{k3}, ymm5, yword [0x5c6]
+	vxorpd zmm7{k6}, zmm1, zword [0x180]
+	vxorpd xmm2{k6}{z}, xmm6, xmm7
+	vxorpd ymm5{k7}{z}, ymm0, yword [0xefa]
+	vxorpd zmm2{k4}{z}, zmm5, zword [0x2d2]

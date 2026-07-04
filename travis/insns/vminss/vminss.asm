@@ -9,3 +9,6 @@ default rel
 	vminss xmm10, xmm12, xmm11
 	vminss xmm27, xmm21, xmm18
 	vminss xmm17, xmm17, xmm23
+	vminss xmm5{k6}, xmm3, xmm1
+	vminss xmm1{k4}{z}, xmm3, xmm4
+	vminss xmm2, xmm7, xmm7, {sae}

@@ -15,3 +15,5 @@ default rel
 	vmovw r24w, xmm30
 	vmovw xmm23, xmm31
 	vmovw xmm22, xmm25
+	vmovw xmm2{k5}, bx
+	vmovw xmm6{k2}{z}, bx

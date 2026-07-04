@@ -14,3 +14,9 @@ default rel
 	vpsravq xmm25, xmm29, xmm25
 	vpsravq ymm28, ymm22, ymm31
 	vpsravq zmm30, zmm23, zmm31
+	vpsravq xmm4{k7}, xmm2, oword [0x274]
+	vpsravq ymm3{k3}, ymm3, ymm2
+	vpsravq zmm4{k4}, zmm4, zmm5
+	vpsravq xmm0{k6}{z}, xmm2, xmm0
+	vpsravq ymm4{k4}{z}, ymm2, ymm2
+	vpsravq zmm3{k1}{z}, zmm0, zmm4

@@ -6,3 +6,5 @@ default rel
 	vcmpneq_osss k7, xmm0, xmm1
 	vcmpneq_osss xmm9, xmm9, xmm15
 	vcmpneq_osss k2, xmm9, xmm14
+	vcmpneq_osss k5{k6}, xmm2, dword [0xb8f]
+	vcmpneq_osss k4, xmm2, xmm0, {sae}

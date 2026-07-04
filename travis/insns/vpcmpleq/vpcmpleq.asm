@@ -11,3 +11,6 @@ default rel
 	vpcmpleq k6, xmm31, xmm24
 	vpcmpleq k6, ymm17, ymm19
 	vpcmpleq k7, zmm21, zmm29
+	vpcmpleq k1{k1}, xmm0, xmm3
+	vpcmpleq k7{k5}, ymm5, yword [0x54d]
+	vpcmpleq k6{k7}, zmm7, zword [0x137]

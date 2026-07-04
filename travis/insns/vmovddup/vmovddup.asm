@@ -15,3 +15,9 @@ default rel
 	vmovddup ymm31, ymm31
 	vmovddup xmm21, xmm28
 	vmovddup ymm25, ymm27
+	vmovddup xmm1{k1}, xmm1
+	vmovddup ymm3{k6}, ymm5
+	vmovddup zmm6{k2}, zword [0xd11]
+	vmovddup xmm3{k6}{z}, xmm1
+	vmovddup ymm0{k6}{z}, yword [0xb50]
+	vmovddup zmm7{k4}{z}, zmm1

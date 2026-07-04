@@ -19,3 +19,9 @@ default rel
 	vpminsb ymm22, ymm28, ymm16
 	vpminsb xmm18, xmm18, xmm30
 	vpminsb ymm23, ymm29, ymm27
+	vpminsb xmm3{k5}, xmm4, xmm3
+	vpminsb ymm0{k6}, ymm7, ymm2
+	vpminsb zmm4{k4}, zmm7, zmm1
+	vpminsb xmm5{k6}{z}, xmm1, xmm7
+	vpminsb ymm2{k3}{z}, ymm6, ymm2
+	vpminsb zmm4{k3}{z}, zmm4, zmm7

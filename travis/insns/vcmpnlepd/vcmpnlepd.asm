@@ -13,3 +13,7 @@ default rel
 	vcmpnlepd ymm11, ymm14, ymm14
 	vcmpnlepd k5, xmm12, xmm13
 	vcmpnlepd k1, ymm10, ymm14
+	vcmpnlepd k5{k6}, xmm7, xmm4
+	vcmpnlepd k5{k5}, ymm0, ymm3
+	vcmpnlepd k3{k7}, zmm2, zmm6
+	vcmpnlepd k4, zmm7, zmm7, {sae}

@@ -6,3 +6,5 @@ default rel
 	vcmple_osss k3, xmm0, xmm6
 	vcmple_osss xmm12, xmm8, xmm8
 	vcmple_osss k5, xmm13, xmm13
+	vcmple_osss k7{k6}, xmm7, xmm1
+	vcmple_osss k5, xmm1, xmm5, {sae}

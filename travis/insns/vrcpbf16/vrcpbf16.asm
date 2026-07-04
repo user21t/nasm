@@ -11,3 +11,9 @@ default rel
 	vrcpbf16 xmm20, xmm24
 	vrcpbf16 ymm25, ymm22
 	vrcpbf16 zmm24, zmm16
+	vrcpbf16 xmm6{k2}, xmm3
+	vrcpbf16 ymm7{k5}, yword [0x7cd]
+	vrcpbf16 zmm6{k4}, zword [0x9ce]
+	vrcpbf16 xmm2{k1}{z}, oword [0x8d5]
+	vrcpbf16 ymm3{k3}{z}, ymm0
+	vrcpbf16 zmm2{k6}{z}, zmm1

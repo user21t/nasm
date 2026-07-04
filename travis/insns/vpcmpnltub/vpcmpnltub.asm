@@ -11,3 +11,6 @@ default rel
 	vpcmpnltub k4, xmm26, xmm19
 	vpcmpnltub k6, ymm26, ymm25
 	vpcmpnltub k6, zmm24, zmm27
+	vpcmpnltub k6{k4}, xmm7, xmm7
+	vpcmpnltub k4{k2}, ymm3, ymm1
+	vpcmpnltub k2{k4}, zmm2, zmm3

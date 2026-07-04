@@ -19,3 +19,9 @@ default rel
 	vandnpd ymm26, ymm19, ymm30
 	vandnpd xmm19, xmm24, xmm24
 	vandnpd ymm24, ymm16, ymm29
+	vandnpd xmm1{k1}, xmm1, xmm6
+	vandnpd ymm1{k7}, ymm4, yword [0x456]
+	vandnpd zmm4{k2}, zmm3, zmm3
+	vandnpd xmm7{k6}{z}, xmm3, oword [0xea3]
+	vandnpd ymm5{k7}{z}, ymm2, ymm6
+	vandnpd zmm5{k5}{z}, zmm6, zmm1
