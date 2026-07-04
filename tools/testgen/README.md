@@ -125,6 +125,31 @@ aren't valid for `scc`-family instructions), and `SETccZU` expands to
 `SETNEZU`/... . Any future new "cc"/"scc" family added to `insns.dat`
 is picked up automatically without changes to this script.
 
+## Optional (`*`/`?`) operand coverage
+
+`insns.xda` marks (at most one, per template) operand as optional:
+
+- a trailing `*` marks an optional **source** operand — when omitted
+  from the source, `x86/insns.pl`'s `relaxed_forms()` (which implements
+  the actual encoding semantics for the C generators) duplicates the
+  *previous* operand's value in the encoding, e.g. `IMUL reg32,rm32*,
+  imm32` covers both the 3-operand form and the 2-operand form `IMUL
+  reg32,imm32` (where `reg32` is implicitly reused as the `rm32`).
+- a trailing `?` marks an optional **destination** operand — when
+  omitted, it's entirely absent from the encoding, e.g. APX
+  non-destructive-destination (NDD) forms like `INC reg32?,rm32`
+  alongside the plain legacy `INC rm32`.
+
+From a pure operand-*syntax* generation point of view we don't need
+either marker's full encoding semantics — both simply mean "this
+operand can be dropped from the concrete instruction line". The
+generator locates the (single) marked operand index per template via
+`optional_operand_index()` and, alongside the normal full-arity
+instruction line, emits one additional reduced-arity line with that
+operand dropped, so both the full and omitted forms get captured as
+goldens. This is done once per template (not once per `--variants`
+instance) to keep output size growth linear rather than combinatorial.
+
 ## Bit-width (16/32/64) handling
 
 Bit-mode support isn't derived from CPU/mode flags in `insns.xda` — the
