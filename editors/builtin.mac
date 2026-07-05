@@ -4,6 +4,7 @@
 %define __?BITS?__
 %define __?PTR?__
 %define __?DEFAULT?__
+%define __?LIST_OPTIONS?__
 %idefine %abs(=)
 %idefine %chr(=+)
 %idefine %count(+)
@@ -68,6 +69,7 @@
 %idefine %findi(&&,+)
 %idefine %find(&&,+)
 %define __?NASM_LIMITS?__
+%define __?LIST_OPTIONS_DEFAULT?__
 %define __?PASS?__
 %define __?SECT?__
 %defalias __SECT__
