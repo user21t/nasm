@@ -562,25 +562,16 @@ nasm.spec: nasm.spec.in nasm.spec.sed version.sed perlbreq.si
 splint:
 	splint -weak *.c
 
-.PHONY: test
-test: $(PROGS)
-	cd $(srcdir)/test && \
-		$(RUNPERL) performtest.pl --nasm=../nasm$(X) *.asm
-
-golden: $(PROGS)
-	cd $(srcdir)/test && \
-		$(RUNPERL) performtest.pl --golden --nasm=../nasm$(X) *.asm
-
 #
 # Travis tests
 #
-travis: $(PROGS)
+travis test: $(PROGS)
 	$(MAKE) -f travis.mk all
 
 clean-travis travis-clean:
 	$(MAKE) -f travis.mk clean
 
-update-travis travis-update:
+update-travis travis-update golden:
 	$(MAKE) -f travis.mk update
 
 #

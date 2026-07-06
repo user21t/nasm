@@ -118,15 +118,6 @@ cryptography-primitivestest:
 
 all:
 
-golden: performtest.pl $(TESTS)
-	$(PERL) performtest.pl --golden --nasm='$(NASM)' $(TESTS)
-
-test:	performtest.pl $(NASM) $(TESTS)
-	$(PERL) performtest.pl --nasm='$(NASM)' $(TESTS)
-
-diff:	performtest.pl $(NASM) $(TESTS)
-	$(PERL) performtest.pl --diff --nasm='$(NASM)' $(TESTS)
-
 clean:
 	$(RM_F) *.com *.o *.o64 *.aout *.obj *.win32 *.win64 *.exe *.lst *.bin
 	$(RM_F) *.bin *.bin16 *.bin32 *.bin64
