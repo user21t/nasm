@@ -711,6 +711,7 @@ static void obj_cleanup(void)
             nasm_free(pubtmp->name);
             nasm_free(pubtmp);
         }
+        nasm_free(segtmp->name);
         nasm_free(segtmp->segclass);
         nasm_free(segtmp->overlay);
         nasm_free(segtmp);
