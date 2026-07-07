@@ -6,8 +6,6 @@
 # Makefile for various extra NASM programs and files
 #
 
-@SET_MAKE@
-
 top_srcdir	= @top_srcdir@
 srcdir		= @srcdir@
 top_objdir	= @top_builddir@

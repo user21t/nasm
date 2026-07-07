@@ -5,6 +5,7 @@
 # Auto-configuring Makefile for the Netwide Assembler.
 
 @SET_MAKE@
+export MAKE
 
 PACKAGE_NAME    = @PACKAGE_NAME@
 PACKAGE_TARNAME = @PACKAGE_TARNAME@

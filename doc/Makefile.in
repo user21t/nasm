@@ -6,8 +6,6 @@
 # UNIX Makefile for NASM documentation
 #
 
-@SET_MAKE@
-
 PACKAGE_NAME    = @PACKAGE_NAME@
 PACKAGE_TARNAME = @PACKAGE_TARNAME@
 

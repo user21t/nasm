@@ -1,5 +1,3 @@
-@SET_MAKE@
-
 .SUFFIXES: .bin .bin16 .bin32 .bin64 .o .o64 .aout .aoutb .obj .obj64 \
 	   .mo32 .mo64 .dbg .i .od .ox .ith .srec .exe .lst \
 	   .asm .pl
