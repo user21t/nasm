@@ -138,12 +138,3 @@ To build modified sources, you will need the tools described in
 
 Some build system changes might not be possible without a POSIX
 environment.
-
-If you have modified the sources to change the embedded declarations
-of warning classes, you may have to manually re-build the warning
-catalog:
-
-\c      make warnings
-
-This is not done automatically, as the tools do not have the ability
-to automatically detect when it is necessary to do so.
