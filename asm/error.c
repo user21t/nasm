@@ -214,9 +214,17 @@ bool set_warning_status(const char *value)
                 warning_state[i] |= mask;
                 break;
             case WID_RESET:
+            {
+                uint8_t old;
+                if (warning_state_init)
+                    old = warning_state_init->state[i];
+                else
+                    old = warning_default[i];
+
                 warning_state[i] &= ~mask;
-                warning_state[i] |= warning_state_init->state[i] & mask;
+                warning_state[i] |= old & mask;
                 break;
+            }
             }
         }
 
