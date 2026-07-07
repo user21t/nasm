@@ -423,7 +423,11 @@ spotless: distclean cleaner
 
 strip:
 
-# Abuse doc/Makefile.in to build nasmdoc.pdf only
+# Abuse doc/Makefile.in to build nasmdoc.pdf only.
+#
+# Building the documentation requires Ghostscript and the Roboto /
+# Roboto Mono fonts to be installed and discoverable; see
+# doc/source.src ("Optional Build Tools") for details.
 docs:
 	cd doc && $(MAKE) /f Makefile.in srcdir=. top_srcdir=.. \
 		PERL=$(PERL) PDFOPT= nasmdoc.pdf
